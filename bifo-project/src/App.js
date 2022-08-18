@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import WortAuswahl from "./components/wortAuswahl";
+import React, { useState } from "react";
 
 function App() {
+  const [worter, setWorter] = useState([
+    {
+      id: 1,
+      name: "hals",
+      auswahl: 3,
+    },
+    {
+      id: 2,
+      name: "ben",
+      auswahl: 1,
+    },
+    {
+      id: 3,
+      name: "jerry",
+      auswahl: 5,
+    },
+    {
+      id: 4,
+      name: "Ben",
+      auswahl: 0,
+    },
+  ]);
+
+  const handelChangeAuswahl = (boxWort) => {
+    const wort = [...worter];
+    const index = wort.indexOf(boxWort);
+    wort[index] = { ...boxWort };
+    wort[index].auswahl = 2;
+    setWorter(() => wort);
+    console.log("changed", worter[index]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <main className="container" />
+      <WortAuswahl
+        wort={worter}
+        onHandleChangeAuswahl={handelChangeAuswahl}
+      ></WortAuswahl>
+    </React.Fragment>
   );
 }
 
