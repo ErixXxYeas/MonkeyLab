@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 function App() {
   const [worter, setWorter] = useState([
+    // state von wörter
     {
       id: 1,
       name: "hals",
@@ -28,9 +29,10 @@ function App() {
   ]);
 
   const handelChangeAuswahl = (boxWort) => {
-    const wort = [...worter];
-    const index = wort.indexOf(boxWort);
-    wort[index] = { ...boxWort };
+    // updatet die wörter array "boxWort" ist die updated array die man zugeschickt kriegt
+    const wort = [...worter]; //definiert wort mit der Wörter array
+    const index = wort.indexOf(boxWort); //holt das index vom wort
+    wort[index] = { ...boxWort }; // ändert an der stelle
     wort[index].auswahl = 2;
     setWorter(() => wort);
     console.log("changed", worter[index]);
