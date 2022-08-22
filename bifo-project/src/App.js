@@ -1,9 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
 import WortAuswahl from "./components/wortAuswahl";
+import WordSelectionList from "./components/wordSelectionCheckBoxList";
 import React, { useState } from "react";
 
 function App() {
+  /*
   const [worter, setWorter] = useState([
     // state von wörter
     {
@@ -38,13 +40,84 @@ function App() {
     console.log("changed", worter[index]);
   };
 
+
+  return (
+
+    <React.Fragment>
+
+      <main className="container" />
+
+      <WortAuswahl
+
+        wort={worter}
+
+        onHandleChangeAuswahl={handelChangeAuswahl}
+
+      ></WortAuswahl>
+
+    </React.Fragment>
+
+  );
+
+}
+
+
+*/
+
+  const handleCheckAuswahlGood = (value) => {
+    const newWordsArray = [...words];
+    const Index = newWordsArray.indexOf(value);
+    newWordsArray[Index] = { ...value };
+    newWordsArray[Index].auswahl = 1;
+    setWords(() => newWordsArray);
+    console.log(words[Index]);
+  };
+
+  const handleCheckAuswahlBad = (value) => {
+    const newWordsArray = [...words];
+    const Index = newWordsArray.indexOf(value);
+    newWordsArray[Index] = { ...value };
+    newWordsArray[Index].auswahl = 2;
+    setWords(() => newWordsArray);
+    console.log(words);
+  };
+
+  const [words, setWords] = useState([
+    // state von wörter
+    {
+      id: 1,
+      name: "Schauspielern",
+      auswahl: 0,
+      checked: true,
+    },
+    {
+      id: 2,
+      name: "Leiten",
+      auswahl: 0,
+      checked: false,
+    },
+    {
+      id: 3,
+      name: "Kontrolieren",
+      auswahl: 0,
+      checked: false,
+    },
+    {
+      id: 4,
+      name: "Lernen",
+      auswahl: 0,
+      checked: false,
+    },
+  ]);
+
   return (
     <React.Fragment>
       <main className="container" />
-      <WortAuswahl
-        wort={worter}
-        onHandleChangeAuswahl={handelChangeAuswahl}
-      ></WortAuswahl>
+      <WordSelectionList
+        words={words}
+        onCheckAuswahlGood={handleCheckAuswahlGood}
+        onCheckAuswahlBad={handleCheckAuswahlBad}
+      ></WordSelectionList>
     </React.Fragment>
   );
 }
