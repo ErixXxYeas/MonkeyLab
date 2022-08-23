@@ -65,28 +65,34 @@ function App() {
 */
 
   const handleCheckAuswahlGood = (value) => {
-    const newWordsArray = [...words];
-    const Index = newWordsArray.indexOf(value);
-    newWordsArray[Index] = { ...value };
-    newWordsArray[Index].auswahl = 1;
-    setWords(() => newWordsArray);
-    console.log(words[Index]);
+    let newWordsArray = [...words]; // erstellt ein neues array dass gleich ist wie die words array
+    let Index = newWordsArray.indexOf(value); // erstellt eine Zahl die, die stelle im array anzeigt welches gleich ist wie der gegebene "value"
+    newWordsArray[Index] = { ...value }; // verändert den array and der index stelle mit dem neuen Wert
+    newWordsArray[Index].auswahl = 1; // ändert die auswahl zu eins
+    setWords(() => newWordsArray); // ersätzt die alte array mit der neuen
   };
 
   const handleCheckAuswahlBad = (value) => {
-    const newWordsArray = [...words];
-    const Index = newWordsArray.indexOf(value);
+    let newWordsArray = [...words];
+    let Index = newWordsArray.indexOf(value);
     newWordsArray[Index] = { ...value };
     newWordsArray[Index].auswahl = 2;
     setWords(() => newWordsArray);
-    console.log(words);
+  };
+
+  const handleCheckAuswahlNeutral = (value) => {
+    let newWordsArray = [...words];
+    let Index = newWordsArray.indexOf(value);
+    newWordsArray[Index] = { ...value };
+    newWordsArray[Index].auswahl = 0;
+    setWords(() => newWordsArray);
   };
 
   const [words, setWords] = useState([
     // state von wörter
     {
       id: 1,
-      name: "Schauspielern",
+      name: "Bauen",
       auswahl: 0,
       checked: true,
     },
@@ -98,7 +104,7 @@ function App() {
     },
     {
       id: 3,
-      name: "Kontrolieren",
+      name: "Kochen",
       auswahl: 0,
       checked: false,
     },
@@ -112,12 +118,14 @@ function App() {
 
   return (
     <React.Fragment>
-      <main className="container" />
-      <WordSelectionList
-        words={words}
-        onCheckAuswahlGood={handleCheckAuswahlGood}
-        onCheckAuswahlBad={handleCheckAuswahlBad}
-      ></WordSelectionList>
+      <main className="container">
+        <WordSelectionList
+          words={words} // prop: das ganze array wird als prop weiter gegeben
+          onCheckAuswahlGood={handleCheckAuswahlGood}
+          onCheckAuswahlBad={handleCheckAuswahlBad}
+          onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
+        ></WordSelectionList>
+      </main>
     </React.Fragment>
   );
 }

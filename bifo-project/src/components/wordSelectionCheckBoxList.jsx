@@ -10,16 +10,28 @@ const wordSelectionCheckBoxList = (props) => {
     props.onCheckAuswahlBad(value);
   };
 
+  const handleCheckAuswahlNeutral = (value) => {
+    props.onCheckAuswahlNeutral(value);
+  };
+
   return (
     <div>
-      {props.words.map((selectionWords) => (
-        <WordSelection
-          key={selectionWords.id}
-          selectionWord={selectionWords}
-          onHandleChangeGood={handleCheckAuswahlGood}
-          onHandleChangeBad={handleCheckAuswahlBad}
-        />
-      ))}
+      <div></div>
+      <div>
+        {props.words.map(
+          (
+            selectionWords //map zählt die wörter auf die in unserer Array ist (selectionWords ist die prop words)
+          ) => (
+            <WordSelection
+              key={selectionWords.id}
+              selectionWord={selectionWords} //prop: selectionword beinhaltet alle eigenschaften vom prop words
+              onHandleChangeGood={handleCheckAuswahlGood}
+              onHandleChangeBad={handleCheckAuswahlBad}
+              onHandleChangeNeutral={handleCheckAuswahlNeutral}
+            />
+          )
+        )}
+      </div>
     </div>
   );
 };
