@@ -1,50 +1,113 @@
 import logo from "./logo.svg";
 import "./App.css";
 import WortAuswahl from "./components/wortAuswahl";
-import React, { useState } from "react";
+import WordSelectionList from "./components/wordSelectionCheckBoxList";
+import React, { useState, useEffect } from "react";
+import wordsJson from "./n29_words.json";
 
 function App() {
-  const [worter, setWorter] = useState([
-    // state von wörter
-    {
-      id: 1,
-      name: "hals",
-      auswahl: 3,
-    },
-    {
-      id: 2,
-      name: "ben",
-      auswahl: 1,
-    },
-    {
-      id: 3,
-      name: "jerry",
-      auswahl: 5,
-    },
-    {
-      id: 4,
-      name: "Ben",
-      auswahl: 0,
-    },
-  ]);
+  const pages = 28;
+  const [int, setInt] = useState(pages);
+  const [lastInt, setLastInt] = useState(0);
+  const [words, setWords] = useState(wordsJson.words); // state von wörter
+  const [chosenGoodSelection, setChosenGoodSelection] = useState(0);
+  const [chosenBadSelection, setChosenBadSelection] = useState(0);
+  const [goodSelection, setGoodSelection] = useState(false);
+  const [badSelection, setBadSelection] = useState(false);
 
-  const handelChangeAuswahl = (boxWort) => {
-    // updatet die wörter array "boxWort" ist die updated array die man zugeschickt kriegt
-    const wort = [...worter]; //definiert wort mit der Wörter array
-    const index = wort.indexOf(boxWort); //holt das index vom wort
-    wort[index] = { ...boxWort }; // ändert an der stelle
-    wort[index].auswahl = 2;
-    setWorter(() => wort);
-    console.log("changed", worter[index]);
+  const handleCheckAuswahlGood = (value) => {
+    let newWordsArray = [...words]; // erstellt ein neues array dass gleich ist wie die words array
+    let Index = newWordsArray.indexOf(value); // erstellt eine Zahl die, die stelle im array anzeigt welches gleich ist wie der gegebene "value"
+    newWordsArray[Index] = { ...value }; // verändert den array and der index stelle mit dem neuen Wert
+    newWordsArray[Index].selection = 1; // ändert die selection zu eins
+    setWords(() => newWordsArray); // ersätzt die alte array mit der neuen
+  };
+
+  const handleCheckAuswahlBad = (value) => {
+    let newWordsArray = [...words];
+    let Index = newWordsArray.indexOf(value);
+    newWordsArray[Index] = { ...value };
+    newWordsArray[Index].selection = 2;
+    setWords(() => newWordsArray);
+  };
+  useEffect(() => {
+    let chosenGoodSelection = 0;
+    let chosenBadSelection = 0;
+    for (let i = lastInt; i <= int; i++) {
+      if (words[i].selection === 1) {
+        chosenGoodSelection++;
+      } else if (words[i].selection === 2) {
+        chosenBadSelection++;
+      }
+    }
+    setChosenGoodSelection(chosenGoodSelection);
+    setChosenBadSelection(chosenBadSelection);
+    checkBoolean();
+  });
+
+  const handleCheckAuswahlNeutral = (value) => {
+    let newWordsArray = [...words];
+    let Index = newWordsArray.indexOf(value);
+    newWordsArray[Index] = { ...value };
+    newWordsArray[Index].selection = 0;
+    setWords(() => newWordsArray);
+  };
+
+  const checkBoolean = () => {
+    if (chosenGoodSelection === 6) {
+      setGoodSelection(true);
+    } else {
+      setGoodSelection(false);
+    }
+    if (chosenBadSelection === 6) {
+      setBadSelection(true);
+    } else {
+      setBadSelection(false);
+    }
+  };
+
+  const handleLastPage = () => {
+    if (lastInt <= 0) {
+      alert("Sie können nicht zurück gehen");
+    } else {
+      let newInt = lastInt - pages;
+      setInt(lastInt);
+      setLastInt(newInt);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (goodSelection && badSelection) {
+      let newInt = int + pages;
+      setLastInt(int);
+      setInt(newInt);
+    } else {
+      alert("wählen sie 6 gute & schlechte Wörter aus");
+    }
   };
 
   return (
     <React.Fragment>
-      <main className="container" />
-      <WortAuswahl
-        wort={worter}
-        onHandleChangeAuswahl={handelChangeAuswahl}
-      ></WortAuswahl>
+      <main className="container">
+        <WordSelectionList
+          chosenGoodSelection={chosenGoodSelection}
+          chosenBadSelection={chosenBadSelection}
+          goodSelection={goodSelection}
+          badSelection={badSelection}
+          int={int}
+          lastInt={lastInt}
+          words={words} // prop: das ganze array wird als prop weiter gegeben
+          onCheckAuswahlGood={handleCheckAuswahlGood}
+          onCheckAuswahlBad={handleCheckAuswahlBad}
+          onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
+          onHandleNextPage={handleNextPage}
+          onHandleLastPage={handleLastPage}
+        ></WordSelectionList>
+        <div>Int{int}</div>
+        lastInt{lastInt}
+        <div>goodSelection {chosenGoodSelection}</div>
+        badSelection {chosenBadSelection}
+      </main>
     </React.Fragment>
   );
 }

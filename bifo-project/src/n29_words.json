@@ -1,0 +1,1744 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "Schauspielern",
+      "selection": 0
+    },
+    {
+      "id": 2,
+      "word": "leiten",
+      "selection": 0
+    },
+    {
+      "id": 3,
+      "word": "kontrollieren",
+      "selection": 0
+    },
+    {
+      "id": 4,
+      "word": "lernen",
+      "selection": 0
+    },
+    {
+      "id": 5,
+      "word": "\u00fcberlegen",
+      "selection": 0
+    },
+    {
+      "id": 6,
+      "word": "experimentieren",
+      "selection": 0
+    },
+    {
+      "id": 7,
+      "word": "sch\u00f6nschreiben",
+      "selection": 0
+    },
+    {
+      "id": 8,
+      "word": "zeichnen",
+      "selection": 0
+    },
+    {
+      "id": 9,
+      "word": "konstruieren",
+      "selection": 0
+    },
+    {
+      "id": 10,
+      "word": "rechnen",
+      "selection": 0
+    },
+    {
+      "id": 11,
+      "word": "schreiben",
+      "selection": 0
+    },
+    {
+      "id": 12,
+      "word": "organisieren",
+      "selection": 0
+    },
+    {
+      "id": 13,
+      "word": "ordnen",
+      "selection": 0
+    },
+    {
+      "id": 14,
+      "word": "einkaufen",
+      "selection": 0
+    },
+    {
+      "id": 15,
+      "word": "anpflanzen",
+      "selection": 0
+    },
+    {
+      "id": 16,
+      "word": "sich bewegen",
+      "selection": 0
+    },
+    {
+      "id": 17,
+      "word": "ruhig arbeiten",
+      "selection": 0
+    },
+    {
+      "id": 18,
+      "word": "pr\u00e4zis arbeiten",
+      "selection": 0
+    },
+    {
+      "id": 19,
+      "word": "werken",
+      "selection": 0
+    },
+    {
+      "id": 20,
+      "word": "basteln",
+      "selection": 0
+    },
+    {
+      "id": 21,
+      "word": "sich aufopfern",
+      "selection": 0
+    },
+    {
+      "id": 22,
+      "word": "sich einordnen",
+      "selection": 0
+    },
+    {
+      "id": 23,
+      "word": "aktiv sein",
+      "selection": 0
+    },
+    {
+      "id": 24,
+      "word": "gehorchen",
+      "selection": 0
+    },
+    {
+      "id": 25,
+      "word": "Kontakt suchen",
+      "selection": 0
+    },
+    {
+      "id": 26,
+      "word": "allein arbeiten",
+      "selection": 0
+    },
+    {
+      "id": 27,
+      "word": "essen",
+      "selection": 0
+    },
+    {
+      "id": 28,
+      "word": "mischen",
+      "selection": 0
+    },
+    {
+      "id": 29,
+      "word": "\u00fcberzeugen",
+      "selection": 0
+    },
+    {
+      "id": 30,
+      "word": "Lehren",
+      "selection": 0
+    },
+    {
+      "id": 31,
+      "word": "auftreten",
+      "selection": 0
+    },
+    {
+      "id": 32,
+      "word": "beaufsichtigen",
+      "selection": 0
+    },
+    {
+      "id": 33,
+      "word": "sich vergewissern",
+      "selection": 0
+    },
+    {
+      "id": 34,
+      "word": "sich \u00fcben",
+      "selection": 0
+    },
+    {
+      "id": 35,
+      "word": "sich besinnen",
+      "selection": 0
+    },
+    {
+      "id": 36,
+      "word": "entdecken",
+      "selection": 0
+    },
+    {
+      "id": 37,
+      "word": "schm\u00fccken",
+      "selection": 0
+    },
+    {
+      "id": 38,
+      "word": "gestalten",
+      "selection": 0
+    },
+    {
+      "id": 39,
+      "word": "entwerfen",
+      "selection": 0
+    },
+    {
+      "id": 40,
+      "word": "kalkulieren",
+      "selection": 0
+    },
+    {
+      "id": 41,
+      "word": "dolmetschen",
+      "selection": 0
+    },
+    {
+      "id": 42,
+      "word": "voraus denken",
+      "selection": 0
+    },
+    {
+      "id": 43,
+      "word": "systematisieren",
+      "selection": 0
+    },
+    {
+      "id": 44,
+      "word": "tauschen",
+      "selection": 0
+    },
+    {
+      "id": 45,
+      "word": "ernten",
+      "selection": 0
+    },
+    {
+      "id": 46,
+      "word": "turnen",
+      "selection": 0
+    },
+    {
+      "id": 47,
+      "word": "betrachten",
+      "selection": 0
+    },
+    {
+      "id": 48,
+      "word": "fein einstellen",
+      "selection": 0
+    },
+    {
+      "id": 49,
+      "word": "hobeln",
+      "selection": 0
+    },
+    {
+      "id": 50,
+      "word": "fertig stellen",
+      "selection": 0
+    },
+    {
+      "id": 51,
+      "word": "pflegen",
+      "selection": 0
+    },
+    {
+      "id": 52,
+      "word": "zusammenarbeiten",
+      "selection": 0
+    },
+    {
+      "id": 53,
+      "word": "sich durchsetzen",
+      "selection": 0
+    },
+    {
+      "id": 54,
+      "word": "befolgen",
+      "selection": 0
+    },
+    {
+      "id": 55,
+      "word": "Umgang pflegen",
+      "selection": 0
+    },
+    {
+      "id": 56,
+      "word": "sich zur\u00fcckhalten",
+      "selection": 0
+    },
+    {
+      "id": 57,
+      "word": "reden",
+      "selection": 0
+    },
+    {
+      "id": 58,
+      "word": "kleben",
+      "selection": 0
+    },
+    {
+      "id": 59,
+      "word": "Dienen",
+      "selection": 0
+    },
+    {
+      "id": 60,
+      "word": "sich anpassen",
+      "selection": 0
+    },
+    {
+      "id": 61,
+      "word": "k\u00e4mpfen",
+      "selection": 0
+    },
+    {
+      "id": 62,
+      "word": "sich f\u00fcgen",
+      "selection": 0
+    },
+    {
+      "id": 63,
+      "word": "sich anschlie\u00dfen",
+      "selection": 0
+    },
+    {
+      "id": 64,
+      "word": "sich fernhalten",
+      "selection": 0
+    },
+    {
+      "id": 65,
+      "word": "sprechen",
+      "selection": 0
+    },
+    {
+      "id": 66,
+      "word": "mixen",
+      "selection": 0
+    },
+    {
+      "id": 67,
+      "word": "erziehen",
+      "selection": 0
+    },
+    {
+      "id": 68,
+      "word": "darbieten",
+      "selection": 0
+    },
+    {
+      "id": 69,
+      "word": "lenken",
+      "selection": 0
+    },
+    {
+      "id": 70,
+      "word": "pr\u00fcfen",
+      "selection": 0
+    },
+    {
+      "id": 71,
+      "word": "begreifen",
+      "selection": 0
+    },
+    {
+      "id": 72,
+      "word": "nachdenken",
+      "selection": 0
+    },
+    {
+      "id": 73,
+      "word": "ergr\u00fcnden",
+      "selection": 0
+    },
+    {
+      "id": 74,
+      "word": "ausstatten",
+      "selection": 0
+    },
+    {
+      "id": 75,
+      "word": "formen",
+      "selection": 0
+    },
+    {
+      "id": 76,
+      "word": "planen",
+      "selection": 0
+    },
+    {
+      "id": 77,
+      "word": "ausrechnen",
+      "selection": 0
+    },
+    {
+      "id": 78,
+      "word": "lesen",
+      "selection": 0
+    },
+    {
+      "id": 79,
+      "word": "\u00fcberblicken",
+      "selection": 0
+    },
+    {
+      "id": 80,
+      "word": "am PC schreiben",
+      "selection": 0
+    },
+    {
+      "id": 81,
+      "word": "verkaufen",
+      "selection": 0
+    },
+    {
+      "id": 82,
+      "word": "g\u00e4rtnern",
+      "selection": 0
+    },
+    {
+      "id": 83,
+      "word": "reisen",
+      "selection": 0
+    },
+    {
+      "id": 84,
+      "word": "still arbeiten",
+      "selection": 0
+    },
+    {
+      "id": 85,
+      "word": "verfeinern",
+      "selection": 0
+    },
+    {
+      "id": 86,
+      "word": "schreinern",
+      "selection": 0
+    },
+    {
+      "id": 87,
+      "word": "zusammensetzen",
+      "selection": 0
+    },
+    {
+      "id": 88,
+      "word": "Singen",
+      "selection": 0
+    },
+    {
+      "id": 89,
+      "word": "vermengen",
+      "selection": 0
+    },
+    {
+      "id": 90,
+      "word": "aufkl\u00e4ren",
+      "selection": 0
+    },
+    {
+      "id": 91,
+      "word": "ver\u00f6ffentlichen",
+      "selection": 0
+    },
+    {
+      "id": 92,
+      "word": "verordnen",
+      "selection": 0
+    },
+    {
+      "id": 93,
+      "word": "sichergehen",
+      "selection": 0
+    },
+    {
+      "id": 94,
+      "word": "zuh\u00f6ren",
+      "selection": 0
+    },
+    {
+      "id": 95,
+      "word": "begr\u00fcnden",
+      "selection": 0
+    },
+    {
+      "id": 96,
+      "word": "untersuchen",
+      "selection": 0
+    },
+    {
+      "id": 97,
+      "word": "dekorieren",
+      "selection": 0
+    },
+    {
+      "id": 98,
+      "word": "modellieren",
+      "selection": 0
+    },
+    {
+      "id": 99,
+      "word": "ausgestalten",
+      "selection": 0
+    },
+    {
+      "id": 100,
+      "word": "multiplizieren",
+      "selection": 0
+    },
+    {
+      "id": 101,
+      "word": "schildern",
+      "selection": 0
+    },
+    {
+      "id": 102,
+      "word": "disponieren",
+      "selection": 0
+    },
+    {
+      "id": 103,
+      "word": "einreihen",
+      "selection": 0
+    },
+    {
+      "id": 104,
+      "word": "handeln",
+      "selection": 0
+    },
+    {
+      "id": 105,
+      "word": "heuen",
+      "selection": 0
+    },
+    {
+      "id": 106,
+      "word": "marschieren",
+      "selection": 0
+    },
+    {
+      "id": 107,
+      "word": "fischen",
+      "selection": 0
+    },
+    {
+      "id": 108,
+      "word": "zuschneiden",
+      "selection": 0
+    },
+    {
+      "id": 109,
+      "word": "gie\u00dfen",
+      "selection": 0
+    },
+    {
+      "id": 110,
+      "word": "fabrizieren",
+      "selection": 0
+    },
+    {
+      "id": 111,
+      "word": "betreuen",
+      "selection": 0
+    },
+    {
+      "id": 112,
+      "word": "teilnehmen",
+      "selection": 0
+    },
+    {
+      "id": 113,
+      "word": "erobern",
+      "selection": 0
+    },
+    {
+      "id": 114,
+      "word": "ertragen",
+      "selection": 0
+    },
+    {
+      "id": 115,
+      "word": "angeh\u00f6ren",
+      "selection": 0
+    },
+    {
+      "id": 116,
+      "word": "allein stehen",
+      "selection": 0
+    },
+    {
+      "id": 117,
+      "word": "Einladen",
+      "selection": 0
+    },
+    {
+      "id": 118,
+      "word": "fernbleiben",
+      "selection": 0
+    },
+    {
+      "id": 119,
+      "word": "degustieren",
+      "selection": 0
+    },
+    {
+      "id": 120,
+      "word": "kneten",
+      "selection": 0
+    },
+    {
+      "id": 121,
+      "word": "anlernen",
+      "selection": 0
+    },
+    {
+      "id": 122,
+      "word": "vorspielen",
+      "selection": 0
+    },
+    {
+      "id": 123,
+      "word": "beauftragen",
+      "selection": 0
+    },
+    {
+      "id": 124,
+      "word": "nachsehen ",
+      "selection": 0
+    },
+    {
+      "id": 125,
+      "word": "auswendig lernen",
+      "selection": 0
+    },
+    {
+      "id": 126,
+      "word": "schlussfolgern",
+      "selection": 0
+    },
+    {
+      "id": 127,
+      "word": "herausfinden",
+      "selection": 0
+    },
+    {
+      "id": 128,
+      "word": "bekleiden",
+      "selection": 0
+    },
+    {
+      "id": 129,
+      "word": "schnitzen",
+      "selection": 0
+    },
+    {
+      "id": 130,
+      "word": "projektieren",
+      "selection": 0
+    },
+    {
+      "id": 131,
+      "word": "zusammenz\u00e4hlen",
+      "selection": 0
+    },
+    {
+      "id": 132,
+      "word": "Briefe schreiben",
+      "selection": 0
+    },
+    {
+      "id": 133,
+      "word": "veranstalten",
+      "selection": 0
+    },
+    {
+      "id": 134,
+      "word": "bescheinigen",
+      "selection": 0
+    },
+    {
+      "id": 135,
+      "word": "wirtschaften",
+      "selection": 0
+    },
+    {
+      "id": 136,
+      "word": "mauern",
+      "selection": 0
+    },
+    {
+      "id": 137,
+      "word": "tanzen",
+      "selection": 0
+    },
+    {
+      "id": 138,
+      "word": "zuwarten",
+      "selection": 0
+    },
+    {
+      "id": 139,
+      "word": "gravieren",
+      "selection": 0
+    },
+    {
+      "id": 140,
+      "word": "s\u00e4gen",
+      "selection": 0
+    },
+    {
+      "id": 141,
+      "word": "installieren",
+      "selection": 0
+    },
+    {
+      "id": 142,
+      "word": "unterst\u00fctzen",
+      "selection": 0
+    },
+    {
+      "id": 143,
+      "word": "sich beteiligen",
+      "selection": 0
+    },
+    {
+      "id": 144,
+      "word": "verfechten",
+      "selection": 0
+    },
+    {
+      "id": 145,
+      "word": "erdulden",
+      "selection": 0
+    },
+    {
+      "id": 146,
+      "word": "Begeistern",
+      "selection": 0
+    },
+    {
+      "id": 147,
+      "word": "ausstellen",
+      "selection": 0
+    },
+    {
+      "id": 148,
+      "word": "verbieten",
+      "selection": 0
+    },
+    {
+      "id": 149,
+      "word": "sichern",
+      "selection": 0
+    },
+    {
+      "id": 150,
+      "word": "erfassen",
+      "selection": 0
+    },
+    {
+      "id": 151,
+      "word": "ersinnen",
+      "selection": 0
+    },
+    {
+      "id": 152,
+      "word": "analysieren",
+      "selection": 0
+    },
+    {
+      "id": 153,
+      "word": "verzieren",
+      "selection": 0
+    },
+    {
+      "id": 154,
+      "word": "bildhauern",
+      "selection": 0
+    },
+    {
+      "id": 155,
+      "word": "erbauen",
+      "selection": 0
+    },
+    {
+      "id": 156,
+      "word": "berechnen",
+      "selection": 0
+    },
+    {
+      "id": 157,
+      "word": "berichten",
+      "selection": 0
+    },
+    {
+      "id": 158,
+      "word": "vorausblicken",
+      "selection": 0
+    },
+    {
+      "id": 159,
+      "word": "archievieren",
+      "selection": 0
+    },
+    {
+      "id": 160,
+      "word": "finanzieren",
+      "selection": 0
+    },
+    {
+      "id": 161,
+      "word": "pfl\u00fcgen",
+      "selection": 0
+    },
+    {
+      "id": 162,
+      "word": "trainieren",
+      "selection": 0
+    },
+    {
+      "id": 163,
+      "word": "ansehen",
+      "selection": 0
+    },
+    {
+      "id": 164,
+      "word": "abmessen",
+      "selection": 0
+    },
+    {
+      "id": 165,
+      "word": "schmieden",
+      "selection": 0
+    },
+    {
+      "id": 166,
+      "word": "herstllen",
+      "selection": 0
+    },
+    {
+      "id": 167,
+      "word": "umsorgen",
+      "selection": 0
+    },
+    {
+      "id": 168,
+      "word": "sich verb\u00fcnden",
+      "selection": 0
+    },
+    {
+      "id": 169,
+      "word": "kritisieren",
+      "selection": 0
+    },
+    {
+      "id": 170,
+      "word": "nachgeben",
+      "selection": 0
+    },
+    {
+      "id": 171,
+      "word": "sich begegnen",
+      "selection": 0
+    },
+    {
+      "id": 172,
+      "word": "vereinzeln",
+      "selection": 0
+    },
+    {
+      "id": 173,
+      "word": "kosten",
+      "selection": 0
+    },
+    {
+      "id": 174,
+      "word": "kleistern",
+      "selection": 0
+    },
+    {
+      "id": 175,
+      "word": "Sich abfinden",
+      "selection": 0
+    },
+    {
+      "id": 176,
+      "word": "besuchen",
+      "selection": 0
+    },
+    {
+      "id": 177,
+      "word": "sich abwenden",
+      "selection": 0
+    },
+    {
+      "id": 178,
+      "word": "kochen",
+      "selection": 0
+    },
+    {
+      "id": 179,
+      "word": "kitten",
+      "selection": 0
+    },
+    {
+      "id": 180,
+      "word": "unterrichten",
+      "selection": 0
+    },
+    {
+      "id": 181,
+      "word": "vorf\u00fchren",
+      "selection": 0
+    },
+    {
+      "id": 182,
+      "word": "b\u00e4ndigen",
+      "selection": 0
+    },
+    {
+      "id": 183,
+      "word": "achtgeben",
+      "selection": 0
+    },
+    {
+      "id": 184,
+      "word": "wiedergeben",
+      "selection": 0
+    },
+    {
+      "id": 185,
+      "word": "vergleichen",
+      "selection": 0
+    },
+    {
+      "id": 186,
+      "word": "erforschen",
+      "selection": 0
+    },
+    {
+      "id": 187,
+      "word": "vergolden",
+      "selection": 0
+    },
+    {
+      "id": 188,
+      "word": "komponieren",
+      "selection": 0
+    },
+    {
+      "id": 189,
+      "word": "durchgestalten",
+      "selection": 0
+    },
+    {
+      "id": 190,
+      "word": "abz\u00e4hlen",
+      "selection": 0
+    },
+    {
+      "id": 191,
+      "word": "verfassen",
+      "selection": 0
+    },
+    {
+      "id": 192,
+      "word": "einteilen",
+      "selection": 0
+    },
+    {
+      "id": 193,
+      "word": "verwalten",
+      "selection": 0
+    },
+    {
+      "id": 194,
+      "word": "exportieren",
+      "selection": 0
+    },
+    {
+      "id": 195,
+      "word": "aufforsten",
+      "selection": 0
+    },
+    {
+      "id": 196,
+      "word": "klettern",
+      "selection": 0
+    },
+    {
+      "id": 197,
+      "word": "sitzen",
+      "selection": 0
+    },
+    {
+      "id": 198,
+      "word": "feilen",
+      "selection": 0
+    },
+    {
+      "id": 199,
+      "word": "nageln",
+      "selection": 0
+    },
+    {
+      "id": 200,
+      "word": "instand setzen",
+      "selection": 0
+    },
+    {
+      "id": 201,
+      "word": "beraten",
+      "selection": 0
+    },
+    {
+      "id": 202,
+      "word": "sich verbr\u00fcdern",
+      "selection": 0
+    },
+    {
+      "id": 203,
+      "word": "eindringen",
+      "selection": 0
+    },
+    {
+      "id": 204,
+      "word": "Wohlt\u00e4tig sein",
+      "selection": 0
+    },
+    {
+      "id": 205,
+      "word": "sich vereinigen",
+      "selection": 0
+    },
+    {
+      "id": 206,
+      "word": "versto\u00dfen",
+      "selection": 0
+    },
+    {
+      "id": 207,
+      "word": "verzichten",
+      "selection": 0
+    },
+    {
+      "id": 208,
+      "word": "anfragen",
+      "selection": 0
+    },
+    {
+      "id": 209,
+      "word": "einsam leben",
+      "selection": 0
+    },
+    {
+      "id": 210,
+      "word": "braten",
+      "selection": 0
+    },
+    {
+      "id": 211,
+      "word": "pflastern",
+      "selection": 0
+    },
+    {
+      "id": 212,
+      "word": "beibringen",
+      "selection": 0
+    },
+    {
+      "id": 213,
+      "word": "pr\u00e4sentieren",
+      "selection": 0
+    },
+    {
+      "id": 214,
+      "word": "gebieten",
+      "selection": 0
+    },
+    {
+      "id": 215,
+      "word": "berichtigen",
+      "selection": 0
+    },
+    {
+      "id": 216,
+      "word": "wahrnehmen",
+      "selection": 0
+    },
+    {
+      "id": 217,
+      "word": "beurteilen",
+      "selection": 0
+    },
+    {
+      "id": 218,
+      "word": "laborieren",
+      "selection": 0
+    },
+    {
+      "id": 219,
+      "word": "garnieren",
+      "selection": 0
+    },
+    {
+      "id": 220,
+      "word": "malen",
+      "selection": 0
+    },
+    {
+      "id": 221,
+      "word": "erfinden",
+      "selection": 0
+    },
+    {
+      "id": 222,
+      "word": "veranschlagen",
+      "selection": 0
+    },
+    {
+      "id": 223,
+      "word": "sprachforschen",
+      "selection": 0
+    },
+    {
+      "id": 224,
+      "word": "vorkehren",
+      "selection": 0
+    },
+    {
+      "id": 225,
+      "word": "sortieren",
+      "selection": 0
+    },
+    {
+      "id": 226,
+      "word": "erwerben",
+      "selection": 0
+    },
+    {
+      "id": 227,
+      "word": "m\u00e4hen",
+      "selection": 0
+    },
+    {
+      "id": 228,
+      "word": "laufen",
+      "selection": 0
+    },
+    {
+      "id": 229,
+      "word": "beobachten",
+      "selection": 0
+    },
+    {
+      "id": 230,
+      "word": "einpassen",
+      "selection": 0
+    },
+    {
+      "id": 231,
+      "word": "schlossern",
+      "selection": 0
+    },
+    {
+      "id": 232,
+      "word": "montieren",
+      "selection": 0
+    },
+    {
+      "id": 233,
+      "word": "Ern\u00e4hren",
+      "selection": 0
+    },
+    {
+      "id": 234,
+      "word": "anstreichen",
+      "selection": 0
+    },
+    {
+      "id": 235,
+      "word": "vormachen",
+      "selection": 0
+    },
+    {
+      "id": 236,
+      "word": "theaterspielen",
+      "selection": 0
+    },
+    {
+      "id": 237,
+      "word": "dirigieren",
+      "selection": 0
+    },
+    {
+      "id": 238,
+      "word": "sicherstellen",
+      "selection": 0
+    },
+    {
+      "id": 239,
+      "word": "wiederholen",
+      "selection": 0
+    },
+    {
+      "id": 240,
+      "word": "philosophieren",
+      "selection": 0
+    },
+    {
+      "id": 241,
+      "word": "mikroskopieren",
+      "selection": 0
+    },
+    {
+      "id": 242,
+      "word": "versch\u00f6nern",
+      "selection": 0
+    },
+    {
+      "id": 243,
+      "word": "fotografieren",
+      "selection": 0
+    },
+    {
+      "id": 244,
+      "word": "ausarbeiten",
+      "selection": 0
+    },
+    {
+      "id": 245,
+      "word": "errechnen",
+      "selection": 0
+    },
+    {
+      "id": 246,
+      "word": "dichten",
+      "selection": 0
+    },
+    {
+      "id": 247,
+      "word": "programmieren",
+      "selection": 0
+    },
+    {
+      "id": 248,
+      "word": "eintragen",
+      "selection": 0
+    },
+    {
+      "id": 249,
+      "word": "importieren",
+      "selection": 0
+    },
+    {
+      "id": 250,
+      "word": "s\u00e4en",
+      "selection": 0
+    },
+    {
+      "id": 251,
+      "word": "rennen",
+      "selection": 0
+    },
+    {
+      "id": 252,
+      "word": "sich beruhigen",
+      "selection": 0
+    },
+    {
+      "id": 253,
+      "word": "ausbessern",
+      "selection": 0
+    },
+    {
+      "id": 254,
+      "word": "zimmern",
+      "selection": 0
+    },
+    {
+      "id": 255,
+      "word": "reparieren",
+      "selection": 0
+    },
+    {
+      "id": 256,
+      "word": "heilen",
+      "selection": 0
+    },
+    {
+      "id": 257,
+      "word": "vers\u00f6hnen",
+      "selection": 0
+    },
+    {
+      "id": 258,
+      "word": "besiegen",
+      "selection": 0
+    },
+    {
+      "id": 259,
+      "word": "entsagen",
+      "selection": 0
+    },
+    {
+      "id": 260,
+      "word": "begleiten",
+      "selection": 0
+    },
+    {
+      "id": 261,
+      "word": "sich zur\u00fcckziehen",
+      "selection": 0
+    },
+    {
+      "id": 262,
+      "word": "Beistehen",
+      "selection": 0
+    },
+    {
+      "id": 263,
+      "word": "zusammenkommen",
+      "selection": 0
+    },
+    {
+      "id": 264,
+      "word": "zerpfl\u00fccken",
+      "selection": 0
+    },
+    {
+      "id": 265,
+      "word": "vermeiden",
+      "selection": 0
+    },
+    {
+      "id": 266,
+      "word": "unterhalten",
+      "selection": 0
+    },
+    {
+      "id": 267,
+      "word": "sich verschlie\u00dfen",
+      "selection": 0
+    },
+    {
+      "id": 268,
+      "word": "speisen",
+      "selection": 0
+    },
+    {
+      "id": 269,
+      "word": "klecksen",
+      "selection": 0
+    },
+    {
+      "id": 270,
+      "word": "bekehren",
+      "selection": 0
+    },
+    {
+      "id": 271,
+      "word": "demonstrieren",
+      "selection": 0
+    },
+    {
+      "id": 272,
+      "word": "befehlen",
+      "selection": 0
+    },
+    {
+      "id": 273,
+      "word": "nachmessen",
+      "selection": 0
+    },
+    {
+      "id": 274,
+      "word": "nachmachen",
+      "selection": 0
+    },
+    {
+      "id": 275,
+      "word": "auskl\u00fcgeln",
+      "selection": 0
+    },
+    {
+      "id": 276,
+      "word": "durchleuchten",
+      "selection": 0
+    },
+    {
+      "id": 277,
+      "word": "renovieren",
+      "selection": 0
+    },
+    {
+      "id": 278,
+      "word": "t\u00f6pfern",
+      "selection": 0
+    },
+    {
+      "id": 279,
+      "word": "erschaffen",
+      "selection": 0
+    },
+    {
+      "id": 280,
+      "word": "dividieren",
+      "selection": 0
+    },
+    {
+      "id": 281,
+      "word": "schriftstelllern",
+      "selection": 0
+    },
+    {
+      "id": 282,
+      "word": "einleiten",
+      "selection": 0
+    },
+    {
+      "id": 283,
+      "word": "beurkunden",
+      "selection": 0
+    },
+    {
+      "id": 284,
+      "word": "gesch\u00e4ften",
+      "selection": 0
+    },
+    {
+      "id": 285,
+      "word": "hirten",
+      "selection": 0
+    },
+    {
+      "id": 286,
+      "word": "tauchen",
+      "selection": 0
+    },
+    {
+      "id": 287,
+      "word": "verharren",
+      "selection": 0
+    },
+    {
+      "id": 288,
+      "word": "feinschleifen",
+      "selection": 0
+    },
+    {
+      "id": 289,
+      "word": "mei\u00dfeln",
+      "selection": 0
+    },
+    {
+      "id": 290,
+      "word": "anschrauben",
+      "selection": 0
+    },
+    {
+      "id": 291,
+      "word": "Sich absondern",
+      "selection": 0
+    },
+    {
+      "id": 292,
+      "word": "trinken",
+      "selection": 0
+    },
+    {
+      "id": 293,
+      "word": "sudeln",
+      "selection": 0
+    },
+    {
+      "id": 294,
+      "word": "werben",
+      "selection": 0
+    },
+    {
+      "id": 295,
+      "word": "enth\u00fcllen",
+      "selection": 0
+    },
+    {
+      "id": 296,
+      "word": "regieren",
+      "selection": 0
+    },
+    {
+      "id": 297,
+      "word": "bewachen",
+      "selection": 0
+    },
+    {
+      "id": 298,
+      "word": "kopieren",
+      "selection": 0
+    },
+    {
+      "id": 299,
+      "word": "bezweifeln",
+      "selection": 0
+    },
+    {
+      "id": 300,
+      "word": "entwirren",
+      "selection": 0
+    },
+    {
+      "id": 301,
+      "word": "frisieren",
+      "selection": 0
+    },
+    {
+      "id": 302,
+      "word": "Schriften malen",
+      "selection": 0
+    },
+    {
+      "id": 303,
+      "word": "aufzeichnen",
+      "selection": 0
+    },
+    {
+      "id": 304,
+      "word": "budgetieren",
+      "selection": 0
+    },
+    {
+      "id": 305,
+      "word": "beschreiben",
+      "selection": 0
+    },
+    {
+      "id": 306,
+      "word": "vorbestimmen",
+      "selection": 0
+    },
+    {
+      "id": 307,
+      "word": "registrieren",
+      "selection": 0
+    },
+    {
+      "id": 308,
+      "word": "anpreisen",
+      "selection": 0
+    },
+    {
+      "id": 309,
+      "word": "graben",
+      "selection": 0
+    },
+    {
+      "id": 310,
+      "word": "umhergehen",
+      "selection": 0
+    },
+    {
+      "id": 311,
+      "word": "verweilen",
+      "selection": 0
+    },
+    {
+      "id": 312,
+      "word": "l\u00f6ten",
+      "selection": 0
+    },
+    {
+      "id": 313,
+      "word": "durchbohren",
+      "selection": 0
+    },
+    {
+      "id": 314,
+      "word": "zusammenf\u00fcgen",
+      "selection": 0
+    },
+    {
+      "id": 315,
+      "word": "tr\u00f6sten",
+      "selection": 0
+    },
+    {
+      "id": 316,
+      "word": "sich versammeln",
+      "selection": 0
+    },
+    {
+      "id": 317,
+      "word": "angreifen",
+      "selection": 0
+    },
+    {
+      "id": 318,
+      "word": "erleiden",
+      "selection": 0
+    },
+    {
+      "id": 319,
+      "word": "anfreunden",
+      "selection": 0
+    },
+    {
+      "id": 320,
+      "word": "Ermuntern",
+      "selection": 0
+    },
+    {
+      "id": 321,
+      "word": "beiwohnen",
+      "selection": 0
+    },
+    {
+      "id": 322,
+      "word": "revolutionieren",
+      "selection": 0
+    },
+    {
+      "id": 323,
+      "word": "z\u00f6gern",
+      "selection": 0
+    },
+    {
+      "id": 324,
+      "word": "sich zugesellen",
+      "selection": 0
+    },
+    {
+      "id": 325,
+      "word": "sich isolieren",
+      "selection": 0
+    },
+    {
+      "id": 326,
+      "word": "schwatzen",
+      "selection": 0
+    },
+    {
+      "id": 327,
+      "word": "schmieren",
+      "selection": 0
+    },
+    {
+      "id": 328,
+      "word": "\u00fcberreden",
+      "selection": 0
+    },
+    {
+      "id": 329,
+      "word": "sich produzieren",
+      "selection": 0
+    },
+    {
+      "id": 330,
+      "word": "kommandieren",
+      "selection": 0
+    },
+    {
+      "id": 331,
+      "word": "korrigieren",
+      "selection": 0
+    },
+    {
+      "id": 332,
+      "word": "nachahmen",
+      "selection": 0
+    },
+    {
+      "id": 333,
+      "word": "ausstudieren",
+      "selection": 0
+    },
+    {
+      "id": 334,
+      "word": "ausforschen",
+      "selection": 0
+    },
+    {
+      "id": 335,
+      "word": "polieren",
+      "selection": 0
+    },
+    {
+      "id": 336,
+      "word": "nachformen",
+      "selection": 0
+    },
+    {
+      "id": 337,
+      "word": "skizzieren",
+      "selection": 0
+    },
+    {
+      "id": 338,
+      "word": "z\u00e4hlen",
+      "selection": 0
+    },
+    {
+      "id": 339,
+      "word": "notieren",
+      "selection": 0
+    },
+    {
+      "id": 340,
+      "word": "veranlassen",
+      "selection": 0
+    },
+    {
+      "id": 341,
+      "word": "klassifizieren",
+      "selection": 0
+    },
+    {
+      "id": 342,
+      "word": "aneignen",
+      "selection": 0
+    },
+    {
+      "id": 343,
+      "word": "fuhrwerken",
+      "selection": 0
+    },
+    {
+      "id": 344,
+      "word": "auswandern",
+      "selection": 0
+    },
+    {
+      "id": 345,
+      "word": "bummeln",
+      "selection": 0
+    },
+    {
+      "id": 346,
+      "word": "abzirkeln",
+      "selection": 0
+    },
+    {
+      "id": 347,
+      "word": "aufbrechen",
+      "selection": 0
+    },
+    {
+      "id": 348,
+      "word": "befestigen",
+      "selection": 0
+    }
+  ]
+}
