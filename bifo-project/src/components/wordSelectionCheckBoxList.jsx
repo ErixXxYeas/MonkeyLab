@@ -30,6 +30,8 @@ const WordSelectionCheckBoxList = (props) => {
             selectionWords //map zählt die wörter auf die in unserer Array ist (selectionWords ist die prop words)
           ) => (
             <WordSelection
+              chosenGoodSelection={props.chosenGoodSelection}
+              chosenBadSelection={props.chosenBadSelection}
               goodSelections={props.goodSelection}
               badSelections={props.badSelection}
               key={selectionWords.id}

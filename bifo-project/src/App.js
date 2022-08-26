@@ -90,6 +90,8 @@ function App() {
     <React.Fragment>
       <main className="container">
         <WordSelectionList
+          chosenGoodSelection={chosenGoodSelection}
+          chosenBadSelection={chosenBadSelection}
           goodSelection={goodSelection}
           badSelection={badSelection}
           int={int}

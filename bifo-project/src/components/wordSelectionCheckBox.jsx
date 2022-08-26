@@ -3,11 +3,19 @@ import styles from "./wordSelectionCheckBoxStyler.module.css";
 
 const wordSelectionCheckBox = (props) => {
   let handleChangeGood = () => {
-    props.onHandleChangeGood(props.selectionWord); //schickt
+    if (props.chosenGoodSelection == 6) {
+      console.log("Bitte eines ausschalten");
+    } else {
+      props.onHandleChangeGood(props.selectionWord); //schickt
+    }
   };
 
   let handleChangeBad = () => {
-    props.onHandleChangeBad(props.selectionWord);
+    if (props.chosenBadSelection == 6) {
+      console.log("Bitte eines ausschalten");
+    } else {
+      props.onHandleChangeBad(props.selectionWord);
+    }
   };
 
   let handleChangeNeutral = () => {
@@ -24,7 +32,7 @@ const wordSelectionCheckBox = (props) => {
           checked={props.selectionWord.selection === 1}
           onChange={handleChangeGood}
           onClick={handleChangeNeutral}
-          disabled={props.goodSelections}
+          //disabled={props.goodSelections}
         />
 
         <input
@@ -33,7 +41,7 @@ const wordSelectionCheckBox = (props) => {
           checked={props.selectionWord.selection === 2}
           onChange={handleChangeBad}
           onClick={handleChangeNeutral}
-          disabled={props.badSelections}
+          //disabled={props.badSelections}
         />
       </div>
       {props.selectionWord.selection}
