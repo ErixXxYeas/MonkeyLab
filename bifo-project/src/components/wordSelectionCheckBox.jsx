@@ -16,25 +16,27 @@ const wordSelectionCheckBox = (props) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.word}>{props.selectionWord.name}</div>
+      <div className={styles.word}>{props.selectionWord.word}</div>
       <div className={styles.radio}>
         <input
           type="radio"
           value={1}
-          checked={props.selectionWord.auswahl === 1}
+          checked={props.selectionWord.selection === 1}
           onChange={handleChangeGood}
           onClick={handleChangeNeutral}
+          disabled={props.goodSelections}
         />
 
         <input
           type="radio"
           value={2}
-          checked={props.selectionWord.auswahl === 2}
+          checked={props.selectionWord.selection === 2}
           onChange={handleChangeBad}
           onClick={handleChangeNeutral}
+          disabled={props.badSelections}
         />
       </div>
-      {props.selectionWord.auswahl}
+      {props.selectionWord.selection}
     </div>
   );
 };
