@@ -32,7 +32,6 @@ const wordSelectionCheckBox = (props) => {
           checked={props.selectionWord.selection === 1}
           onChange={handleChangeGood}
           onClick={handleChangeNeutral}
-          //disabled={props.goodSelections}
         />
 
         <input
@@ -41,7 +40,6 @@ const wordSelectionCheckBox = (props) => {
           checked={props.selectionWord.selection === 2}
           onChange={handleChangeBad}
           onClick={handleChangeNeutral}
-          //disabled={props.badSelections}
         />
       </div>
       {props.selectionWord.selection}
