@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import wordsJson from "./n29_words.json";
 
 function App() {
-  const pages = 28;
+  const pages = 29;
   const [int, setInt] = useState(pages);
   const [lastInt, setLastInt] = useState(0);
   const [words, setWords] = useState(wordsJson.words); // state von wörter
@@ -77,12 +77,16 @@ function App() {
   };
 
   const handleNextPage = () => {
-    if (goodSelection && badSelection) {
+    if (int <= 347) {
+      //if (goodSelection && badSelection) {
       let newInt = int + pages;
       setLastInt(int);
       setInt(newInt);
-    } else {
+      /* } else {
       alert("wählen sie 6 gute & schlechte Wörter aus");
+   } */
+    } else {
+      console.log("letzte seite");
     }
   };
 
