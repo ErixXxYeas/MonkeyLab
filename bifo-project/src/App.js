@@ -128,37 +128,36 @@ function App() {
   };
 
   const evaluationProcess = () => {
-    let scanner = [20, 50, 59, 110, 139, 166, 200, 204, 255, 262, 314, 320];
+    let scanner = [20, 50, 58, 110, 141, 166, 200, 203, 255, 261, 314, 319];
     let newEvaluation = [...evaluation];
     let goodSelections = 0;
     let badSelections = 0;
 
-    /*let scanner2 = 50;
-    let scanner3 = 59;
-    let scanner4 = 110;
-    let scanner5 = 139;
-    let scanner6 = 166;
-    let scanner7 = 200;
-    let scanner8 = 204;
-    let scanner9 = 255;
-    let scanner10 = 262;
-    let scanner11 = 314;
-    let scanner12 = 320;
-    */
+    for (let evaluationRow = 0; evaluationRow <= 11; evaluationRow++) {
+      for (let i = 0; i <= 11; i++) {
+        let scannerLoc = scanner[i];
+        if (words[scannerLoc].selection === 1) {
+          goodSelections++;
+        } else if (words[scannerLoc].selection === 2) {
+          badSelections++;
+        }
+      }
+      newEvaluation[evaluationRow].good = goodSelections;
+      newEvaluation[evaluationRow].bad = badSelections;
+      setEvalutation(() => newEvaluation);
 
-    for (let i = 0; i <= 12; i++) {
-      let scannerLoc = scanner[i];
-      if (words[scannerLoc].selection === 1) {
-        goodSelections++;
-      } else if (words[scannerLoc].selection === 2) {
-        badSelections++;
+      for (let scannerUpdate = 0; scannerUpdate <= 11; scannerUpdate++) {
+        scanner[scannerUpdate] += 1;
+
+        switch (scannerUpdate) {
+          case value:
+            break;
+
+          default:
+            break;
+        }
       }
     }
-
-    newEvaluation[0].good = goodSelections;
-    newEvaluation[0].bad = badSelections;
-
-    setEvalutation(() => newEvaluation);
   };
 
   const handleNextPage = () => {
