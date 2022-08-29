@@ -4,6 +4,7 @@ import WortAuswahl from "./components/wortAuswahl";
 import WordSelectionList from "./components/wordSelectionCheckBoxList";
 import React, { useState, useEffect } from "react";
 import wordsJson from "./n29_words.json";
+import selectionArray from "./selection.json";
 
 function App() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -14,52 +15,7 @@ function App() {
   const [chosenBadSelection, setChosenBadSelection] = useState(0);
   const [goodSelection, setGoodSelection] = useState(false);
   const [badSelection, setBadSelection] = useState(false);
-  const [evaluation, setEvalutation] = useState([
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-    {
-      good: 0,
-      bad: 0,
-    },
-  ]);
+  const [evaluation, setEvalutation] = useState(selectionArray);
 
   const handleCheckAuswahlGood = (value) => {
     let newWordsArray = [...words]; //* erstellt ein neues array dass gleich ist wie die words array
@@ -145,15 +101,48 @@ function App() {
       newEvaluation[evaluationRow].good = goodSelections;
       newEvaluation[evaluationRow].bad = badSelections;
       setEvalutation(() => newEvaluation);
+      goodSelections = 0;
+      badSelections = 0;
 
       for (let scannerUpdate = 0; scannerUpdate <= 11; scannerUpdate++) {
         scanner[scannerUpdate] += 1;
-
-        switch (scannerUpdate) {
-          case value:
+        let scannerColumn = scanner[scannerUpdate];
+        switch (scannerColumn) {
+          case 28:
+            scanner[scannerUpdate] = 0;
             break;
-
-          default:
+          case 57:
+            scanner[scannerUpdate] = 29;
+            break;
+          case 86:
+            scanner[scannerUpdate] = 58;
+            break;
+          case 115:
+            scanner[scannerUpdate] = 87;
+            break;
+          case 144:
+            scanner[scannerUpdate] = 116;
+            break;
+          case 173:
+            scanner[scannerUpdate] = 145;
+            break;
+          case 202:
+            scanner[scannerUpdate] = 174;
+            break;
+          case 231:
+            scanner[scannerUpdate] = 203;
+            break;
+          case 260:
+            scanner[scannerUpdate] = 232;
+            break;
+          case 289:
+            scanner[scannerUpdate] = 261;
+            break;
+          case 318:
+            scanner[scannerUpdate] = 290;
+            break;
+          case 347:
+            scanner[scannerUpdate] = 319;
             break;
         }
       }
