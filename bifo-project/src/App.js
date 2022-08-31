@@ -8,8 +8,8 @@ import selectionArray from "./selection.json";
 
 function App() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
-  const [int, setInt] = useState(pages); //* int gibt die maximale array stelle an die dargesstellt wird
-  const [lastInt, setLastInt] = useState(0); //* lastInt gibt die erste stelle im array an die dargestellt wird.
+  const [maxArray, setMaxArray] = useState(pages); //* maxArray gibt die maximale array stelle an die dargesstellt wird
+  const [minArray, setminArray] = useState(0); //* minArray gibt die erste stelle im array an die dargestellt wird.
   const [words, setWords] = useState(wordsJson.words); //* state von wörter
   const [chosenGoodSelection, setChosenGoodSelection] = useState(0);
   const [chosenBadSelection, setChosenBadSelection] = useState(0);
@@ -36,8 +36,8 @@ function App() {
     //* useEffect wird nach jedem render der seite und update der states durchgeführt, dies verwenden wir
     let chosenGoodSelection = 0; //* um die anzahl der ausgewählten guten und schlecht wörter zu im Blick zu halten
     let chosenBadSelection = 0;
-    for (let i = lastInt; i <= int - 1; i++) {
-      //* geht durch das array and der stelle lastInt bis int durch
+    for (let i = minArray; i <= maxArray - 1; i++) {
+      //* geht durch das array and der stelle minArray bis maxArray durch
       if (words[i].selection === 1) {
         //* wenn es an der stelle eine auswahl von 1 gibt
         chosenGoodSelection++; //* wird die variable um eins gestiegen
@@ -79,12 +79,12 @@ function App() {
   };
 
   const handleLastPage = () => {
-    if (lastInt <= 0) {
+    if (minArray <= 0) {
       alert("Sie können nicht zurück gehen");
     } else {
-      let newInt = lastInt - pages;
-      setInt(lastInt);
-      setLastInt(newInt);
+      let newArray = minArray - pages;
+      setMaxArray(minArray);
+      setminArray(newArray);
     }
   };
 
@@ -156,11 +156,11 @@ function App() {
   };
 
   const handleNextPage = () => {
-    if (int <= 347) {
+    if (maxArray <= 347) {
       //*if (goodSelection && badSelection) {
-      let newInt = int + pages;
-      setLastInt(int);
-      setInt(newInt);
+      let newArray = maxArray + pages;
+      setminArray(maxArray);
+      setMaxArray(newArray);
       /* } else {
       alert("wählen sie 6 gute & schlechte Wörter aus");
    } */
@@ -177,8 +177,8 @@ function App() {
           chosenBadSelection={chosenBadSelection}
           goodSelection={goodSelection}
           badSelection={badSelection}
-          int={int}
-          lastInt={lastInt}
+          maxArray={maxArray}
+          minArray={minArray}
           words={words} //* prop: das ganze array wird als prop weiter gegeben
           onCheckAuswahlGood={handleCheckAuswahlGood}
           onCheckAuswahlBad={handleCheckAuswahlBad}
@@ -187,8 +187,8 @@ function App() {
           onHandleLastPage={handleLastPage}
         ></WordSelectionList>
         <button onClick={evaluationProcess}>Start evaluation</button>
-        <div>Int{int}</div>
-        lastInt{lastInt}
+        <div>Int{maxArray}</div>
+        minArray{minArray}
         <div>goodSelection {chosenGoodSelection}</div>
         badSelection {chosenBadSelection}
       </main>

@@ -4,7 +4,7 @@ import PageButton from "./pageButton";
 
 const WordSelectionCheckBoxList = (props) => {
   const handleCheckAuswahlGood = (value) => {
-    props.onCheckAuswahlGood(value);
+    props.onCheckAuswahlGood(value, 1);
   };
 
   const handleCheckAuswahlBad = (value) => {
@@ -24,7 +24,7 @@ const WordSelectionCheckBoxList = (props) => {
   return (
     <div>
       <div>
-        {props.words.slice(props.lastInt, props.int).map(
+        {props.words.slice(props.minArry, props.maxArray).map(
           //slice: gibt von welchen teil der array die wörter genommen werden
           (
             selectionWords //map zählt die wörter auf die in unserer Array ist (selectionWords ist die prop words)
