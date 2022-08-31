@@ -6,7 +6,7 @@ const wordSelectionCheckBox = (props) => {
     if (props.chosenGoodSelection == 6) {
       console.log("Bitte eines ausschalten");
     } else {
-      props.onHandleChangeGood(props.selectionWord); //schickt
+      props.onHandleChangeSelection(props.selectionWord, 1); //schickt
     }
   };
 
@@ -14,12 +14,16 @@ const wordSelectionCheckBox = (props) => {
     if (props.chosenBadSelection == 6) {
       console.log("Bitte eines ausschalten");
     } else {
-      props.onHandleChangeBad(props.selectionWord);
+      props.onHandleChangeSelection(props.selectionWord, 2);
     }
   };
 
-  let handleChangeNeutral = () => {
-    props.onHandleChangeNeutral(props.selectionWord);
+  let handleChangeNeutralGood = () => {
+    props.onHandleChangeNeutral(props.selectionWord, 1);
+  };
+
+  let handleChangeNeutralBad = () => {
+    props.onHandleChangeNeutral(props.selectionWord, 2);
   };
 
   return (
@@ -31,7 +35,7 @@ const wordSelectionCheckBox = (props) => {
           value={1}
           checked={props.selectionWord.selection === 1}
           onChange={handleChangeGood}
-          onClick={handleChangeNeutral}
+          onClick={handleChangeNeutralGood}
         />
 
         <input
@@ -39,7 +43,7 @@ const wordSelectionCheckBox = (props) => {
           value={2}
           checked={props.selectionWord.selection === 2}
           onChange={handleChangeBad}
-          onClick={handleChangeNeutral}
+          onClick={handleChangeNeutralBad}
         />
       </div>
       {props.selectionWord.selection}
