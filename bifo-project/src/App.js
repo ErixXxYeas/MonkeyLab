@@ -30,9 +30,10 @@ function App() {
   };
 
   useEffect(() => {
-    let chosenGoodSelections = 0; //* um die anzahl der ausgewählten guten und schlecht wörter im Blick zu halten
-    let chosenBadSelections = 0;
-    for (let i = lastInt; i <= int; i++) {
+    //* useEffect wird nach jedem render der seite und update der states durchgeführt, dies verwenden wir
+    let chosenGoodSelection = 0; //* um die anzahl der ausgewählten guten und schlecht wörter zu im Blick zu halten
+    let chosenBadSelection = 0;
+    for (let i = lastInt; i <= int - 1; i++) {
       //* geht durch das array and der stelle lastInt bis int durch
       if (words[i].selection === 1) {
         //* wenn es an der stelle eine auswahl von 1 gibt
@@ -87,7 +88,7 @@ function App() {
     let goodSelections = 0;
     let badSelections = 0;
 
-    for (let evaluationRow = 0; evaluationRow <= 11; evaluationRow++) {
+    for (let evaluationRow = 0; evaluationRow <= 28; evaluationRow++) {
       for (let i = 0; i <= 11; i++) {
         let scannerLoc = scanner[i];
         if (words[scannerLoc].selection === 1) {
@@ -106,44 +107,45 @@ function App() {
         scanner[scannerUpdate] += 1;
         let scannerColumn = scanner[scannerUpdate];
         switch (scannerColumn) {
-          case 28:
+          case 29:
             scanner[scannerUpdate] = 0;
             break;
-          case 57:
+          case 58:
             scanner[scannerUpdate] = 29;
             break;
-          case 86:
+          case 87:
             scanner[scannerUpdate] = 58;
             break;
-          case 115:
+          case 116:
             scanner[scannerUpdate] = 87;
             break;
-          case 144:
+          case 145:
             scanner[scannerUpdate] = 116;
             break;
-          case 173:
+          case 174:
             scanner[scannerUpdate] = 145;
             break;
-          case 202:
+          case 203:
             scanner[scannerUpdate] = 174;
             break;
-          case 231:
+          case 232:
             scanner[scannerUpdate] = 203;
             break;
-          case 260:
+          case 261:
             scanner[scannerUpdate] = 232;
             break;
-          case 289:
+          case 290:
             scanner[scannerUpdate] = 261;
             break;
-          case 318:
+          case 319:
             scanner[scannerUpdate] = 290;
             break;
-          case 347:
+          case 348:
             scanner[scannerUpdate] = 319;
             break;
         }
       }
+      console.log(scanner);
     }
   };
 
