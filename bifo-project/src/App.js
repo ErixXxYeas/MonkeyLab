@@ -31,8 +31,8 @@ function App() {
 
   useEffect(() => {
     //* useEffect wird nach jedem render der seite und update der states durchgeführt, dies verwenden wir
-    let chosenGoodSelection = 0; //* um die anzahl der ausgewählten guten und schlecht wörter zu im Blick zu halten
-    let chosenBadSelection = 0;
+    let chosenGoodSelections = 0; //* um die anzahl der ausgewählten guten und schlecht wörter zu im Blick zu halten
+    let chosenBadSelections = 0;
     for (let i = lastInt; i <= int - 1; i++) {
       //* geht durch das array and der stelle lastInt bis int durch
       if (words[i].selection === 1) {
