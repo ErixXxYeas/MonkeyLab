@@ -3,16 +3,12 @@ import WordSelection from "./wordSelectionCheckBox";
 import PageButton from "./pageButton";
 
 const WordSelectionCheckBoxList = (props) => {
-  const handleCheckAuswahlGood = (value) => {
-    props.onCheckAuswahlGood(value, 1);
+  const handleCheckAuswahl = (value, Int) => {
+    props.onCheckAuswahl(value, Int);
   };
 
-  const handleCheckAuswahlBad = (value) => {
-    props.onCheckAuswahlBad(value);
-  };
-
-  const handleCheckAuswahlNeutral = (value) => {
-    props.onCheckAuswahlNeutral(value);
+  const handleCheckAuswahlNeutral = (value, Int) => {
+    props.onCheckAuswahlNeutral(value, Int);
   };
   const handleLastPage = () => {
     props.onHandleLastPage();
@@ -23,8 +19,8 @@ const WordSelectionCheckBoxList = (props) => {
 
   return (
     <div>
-      <div>
-        {props.words.slice(props.minArry, props.maxArray).map(
+      <div style={{ columns: 1 }}>
+        {props.words.slice(props.lastInt, props.int).map(
           //slice: gibt von welchen teil der array die wörter genommen werden
           (
             selectionWords //map zählt die wörter auf die in unserer Array ist (selectionWords ist die prop words)
@@ -36,8 +32,7 @@ const WordSelectionCheckBoxList = (props) => {
               badSelections={props.badSelection}
               key={selectionWords.id}
               selectionWord={selectionWords} //prop: selectionword beinhaltet alle eigenschaften vom prop words
-              onHandleChangeGood={handleCheckAuswahlGood}
-              onHandleChangeBad={handleCheckAuswahlBad}
+              onHandleChangeSelection={handleCheckAuswahl}
               onHandleChangeNeutral={handleCheckAuswahlNeutral}
             />
           )

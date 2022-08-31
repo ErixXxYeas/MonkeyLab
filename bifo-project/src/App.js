@@ -17,21 +17,18 @@ function App() {
   const [badSelection, setBadSelection] = useState(false);
   const [evaluation, setEvalutation] = useState(selectionArray.selection);
 
-  const handleCheckAuswahlGood = (value) => {
+  const handleCheckAuswahl = (value, Int) => {
     let newWordsArray = [...words]; //* erstellt ein neues array dass gleich ist wie die words array
     let Index = newWordsArray.indexOf(value); //* erstellt eine Zahl die, die stelle im array anzeigt welches gleich ist wie der gegebene "value"
     newWordsArray[Index] = { ...value }; //* verändert den array and der index stelle mit dem neuen Wert
-    newWordsArray[Index].selection = 1; //* ändert die selection zu eins
+    if (Int === 1) {
+      newWordsArray[Index].selection = 1; //* ändert die selection zu eins
+    } else if (Int === 2) {
+      newWordsArray[Index].selection = 2;
+    }
     setWords(() => newWordsArray); //* ersätzt die alte array mit der neuen
   };
 
-  const handleCheckAuswahlBad = (value) => {
-    let newWordsArray = [...words];
-    let Index = newWordsArray.indexOf(value);
-    newWordsArray[Index] = { ...value };
-    newWordsArray[Index].selection = 2;
-    setWords(() => newWordsArray);
-  };
   useEffect(() => {
     //* useEffect wird nach jedem render der seite und update der states durchgeführt, dies verwenden wir
     let chosenGoodSelection = 0; //* um die anzahl der ausgewählten guten und schlecht wörter zu im Blick zu halten
@@ -40,26 +37,23 @@ function App() {
       //* geht durch das array and der stelle minArray bis maxArray durch
       if (words[i].selection === 1) {
         //* wenn es an der stelle eine auswahl von 1 gibt
-        chosenGoodSelection++; //* wird die variable um eins gestiegen
+        chosenGoodSelections++; //* wird die variable um eins gestiegen
       } else if (words[i].selection === 2) {
         //* wenn es an der stelle eine auswahl von 2 gibt
-        chosenBadSelection++; //* wird die variable um eins gestiegen
+        chosenBadSelections++; //* wird die variable um eins gestiegen
       }
     }
-    setChosenGoodSelection(chosenGoodSelection); //* dies ändert den "globalen" state der vairable
-    setChosenBadSelection(chosenBadSelection);
+    setChosenGoodSelection(chosenGoodSelections); //* dies ändert den "globalen" state der vairable
+    setChosenBadSelection(chosenBadSelections); //! Man sollte setState nie in useEffect verwenden, solange man weiss wie man eine infinite loop vermeidet.
     checkBoolean();
     console.log(evaluation);
   });
 
-  const handleCheckAuswahlNeutral = (value) => {
+  const handleCheckAuswahlNeutral = (value, Int) => {
     let newWordsArray = [...words];
     let Index = newWordsArray.indexOf(value);
-    if (
-      newWordsArray[Index].selection == 1 ||
-      newWordsArray[Index].selection == 2
-    ) {
-      newWordsArray[Index] = { ...value };
+    newWordsArray[Index] = { ...value };
+    if (Int == newWordsArray[Index].selection) {
       newWordsArray[Index].selection = 0;
       setWords(() => newWordsArray);
     }
@@ -180,8 +174,7 @@ function App() {
           maxArray={maxArray}
           minArray={minArray}
           words={words} //* prop: das ganze array wird als prop weiter gegeben
-          onCheckAuswahlGood={handleCheckAuswahlGood}
-          onCheckAuswahlBad={handleCheckAuswahlBad}
+          onCheckAuswahl={handleCheckAuswahl}
           onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
           onHandleNextPage={handleNextPage}
           onHandleLastPage={handleLastPage}
