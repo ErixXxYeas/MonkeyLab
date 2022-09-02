@@ -1,9 +1,21 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./wordSelectionCheckBoxStyler.module.css";
 
-const wordSelectionCheckBox = (props) => {
+const WordSelectionCheckBox = (props) => {
+  const [backgroundColor, setBackgroundColor] = useState("#cccccc");
+
+  useEffect(() => {
+    if (props.selectionWord.selection === 1) {
+      setBackgroundColor("green");
+    } else if (props.selectionWord.selection === 2) {
+      setBackgroundColor("red");
+    } else {
+      setBackgroundColor("#cccccc");
+    }
+  }, [props.selectionWord.selection]);
+
   let handleChangeGood = () => {
-    if (props.chosenGoodSelection == 6) {
+    if (props.chosenGoodSelection === 6) {
       console.log("Bitte eines ausschalten");
     } else {
       props.onHandleChangeSelection(props.selectionWord, 1); //schickt
@@ -11,7 +23,7 @@ const wordSelectionCheckBox = (props) => {
   };
 
   let handleChangeBad = () => {
-    if (props.chosenBadSelection == 6) {
+    if (props.chosenBadSelection === 6) {
       console.log("Bitte eines ausschalten");
     } else {
       props.onHandleChangeSelection(props.selectionWord, 2);
@@ -27,7 +39,10 @@ const wordSelectionCheckBox = (props) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ backgroundColor: backgroundColor }}
+    >
       <div className={styles.word}>{props.selectionWord.word}</div>
       <div className={styles.radio}>
         <input
@@ -51,4 +66,4 @@ const wordSelectionCheckBox = (props) => {
   );
 };
 
-export default wordSelectionCheckBox;
+export default WordSelectionCheckBox;
