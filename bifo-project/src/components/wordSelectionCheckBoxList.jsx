@@ -20,7 +20,7 @@ const WordSelectionCheckBoxList = (props) => {
   return (
     <div>
       <div style={{ columns: 1 }}>
-        {props.words.slice(props.lastInt, props.int).map(
+        {props.words.slice(props.minArray, props.maxArray).map(
           //slice: gibt von welchen teil der array die wörter genommen werden
           (
             selectionWords //map zählt die wörter auf die in unserer Array ist (selectionWords ist die prop words)
