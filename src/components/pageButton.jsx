@@ -1,5 +1,3 @@
-import React, { Component } from "react";
-
 const pageButtons = (props) => {
   const handleNextPage = () => {
     props.onNextPage();
