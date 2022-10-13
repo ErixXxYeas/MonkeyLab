@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import Bud from "./box";
 
 const WortAuswahl = (props) => {
