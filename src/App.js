@@ -1,6 +1,4 @@
-import logo from "./logo.svg";
 import "./App.css";
-import WortAuswahl from "./components/wortAuswahl";
 import WordSelectionList from "./components/wordSelectionCheckBoxList";
 import React, { useState, useEffect } from "react";
 import wordsJson from "./n29_words.json";
@@ -29,6 +27,7 @@ function App() {
     setWords(() => newWordsArray); //* ersätzt die alte array mit der neuen
   };
 
+  // eslint-disable-next-line
   useEffect(() => {
     //* useEffect wird nach jedem render der seite und update der states durchgeführt, dies verwenden wir
     let chosenGoodSelections = 0; //* um die anzahl der ausgewählten guten und schlecht wörter zu im Blick zu halten
@@ -43,7 +42,9 @@ function App() {
         chosenBadSelections++; //* wird die variable um eins gestiegen
       }
     }
+
     setChosenGoodSelection(chosenGoodSelections); //* dies ändert den "globalen" state der vairable
+
     setChosenBadSelection(chosenBadSelections); //! Man sollte setState nie in useEffect verwenden, solange man weiss wie man eine infinite loop vermeidet.
     checkBoolean();
     const result = {
@@ -58,7 +59,7 @@ function App() {
     let newWordsArray = [...words];
     let Index = newWordsArray.indexOf(value);
     newWordsArray[Index] = { ...value };
-    if (Int == newWordsArray[Index].selection) {
+    if (Int === newWordsArray[Index].selection) {
       newWordsArray[Index].selection = 0;
       setWords(() => newWordsArray);
     }
@@ -112,6 +113,7 @@ function App() {
         scanner[scannerUpdate] += 1;
         let scannerColumn = scanner[scannerUpdate];
         switch (scannerColumn) {
+          default:
           case 29:
             scanner[scannerUpdate] = 0;
             break;
