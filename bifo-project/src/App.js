@@ -46,7 +46,12 @@ function App() {
     setChosenGoodSelection(chosenGoodSelections); //* dies ändert den "globalen" state der vairable
     setChosenBadSelection(chosenBadSelections); //! Man sollte setState nie in useEffect verwenden, solange man weiss wie man eine infinite loop vermeidet.
     checkBoolean();
-    console.log(evaluation);
+    const result = {
+      name: "Hansi",
+      date: "444",
+      evaluation: evaluation,
+    };
+    console.log(result);
   });
 
   const handleCheckAuswahlNeutral = (value, Int) => {
@@ -151,18 +156,17 @@ function App() {
 
   const handleNextPage = () => {
     if (maxArray <= 347) {
-      //*if (goodSelection && badSelection) {
-      let newArray = maxArray + pages;
-      setminArray(maxArray);
-      setMaxArray(newArray);
-      /* } else {
-      alert("wählen sie 6 gute & schlechte Wörter aus");
-   } */
+      if (goodSelection && badSelection) {
+        let newArray = maxArray + pages;
+        setminArray(maxArray);
+        setMaxArray(newArray);
+      } else {
+        console.log("wählen sie 6 gute & schlechte Wörter aus");
+      }
     } else {
       console.log("letzte seite");
     }
   };
-
   return (
     <React.Fragment>
       <main className="container">
