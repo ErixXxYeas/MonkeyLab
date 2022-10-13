@@ -1,5 +1,3 @@
-import React, { Component } from "react";
-
 const Box = (props) => {
   let handleAuswahl = () => {
     props.onChangeAuswahl(props.wort);
