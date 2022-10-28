@@ -1,10 +1,9 @@
-import "./App.css";
 import WordSelectionList from "./components/wordSelectionCheckBoxList";
 import React, { useState, useEffect } from "react";
 import wordsJson from "./n29_words.json";
 import selectionArray from "./selection.json";
 
-function App() {
+function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
   const [maxArray, setMaxArray] = useState(pages); //* maxArray gibt die maximale array stelle an die dargesstellt wird
   const [minArray, setminArray] = useState(0); //* minArray gibt die erste stelle im array an die dargestellt wird.
@@ -195,4 +194,4 @@ function App() {
   );
 }
 
-export default App;
+export default N29Test;
