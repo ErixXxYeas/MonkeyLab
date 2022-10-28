@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./wordSelectionCheckBoxStyler.module.css";
+import styles from "../modules/wordSelectionCheckBoxStyler.module.css";
 
 const WordSelectionCheckBox = (props) => {
   const [backgroundColor, setBackgroundColor] = useState("#cccccc");
