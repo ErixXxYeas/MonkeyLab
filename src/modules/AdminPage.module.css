@@ -1,5 +1,39 @@
 .Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
   background-color: #1a4978;
+}
+
+.Header {
+  display: flex;
+  width: 85vw;
+  position: relative;
+  justify-content: space-between;
+}
+
+.List {
+  background-color: white;
+  height: 77vh;
+  width: 85vw;
+}
+
+.Selection {
+  width: 100px;
+  height: 30px;
+}
+
+.Headline {
+  position: relative;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Knopf {
+  width: 300px;
+  height: 50px;
 }
