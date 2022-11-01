@@ -8,9 +8,13 @@ function AdminPage() {
       <div className={css.Container}>
         <div className={css.Main}>
           <div className={css.Header}>
-            <p className={css.Headline}>Alle gemachten Tests</p>
-            <Button style={css.Knopf} name="Test Durchführen"></Button>
-            <Button style={css.Knopf} name="Link Erstellen"></Button>
+            <div className={css.Headline}>
+              <p>Alle gemachten Tests</p>
+            </div>
+            <div className={css.Knöpfe}>
+              <Button style={css.Knopf} name="Test Durchführen"></Button>
+              <Button style={css.Knopf} name="Link Erstellen"></Button>
+            </div>
             <select className={css.Selection} placeholder="Filter">
               <option>Name</option>
             </select>

@@ -8,6 +8,11 @@
   background-color: #1a4978;
 }
 
+.Knöpfe {
+  display: flex;
+  justify-content: space-between;
+  width: 36vw;
+}
 .Main {
   margin-bottom: 80px;
 }
@@ -87,4 +92,23 @@
 .Selectedwords {
   position: relative;
   right: 50vh;
+}
+
+@media screen and (max-width: 1350px) {
+  .Header {
+    display: flex;
+    width: 85vw;
+    position: relative;
+    justify-content: space-between;
+    top: 20px;
+  }
+
+  .Knöpfe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10vw;
+    position: relative;
+    bottom: 22px;
+  }
 }
