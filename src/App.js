@@ -2,6 +2,9 @@ import WordSelectionList from "./components/wordSelectionCheckBoxList";
 import React, { useState, useEffect } from "react";
 import wordsJson from "./n29_words.json";
 import selectionArray from "./selection.json";
+import "./cssReset.css";
+import css from "./modules/app.module.css";
+import ButtonComp from "./components/button";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -112,7 +115,6 @@ function N29Test() {
         scanner[scannerUpdate] += 1;
         let scannerColumn = scanner[scannerUpdate];
         switch (scannerColumn) {
-          default:
           case 29:
             scanner[scannerUpdate] = 0;
             break;
@@ -168,23 +170,43 @@ function N29Test() {
       console.log("letzte seite");
     }
   };
+
+  const clicked = () => {
+    console.log("clicked");
+  };
+
   return (
     <React.Fragment>
-      <main className="container">
-        <WordSelectionList
-          chosenGoodSelection={chosenGoodSelection}
-          chosenBadSelection={chosenBadSelection}
-          goodSelection={goodSelection}
-          badSelection={badSelection}
-          maxArray={maxArray}
-          minArray={minArray}
-          words={words} //* prop: das ganze array wird als prop weiter gegeben
-          onCheckAuswahl={handleCheckAuswahl}
-          onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
-          onHandleNextPage={handleNextPage}
-          onHandleLastPage={handleLastPage}
-        ></WordSelectionList>
-        <button onClick={evaluationProcess}>Start evaluation</button>
+      <main className={css.Container}>
+        <div className={css.Header}>
+          <p>N-29 Neigungstest</p>
+          <ButtonComp
+            event={clicked}
+            name={"ben"}
+            style={css.Button}
+          ></ButtonComp>
+        </div>
+        <div>
+          <div className={css.TestHeader}>
+            <p>Wörter</p>
+            <p>Gut</p>
+            <p>Schlecht</p>
+          </div>
+          <WordSelectionList
+            chosenGoodSelection={chosenGoodSelection}
+            chosenBadSelection={chosenBadSelection}
+            goodSelection={goodSelection}
+            badSelection={badSelection}
+            maxArray={maxArray}
+            minArray={minArray}
+            words={words} //* prop: das ganze array wird als prop weiter gegeben
+            onCheckAuswahl={handleCheckAuswahl}
+            onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
+            onHandleNextPage={handleNextPage}
+            onHandleLastPage={handleLastPage}
+          ></WordSelectionList>
+        </div>
+        <ButtonComp name={"Evalutation"} event={evaluationProcess}></ButtonComp>
         <div>Int{maxArray}</div>
         minArray{minArray}
         <div>goodSelection {chosenGoodSelection}</div>

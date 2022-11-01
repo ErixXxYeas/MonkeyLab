@@ -1,0 +1,21 @@
+.Container {
+  width: 99, 99999vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Header {
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.Button {
+  font-size: -2rem;
+}
+
+.TestHeader {
+  display: flex;
+}

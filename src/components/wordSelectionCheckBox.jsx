@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./wordSelectionCheckBoxStyler.module.css";
+import styles from "../modules/wordSelectionCheckBoxStyler.module.css";
 
 const WordSelectionCheckBox = (props) => {
   const [backgroundColor, setBackgroundColor] = useState("#cccccc");
@@ -44,15 +44,18 @@ const WordSelectionCheckBox = (props) => {
       style={{ backgroundColor: backgroundColor }}
     >
       <div className={styles.word}>{props.selectionWord.word}</div>
-      <div className={styles.radio}>
+
+      <div>
         <input
+          className={styles.radio}
           type="radio"
           value={1}
           checked={props.selectionWord.selection === 1}
           onChange={handleChangeGood}
           onClick={handleChangeNeutralGood}
         />
-
+      </div>
+      <div className={styles.Radio}>
         <input
           type="radio"
           value={2}
@@ -61,7 +64,6 @@ const WordSelectionCheckBox = (props) => {
           onClick={handleChangeNeutralBad}
         />
       </div>
-      {props.selectionWord.selection}
     </div>
   );
 };
