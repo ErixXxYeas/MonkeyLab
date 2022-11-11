@@ -5,6 +5,7 @@ import selectionArray from "./selection.json";
 import "./cssReset.css";
 import css from "./modules/app.module.css";
 import ButtonComp from "./components/button";
+import SelectedWordList from "./components/selectedWordList";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -186,25 +187,30 @@ function N29Test() {
             style={css.Button}
           ></ButtonComp>
         </div>
-        <div>
-          <div className={css.TestHeader}>
-            <p>Wörter</p>
-            <p>Gut</p>
-            <p>Schlecht</p>
+        <div className={css.main}>
+          <div>
+            <div className={css.TestHeader}>
+              <p>Wörter</p>
+              <p>Gut</p>
+              <p>Schlecht</p>
+            </div>
+            <WordSelectionList
+              chosenGoodSelection={chosenGoodSelection}
+              chosenBadSelection={chosenBadSelection}
+              goodSelection={goodSelection}
+              badSelection={badSelection}
+              maxArray={maxArray}
+              minArray={minArray}
+              words={words} //* prop: das ganze array wird als prop weiter gegeben
+              onCheckAuswahl={handleCheckAuswahl}
+              onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
+              onHandleNextPage={handleNextPage}
+              onHandleLastPage={handleLastPage}
+            ></WordSelectionList>
           </div>
-          <WordSelectionList
-            chosenGoodSelection={chosenGoodSelection}
-            chosenBadSelection={chosenBadSelection}
-            goodSelection={goodSelection}
-            badSelection={badSelection}
-            maxArray={maxArray}
-            minArray={minArray}
-            words={words} //* prop: das ganze array wird als prop weiter gegeben
-            onCheckAuswahl={handleCheckAuswahl}
-            onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
-            onHandleNextPage={handleNextPage}
-            onHandleLastPage={handleLastPage}
-          ></WordSelectionList>
+          <div>
+            <SelectedWordList></SelectedWordList>
+          </div>
         </div>
         <ButtonComp name={"Evalutation"} event={evaluationProcess}></ButtonComp>
         <div>Int{maxArray}</div>

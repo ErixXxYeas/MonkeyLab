@@ -55,8 +55,9 @@ const WordSelectionCheckBox = (props) => {
           onClick={handleChangeNeutralGood}
         />
       </div>
-      <div className={styles.Radio}>
+      <div>
         <input
+          className={styles.radio}
           type="radio"
           value={2}
           checked={props.selectionWord.selection === 2}
