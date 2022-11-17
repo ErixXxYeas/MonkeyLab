@@ -178,7 +178,7 @@ function N29Test() {
 
   return (
     <React.Fragment>
-      <main className={css.Container}>
+      <div className={css.Container}>
         <div className={css.Header}>
           <p>N-29 Neigungstest</p>
           <ButtonComp
@@ -188,7 +188,7 @@ function N29Test() {
           ></ButtonComp>
         </div>
         <div className={css.main}>
-          <div>
+          <div className={css.WordList}>
             <div className={css.TestHeader}>
               <p>Wörter</p>
               <p>Gut</p>
@@ -208,16 +208,16 @@ function N29Test() {
               onHandleLastPage={handleLastPage}
             ></WordSelectionList>
           </div>
-          <div>
+          <div className={css.SelectedWordList}>
             <SelectedWordList></SelectedWordList>
           </div>
         </div>
-        <ButtonComp name={"Evalutation"} event={evaluationProcess}></ButtonComp>
         <div>Int{maxArray}</div>
         minArray{minArray}
         <div>goodSelection {chosenGoodSelection}</div>
         badSelection {chosenBadSelection}
-      </main>
+        <ButtonComp name={"Evalutation"} event={evaluationProcess}></ButtonComp>
+      </div>
     </React.Fragment>
   );
 }

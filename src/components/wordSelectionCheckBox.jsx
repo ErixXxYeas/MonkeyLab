@@ -44,26 +44,27 @@ const WordSelectionCheckBox = (props) => {
       style={{ backgroundColor: backgroundColor }}
     >
       <div className={styles.word}>{props.selectionWord.word}</div>
-
-      <div>
-        <input
-          className={styles.radio}
-          type="radio"
-          value={1}
-          checked={props.selectionWord.selection === 1}
-          onChange={handleChangeGood}
-          onClick={handleChangeNeutralGood}
-        />
-      </div>
-      <div>
-        <input
-          className={styles.radio}
-          type="radio"
-          value={2}
-          checked={props.selectionWord.selection === 2}
-          onChange={handleChangeBad}
-          onClick={handleChangeNeutralBad}
-        />
+      <div className={styles.radios}>
+        <div>
+          <input
+            className={styles.radio}
+            type="radio"
+            value={1}
+            checked={props.selectionWord.selection === 1}
+            onChange={handleChangeGood}
+            onClick={handleChangeNeutralGood}
+          />
+        </div>
+        <div>
+          <input
+            className={styles.radio}
+            type="radio"
+            value={2}
+            checked={props.selectionWord.selection === 2}
+            onChange={handleChangeBad}
+            onClick={handleChangeNeutralBad}
+          />
+        </div>
       </div>
     </div>
   );

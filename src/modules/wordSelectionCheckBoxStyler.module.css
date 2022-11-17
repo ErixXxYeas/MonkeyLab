@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  width: 30vw;
+  width: 580px;
   margin: 1px;
   border-radius: 10px;
   margin-bottom: 5px;
@@ -17,9 +17,12 @@
 
 .radio {
   background-color: transparent;
-  display: flex;
-  justify-content: space-around;
-
   height: 2rem;
   width: 2rem;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.radios {
+  display: flex;
 }

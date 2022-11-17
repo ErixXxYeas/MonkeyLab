@@ -26,14 +26,14 @@ const WordSelectionCheckBoxList = (props) => {
         .slice(props.minArray, props.maxArray)
         .map((selectionWords) => (
           <WordSelection
+            onHandleChangeNeutral={handleCheckAuswahlNeutral}
             chosenGoodSelection={props.chosenGoodSelection}
             chosenBadSelection={props.chosenBadSelection}
+            onHandleChangeSelection={handleCheckAuswahl}
             goodSelections={props.goodSelection}
             badSelections={props.badSelection}
-            key={selectionWords.id}
             selectionWord={selectionWords} //prop: selectionword beinhaltet alle eigenschaften vom prop words
-            onHandleChangeSelection={handleCheckAuswahl}
-            onHandleChangeNeutral={handleCheckAuswahlNeutral}
+            key={selectionWords.id}
           />
         ))}
 

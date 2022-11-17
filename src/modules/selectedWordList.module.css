@@ -1,5 +1,5 @@
 .container {
-  position: sticky;
-  width: 20vw;
-  height: 30vh;
+  width: 400px;
+  height: 600px;
+  background-color: red;
 }
