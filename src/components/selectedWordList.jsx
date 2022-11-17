@@ -1,7 +1,12 @@
 import styles from "../modules/selectedWordList.module.css";
 
-const SelectedWordList = () => {
-  return <div className={styles.container}></div>;
+const SelectedWordList = (props) => {
+  return (
+    <div className={styles.container}>
+      <div>{props.goodWordList}</div>
+      <div></div>
+    </div>
+  );
 };
 
 export default SelectedWordList;

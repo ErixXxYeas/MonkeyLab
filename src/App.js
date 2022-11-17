@@ -17,6 +17,7 @@ function N29Test() {
   const [goodSelection, setGoodSelection] = useState(false);
   const [badSelection, setBadSelection] = useState(false);
   const [evaluation, setEvalutation] = useState(selectionArray.selection);
+  const [goodWordList, setGoodWordList] = useState([]);
 
   const handleCheckAuswahl = (value, Int) => {
     let newWordsArray = [...words]; //* erstellt ein neues array dass gleich ist wie die words array
@@ -24,10 +25,24 @@ function N29Test() {
     newWordsArray[Index] = { ...value }; //* verändert den array and der index stelle mit dem neuen Wert
     if (Int === 1) {
       newWordsArray[Index].selection = 1; //* ändert die selection zu eins
+      setGoodWordList((goodWordList) => [...goodWordList, words[Index].word]);
     } else if (Int === 2) {
       newWordsArray[Index].selection = 2;
     }
     setWords(() => newWordsArray); //* ersätzt die alte array mit der neuen
+  };
+
+  const handleCheckAuswahlNeutral = (value, Int) => {
+    let newWordsArray = [...words];
+    let Index = newWordsArray.indexOf(value);
+    newWordsArray[Index] = { ...value };
+    if (Int === newWordsArray[Index].selection) {
+      newWordsArray[Index].selection = 0;
+      setWords(() => newWordsArray);
+      setGoodWordList(
+        goodWordList.filter((goodWordList[0] = words[Index].word))
+      );
+    }
   };
 
   // eslint-disable-next-line
@@ -58,16 +73,6 @@ function N29Test() {
     console.log(result);
   });
 
-  const handleCheckAuswahlNeutral = (value, Int) => {
-    let newWordsArray = [...words];
-    let Index = newWordsArray.indexOf(value);
-    newWordsArray[Index] = { ...value };
-    if (Int === newWordsArray[Index].selection) {
-      newWordsArray[Index].selection = 0;
-      setWords(() => newWordsArray);
-    }
-  };
-
   const checkBoolean = () => {
     if (chosenGoodSelection === 6) {
       setGoodSelection(true);
@@ -88,6 +93,21 @@ function N29Test() {
       let newArray = minArray - pages;
       setMaxArray(minArray);
       setminArray(newArray);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (maxArray <= 347) {
+      if (goodSelection && badSelection) {
+        let newArray = maxArray + pages;
+        setminArray(maxArray);
+        setMaxArray(newArray);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        console.log("wählen sie 6 gute & schlechte Wörter aus");
+      }
+    } else {
+      console.log("letzte seite");
     }
   };
 
@@ -158,20 +178,6 @@ function N29Test() {
     }
   };
 
-  const handleNextPage = () => {
-    if (maxArray <= 347) {
-      if (goodSelection && badSelection) {
-        let newArray = maxArray + pages;
-        setminArray(maxArray);
-        setMaxArray(newArray);
-      } else {
-        console.log("wählen sie 6 gute & schlechte Wörter aus");
-      }
-    } else {
-      console.log("letzte seite");
-    }
-  };
-
   const clicked = () => {
     console.log("clicked");
   };
@@ -191,8 +197,10 @@ function N29Test() {
           <div className={css.WordList}>
             <div className={css.TestHeader}>
               <p>Wörter</p>
-              <p>Gut</p>
-              <p>Schlecht</p>
+              <div className={css.TestHeaderWordGroup}>
+                <p className={css.TestHeaderWord}>Positiv</p>
+                <p className={css.TestHeaderWord}>Negativ</p>
+              </div>
             </div>
             <WordSelectionList
               chosenGoodSelection={chosenGoodSelection}
@@ -209,7 +217,7 @@ function N29Test() {
             ></WordSelectionList>
           </div>
           <div className={css.SelectedWordList}>
-            <SelectedWordList></SelectedWordList>
+            <SelectedWordList goodWordList={goodWordList}></SelectedWordList>
           </div>
         </div>
         <div>Int{maxArray}</div>

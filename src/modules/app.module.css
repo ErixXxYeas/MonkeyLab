@@ -9,7 +9,7 @@
 
 .main {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   height: fit-content;
 }
@@ -31,16 +31,27 @@
 
 .TestHeader {
   display: flex;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-bottom: -15px;
+}
+
+.TestHeaderWord {
+  margin-left: 80px;
+}
+
+.TestHeaderWordGroup {
+  display: flex;
+  margin-left: 100px;
 }
 
 .SelectedWordList {
   position: sticky;
   top: 200px;
-  display: flex;
+  margin-bottom: 100px;
   height: 100%;
-  margin-left: 100px;
 }
 
 .WordList {
-  background-color: grey;
 }

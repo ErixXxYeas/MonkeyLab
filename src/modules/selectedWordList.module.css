@@ -1,5 +1,7 @@
 .container {
+  position: relative;
+  right: 120px;
   width: 400px;
   height: 600px;
-  background-color: red;
+  background-color: #969393;
 }

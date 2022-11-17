@@ -39,11 +39,10 @@ const WordSelectionCheckBox = (props) => {
   };
 
   return (
-    <div
-      className={styles.container}
-      style={{ backgroundColor: backgroundColor }}
-    >
-      <div className={styles.word}>{props.selectionWord.word}</div>
+    <div className={styles.container}>
+      <div className={styles.word} style={{ backgroundColor: backgroundColor }}>
+        {props.selectionWord.word}
+      </div>
       <div className={styles.radios}>
         <div>
           <input
