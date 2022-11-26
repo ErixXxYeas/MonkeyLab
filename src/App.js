@@ -5,7 +5,10 @@ import selectionArray from "./selection.json";
 import "./cssReset.css";
 import css from "./modules/app.module.css";
 import ButtonComp from "./components/button";
+import { GrCircleInformation } from "react-icons/gr";
 import SelectedWordList from "./components/selectedWordList";
+impor;
+import "./fonts/Exo2-Italic-VariableFont_wght.ttf";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -84,16 +87,6 @@ function N29Test() {
       setBadSelection(true);
     } else {
       setBadSelection(false);
-    }
-  };
-
-  const handleLastPage = () => {
-    if (minArray <= 0) {
-      alert("Sie können nicht zurück gehen");
-    } else {
-      let newArray = minArray - pages;
-      setMaxArray(minArray);
-      setminArray(newArray);
     }
   };
 
@@ -187,7 +180,10 @@ function N29Test() {
     <React.Fragment>
       <div className={css.Container}>
         <div className={css.Header}>
-          <p>N-29 Neigungstest</p>
+          <p>BIFO | N-29 Neigungstest</p>
+          <div className={css.Information}>
+            <GrCircleInformation />
+          </div>
         </div>
         <div className={css.main}>
           <div className={css.WordList}>
@@ -209,7 +205,6 @@ function N29Test() {
               onCheckAuswahl={handleCheckAuswahl}
               onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
               onHandleNextPage={handleNextPage}
-              onHandleLastPage={handleLastPage}
             ></WordSelectionList>
           </div>
           <div className={css.SelectedWordList}></div>
