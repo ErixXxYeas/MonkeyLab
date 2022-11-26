@@ -34,7 +34,13 @@ const students = [
 ];
 
 app.get("/surveys", (req, res) => {
-  res.send(students);
+  db.collection("testcoll")
+    .find()
+    .toArray(function (err, result) {
+      if (err) throw err;
+
+      res.send(result);
+    });
 });
 
 app.get("/surveys/:id", (req, res) => {
