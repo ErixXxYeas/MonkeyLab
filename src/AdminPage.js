@@ -27,6 +27,7 @@ function AdminPage() {
               <p className={css.Evaluation}>Auswertung</p>
               <p className={css.Selectedwords}>Wörterauswahl</p>
             </div>
+
             <div className={css.TrueList}></div>
           </div>
         </div>
