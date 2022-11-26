@@ -1,13 +1,12 @@
-import WordSelectionList from "./components/wordSelectionCheckBoxList";
 import React, { useState, useEffect } from "react";
 import wordsJson from "./n29_words.json";
 import selectionArray from "./selection.json";
+import ButtonComp from "./components/button";
+import "./fonts/Exo2-Italic-VariableFont_wght.ttf";
+import InformationIcon from "./components/informationIcon";
+import WordSelectionList from "./components/wordSelectionCheckBoxList";
 import "./cssReset.css";
 import css from "./modules/app.module.css";
-import ButtonComp from "./components/button";
-import { GrCircleInformation } from "react-icons/gr";
-import SelectedWordList from "./components/selectedWordList";
-import "./fonts/Exo2-Italic-VariableFont_wght.ttf";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -19,7 +18,6 @@ function N29Test() {
   const [goodSelection, setGoodSelection] = useState(false);
   const [badSelection, setBadSelection] = useState(false);
   const [evaluation, setEvalutation] = useState(selectionArray.selection);
-  const [goodWordList, setGoodWordList] = useState([]);
 
   const handleCheckAuswahl = (value, Int) => {
     let newWordsArray = [...words]; //* erstellt ein neues array dass gleich ist wie die words array
@@ -27,7 +25,6 @@ function N29Test() {
     newWordsArray[Index] = { ...value }; //* verändert den array and der index stelle mit dem neuen Wert
     if (Int === 1) {
       newWordsArray[Index].selection = 1; //* ändert die selection zu eins
-      setGoodWordList((goodWordList) => [...goodWordList, words[Index].word]);
     } else if (Int === 2) {
       newWordsArray[Index].selection = 2;
     }
@@ -41,14 +38,9 @@ function N29Test() {
     if (Int === newWordsArray[Index].selection) {
       newWordsArray[Index].selection = 0;
       setWords(() => newWordsArray);
-      setGoodWordList(
-        goodWordList.filter(goodWordList[1] !== words[Index].word)
-      );
-      console.log(goodWordList);
     }
   };
 
-  // eslint-disable-next-line
   useEffect(() => {
     //* useEffect wird nach jedem render der seite und update der states durchgeführt, dies verwenden wir
     let chosenGoodSelections = 0; //* um die anzahl der ausgewählten guten und schlecht wörter zu im Blick zu halten
@@ -171,17 +163,13 @@ function N29Test() {
     }
   };
 
-  const clicked = () => {
-    console.log("clicked");
-  };
-
   return (
     <React.Fragment>
       <div className={css.Container}>
         <div className={css.Header}>
           <p>BIFO | N-29 Neigungstest</p>
           <div className={css.Information}>
-            <GrCircleInformation color={"white"} />
+            <InformationIcon />
           </div>
         </div>
         <div className={css.main}>
@@ -193,20 +181,24 @@ function N29Test() {
                 <p className={css.TestHeaderWord}>Negativ</p>
               </div>
             </div>
-            <WordSelectionList
-              chosenGoodSelection={chosenGoodSelection}
-              chosenBadSelection={chosenBadSelection}
-              goodSelection={goodSelection}
-              badSelection={badSelection}
-              maxArray={maxArray}
-              minArray={minArray}
-              words={words} //* prop: das ganze array wird als prop weiter gegeben
-              onCheckAuswahl={handleCheckAuswahl}
-              onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
-              onHandleNextPage={handleNextPage}
-            ></WordSelectionList>
+            <div className={css.WordSelectionList}>
+              <WordSelectionList
+                chosenGoodSelection={chosenGoodSelection}
+                chosenBadSelection={chosenBadSelection}
+                goodSelection={goodSelection}
+                badSelection={badSelection}
+                maxArray={maxArray}
+                minArray={minArray}
+                words={words} //* prop: das ganze array wird als prop weiter gegeben
+                onCheckAuswahl={handleCheckAuswahl}
+                onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
+                onHandleNextPage={handleNextPage}
+              ></WordSelectionList>
+            </div>
           </div>
-          <div className={css.SelectedWordList}></div>
+          <div className={css.Logo}>
+            <div className={css.LogoPicture}></div>
+          </div>
         </div>
         <ButtonComp name={"Evalutation"} event={evaluationProcess}></ButtonComp>
       </div>

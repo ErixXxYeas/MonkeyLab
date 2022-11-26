@@ -10,7 +10,7 @@ const WordSelectionCheckBox = (props) => {
       setBackgroundColor("#006ab2");
       setTextColor("white");
     } else if (props.selectionWord.selection === 2) {
-      setBackgroundColor("#D63F3F");
+      setBackgroundColor("#ee7f00");
       setTextColor("white");
     } else {
       setBackgroundColor("#cccccc");
@@ -69,7 +69,7 @@ const WordSelectionCheckBox = (props) => {
             checked={props.selectionWord.selection === 2}
             onChange={handleChangeBad}
             onClick={handleChangeNeutralBad}
-            style={{ accentColor: "#AF4707" }}
+            style={{ accentColor: "#DA7500" }}
           />
         </div>
       </div>

@@ -21,6 +21,9 @@
   border-radius: 15px;
   transition: background-color 0.5s;
 }
+.radios {
+  display: flex;
+}
 
 .radio {
   margin-top: 5px;
@@ -29,9 +32,5 @@
   width: 1.5rem;
   margin-left: 100px;
   margin-right: 60px;
-  accent-color: #006ab2;
-}
-
-.radios {
-  display: flex;
+  accent-color: "#086cb4";
 }
