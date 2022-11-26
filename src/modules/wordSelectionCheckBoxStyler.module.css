@@ -4,10 +4,10 @@
   align-items: center;
   height: 50px;
   width: 580px;
-  margin: 1px;
   border-radius: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   background-color: #cccccc;
+  box-shadow: -3px 4px 10px;
 }
 
 .word {

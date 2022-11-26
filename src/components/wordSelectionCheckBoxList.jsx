@@ -1,5 +1,5 @@
 import WordSelection from "./wordSelectionCheckBox";
-import PageButton from "./pageButton";
+import PageButton from "./button";
 
 const WordSelectionCheckBoxList = (props) => {
   const handleCheckAuswahl = (value, Int) => {
@@ -9,9 +9,7 @@ const WordSelectionCheckBoxList = (props) => {
   const handleCheckAuswahlNeutral = (value, Int) => {
     props.onCheckAuswahlNeutral(value, Int);
   };
-  const handleLastPage = () => {
-    props.onHandleLastPage();
-  };
+
   const handleNextPage = () => {
     props.onHandleNextPage();
   };
@@ -38,7 +36,7 @@ const WordSelectionCheckBoxList = (props) => {
         ))}
 
       <div>
-        <PageButton onLastPage={handleLastPage} onNextPage={handleNextPage} />
+        <PageButton name="Next Page" event={handleNextPage} />
       </div>
     </div>
   );

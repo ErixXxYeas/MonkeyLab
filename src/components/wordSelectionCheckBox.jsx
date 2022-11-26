@@ -6,9 +6,9 @@ const WordSelectionCheckBox = (props) => {
 
   useEffect(() => {
     if (props.selectionWord.selection === 1) {
-      setBackgroundColor("green");
-    } else if (props.selectionWord.selection === 2) {
       setBackgroundColor("red");
+    } else if (props.selectionWord.selection === 2) {
+      setBackgroundColor("#5869d6");
     } else {
       setBackgroundColor("#cccccc");
     }
