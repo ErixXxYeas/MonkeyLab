@@ -1,8 +1,24 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongo = require("mongodb").MongoClient;
-const url = "mongodb://localhost";
+require("dotenv").config();
 
+const { application } = require("express");
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+//const bodyParser = require("body-parser");
+
+mongoose.connect(process.env.DATABASE_URL);
+const db = mongoose.connection;
+db.on("error", (error) => console.error(error));
+db.once("open", () => console.log("Connected to Database"));
+
+app.use(express.json());
+
+const testRouter = require("./routes/tests");
+app.use("/test", testRouter);
+
+app.listen(3000, () => console.log("Server started"));
+
+/*
 let db;
 
 mongo.connect(
@@ -55,3 +71,4 @@ app.post("/surveys", (req, res) => {
 });
 
 app.listen(port, () => console.log("Server ready"));
+*/
