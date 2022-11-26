@@ -11,7 +11,7 @@
 .Knöpfe {
   display: flex;
   justify-content: space-between;
-  width: 37vw;
+  width: 36vw;
 }
 .Main {
   margin-bottom: 80px;
