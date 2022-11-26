@@ -2,6 +2,12 @@ import WordSelectionList from "./components/wordSelectionCheckBoxList";
 import React, { useState, useEffect } from "react";
 import wordsJson from "./n29_words.json";
 import selectionArray from "./selection.json";
+import "./cssReset.css";
+import css from "./modules/app.module.css";
+import ButtonComp from "./components/button";
+import { GrCircleInformation } from "react-icons/gr";
+import SelectedWordList from "./components/selectedWordList";
+import "./fonts/Exo2-Italic-VariableFont_wght.ttf";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -13,6 +19,7 @@ function N29Test() {
   const [goodSelection, setGoodSelection] = useState(false);
   const [badSelection, setBadSelection] = useState(false);
   const [evaluation, setEvalutation] = useState(selectionArray.selection);
+  const [goodWordList, setGoodWordList] = useState([]);
 
   const handleCheckAuswahl = (value, Int) => {
     let newWordsArray = [...words]; //* erstellt ein neues array dass gleich ist wie die words array
@@ -20,10 +27,25 @@ function N29Test() {
     newWordsArray[Index] = { ...value }; //* verändert den array and der index stelle mit dem neuen Wert
     if (Int === 1) {
       newWordsArray[Index].selection = 1; //* ändert die selection zu eins
+      setGoodWordList((goodWordList) => [...goodWordList, words[Index].word]);
     } else if (Int === 2) {
       newWordsArray[Index].selection = 2;
     }
     setWords(() => newWordsArray); //* ersätzt die alte array mit der neuen
+  };
+
+  const handleCheckAuswahlNeutral = (value, Int) => {
+    let newWordsArray = [...words];
+    let Index = newWordsArray.indexOf(value);
+    newWordsArray[Index] = { ...value };
+    if (Int === newWordsArray[Index].selection) {
+      newWordsArray[Index].selection = 0;
+      setWords(() => newWordsArray);
+      setGoodWordList(
+        goodWordList.filter(goodWordList[1] !== words[Index].word)
+      );
+      console.log(goodWordList);
+    }
   };
 
   // eslint-disable-next-line
@@ -54,16 +76,6 @@ function N29Test() {
     console.log(result);
   });
 
-  const handleCheckAuswahlNeutral = (value, Int) => {
-    let newWordsArray = [...words];
-    let Index = newWordsArray.indexOf(value);
-    newWordsArray[Index] = { ...value };
-    if (Int === newWordsArray[Index].selection) {
-      newWordsArray[Index].selection = 0;
-      setWords(() => newWordsArray);
-    }
-  };
-
   const checkBoolean = () => {
     if (chosenGoodSelection === 6) {
       setGoodSelection(true);
@@ -77,13 +89,18 @@ function N29Test() {
     }
   };
 
-  const handleLastPage = () => {
-    if (minArray <= 0) {
-      alert("Sie können nicht zurück gehen");
+  const handleNextPage = () => {
+    if (maxArray <= 347) {
+      if (goodSelection && badSelection) {
+        let newArray = maxArray + pages;
+        setminArray(maxArray);
+        setMaxArray(newArray);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        console.log("wählen sie 6 gute & schlechte Wörter aus");
+      }
     } else {
-      let newArray = minArray - pages;
-      setMaxArray(minArray);
-      setminArray(newArray);
+      console.log("letzte seite");
     }
   };
 
@@ -112,7 +129,6 @@ function N29Test() {
         scanner[scannerUpdate] += 1;
         let scannerColumn = scanner[scannerUpdate];
         switch (scannerColumn) {
-          default:
           case 29:
             scanner[scannerUpdate] = 0;
             break;
@@ -155,41 +171,45 @@ function N29Test() {
     }
   };
 
-  const handleNextPage = () => {
-    if (maxArray <= 347) {
-      if (goodSelection && badSelection) {
-        let newArray = maxArray + pages;
-        setminArray(maxArray);
-        setMaxArray(newArray);
-      } else {
-        console.log("wählen sie 6 gute & schlechte Wörter aus");
-      }
-    } else {
-      console.log("letzte seite");
-    }
+  const clicked = () => {
+    console.log("clicked");
   };
+
   return (
     <React.Fragment>
-      <main className="container">
-        <WordSelectionList
-          chosenGoodSelection={chosenGoodSelection}
-          chosenBadSelection={chosenBadSelection}
-          goodSelection={goodSelection}
-          badSelection={badSelection}
-          maxArray={maxArray}
-          minArray={minArray}
-          words={words} //* prop: das ganze array wird als prop weiter gegeben
-          onCheckAuswahl={handleCheckAuswahl}
-          onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
-          onHandleNextPage={handleNextPage}
-          onHandleLastPage={handleLastPage}
-        ></WordSelectionList>
-        <button onClick={evaluationProcess}>Start evaluation</button>
-        <div>Int{maxArray}</div>
-        minArray{minArray}
-        <div>goodSelection {chosenGoodSelection}</div>
-        badSelection {chosenBadSelection}
-      </main>
+      <div className={css.Container}>
+        <div className={css.Header}>
+          <p>BIFO | N-29 Neigungstest</p>
+          <div className={css.Information}>
+            <GrCircleInformation color={"white"} />
+          </div>
+        </div>
+        <div className={css.main}>
+          <div className={css.WordList}>
+            <div className={css.TestHeader}>
+              <p>Wörter</p>
+              <div className={css.TestHeaderWordGroup}>
+                <p className={css.TestHeaderWord}>Positiv</p>
+                <p className={css.TestHeaderWord}>Negativ</p>
+              </div>
+            </div>
+            <WordSelectionList
+              chosenGoodSelection={chosenGoodSelection}
+              chosenBadSelection={chosenBadSelection}
+              goodSelection={goodSelection}
+              badSelection={badSelection}
+              maxArray={maxArray}
+              minArray={minArray}
+              words={words} //* prop: das ganze array wird als prop weiter gegeben
+              onCheckAuswahl={handleCheckAuswahl}
+              onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
+              onHandleNextPage={handleNextPage}
+            ></WordSelectionList>
+          </div>
+          <div className={css.SelectedWordList}></div>
+        </div>
+        <ButtonComp name={"Evalutation"} event={evaluationProcess}></ButtonComp>
+      </div>
     </React.Fragment>
   );
 }

@@ -1,0 +1,69 @@
+:root {
+}
+
+.Container {
+  width: 99, 9vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*background-color: pink;*/
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: fit-content;
+}
+
+.Header {
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #006ab2;
+  color: white;
+}
+
+.Button {
+  font-size: -2rem;
+}
+
+.TestHeader {
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+
+.TestHeaderWord {
+  margin-left: 80px;
+}
+
+.TestHeaderWordGroup {
+  display: flex;
+  margin-left: 100px;
+}
+
+.SelectedWordList {
+  position: sticky;
+  right: 400px;
+  top: 450px;
+  width: 500px;
+  height: 197px;
+  background-image: url("../bifo-logo.png");
+}
+
+.WordList {
+}
+
+.Information {
+  position: absolute;
+  right: 20px;
+}

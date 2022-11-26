@@ -5,7 +5,9 @@ const button = (props) => {
 
   return (
     <div>
-      <button onClick={clicked}>{props.name}</button>
+      <button onClick={props.event} className={props.style}>
+        {props.name}
+      </button>
     </div>
   );
 };
