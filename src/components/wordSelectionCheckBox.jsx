@@ -3,14 +3,18 @@ import styles from "../modules/wordSelectionCheckBoxStyler.module.css";
 
 const WordSelectionCheckBox = (props) => {
   const [backgroundColor, setBackgroundColor] = useState("#cccccc");
+  const [textColor, setTextColor] = useState("#cccccc");
 
   useEffect(() => {
     if (props.selectionWord.selection === 1) {
-      setBackgroundColor("red");
+      setBackgroundColor("#006ab2");
+      setTextColor("white");
     } else if (props.selectionWord.selection === 2) {
-      setBackgroundColor("#5869d6");
+      setBackgroundColor("#D63F3F");
+      setTextColor("white");
     } else {
       setBackgroundColor("#cccccc");
+      setTextColor("black");
     }
   }, [props.selectionWord.selection]);
 
@@ -40,7 +44,10 @@ const WordSelectionCheckBox = (props) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.word} style={{ backgroundColor: backgroundColor }}>
+      <div
+        className={styles.word}
+        style={{ color: textColor, backgroundColor: backgroundColor }}
+      >
         {props.selectionWord.word}
       </div>
       <div className={styles.radios}>
@@ -62,6 +69,7 @@ const WordSelectionCheckBox = (props) => {
             checked={props.selectionWord.selection === 2}
             onChange={handleChangeBad}
             onClick={handleChangeNeutralBad}
+            style={{ accentColor: "#AF4707" }}
           />
         </div>
       </div>

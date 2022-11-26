@@ -181,7 +181,7 @@ function N29Test() {
         <div className={css.Header}>
           <p>BIFO | N-29 Neigungstest</p>
           <div className={css.Information}>
-            <GrCircleInformation />
+            <GrCircleInformation color={"white"} />
           </div>
         </div>
         <div className={css.main}>

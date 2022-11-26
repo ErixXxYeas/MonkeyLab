@@ -25,7 +25,8 @@
   justify-content: center;
   font-size: 3rem;
   font-weight: bold;
-  background-color: grey;
+  background-color: #006ab2;
+  color: white;
 }
 
 .Button {
@@ -37,7 +38,8 @@
   font-size: 1.8rem;
   font-weight: bold;
   padding-left: 10px;
-  margin-bottom: -15px;
+  margin-bottom: 5px;
+  margin-top: 25px;
 }
 
 .TestHeaderWord {
@@ -51,9 +53,11 @@
 
 .SelectedWordList {
   position: sticky;
-  top: 200px;
-  margin-bottom: 100px;
-  height: 100%;
+  right: 400px;
+  top: 450px;
+  width: 500px;
+  height: 197px;
+  background-image: url("../bifo-logo.png");
 }
 
 .WordList {
@@ -62,8 +66,4 @@
 .Information {
   position: absolute;
   right: 20px;
-}
-
-.InformationIcon {
-  color: green;
 }
