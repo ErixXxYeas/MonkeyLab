@@ -40,8 +40,9 @@ function N29Test() {
       newWordsArray[Index].selection = 0;
       setWords(() => newWordsArray);
       setGoodWordList(
-        goodWordList.filter((goodWordList[0] = words[Index].word))
+        goodWordList.filter(goodWordList[1] !== words[Index].word)
       );
+      console.log(goodWordList);
     }
   };
 
@@ -187,11 +188,6 @@ function N29Test() {
       <div className={css.Container}>
         <div className={css.Header}>
           <p>N-29 Neigungstest</p>
-          <ButtonComp
-            event={clicked}
-            name={"ben"}
-            style={css.Button}
-          ></ButtonComp>
         </div>
         <div className={css.main}>
           <div className={css.WordList}>
@@ -216,14 +212,8 @@ function N29Test() {
               onHandleLastPage={handleLastPage}
             ></WordSelectionList>
           </div>
-          <div className={css.SelectedWordList}>
-            <SelectedWordList goodWordList={goodWordList}></SelectedWordList>
-          </div>
+          <div className={css.SelectedWordList}></div>
         </div>
-        <div>Int{maxArray}</div>
-        minArray{minArray}
-        <div>goodSelection {chosenGoodSelection}</div>
-        badSelection {chosenBadSelection}
         <ButtonComp name={"Evalutation"} event={evaluationProcess}></ButtonComp>
       </div>
     </React.Fragment>
