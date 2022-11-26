@@ -7,7 +7,6 @@ import css from "./modules/app.module.css";
 import ButtonComp from "./components/button";
 import { GrCircleInformation } from "react-icons/gr";
 import SelectedWordList from "./components/selectedWordList";
-impor;
 import "./fonts/Exo2-Italic-VariableFont_wght.ttf";
 
 function N29Test() {
