@@ -1,11 +1,18 @@
 .Container {
-  background-image: url("../../public/loginBackground.png");
+  background-image: url("../../public/Login-Background.jpg");
   background-size: cover;
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+}
+
+.Logo {
+  width: 500px;
+  height: 197px;
+  background-image: url("../../public/bifo-logo.png");
 }
 
 .Background {
@@ -13,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #d9d9d9;
+  background-color: #006ab2;
   border-radius: 10px;
   height: 430px;
   width: 350px;
@@ -48,6 +55,18 @@
 }
 
 .Butt {
+  position: relative;
+  background-color: rgb(255, 165, 0);
+  height: 50px;
+  width: 190px;
+  bottom: 40px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  color: white;
+}
+
+.Link {
   position: relative;
   background-color: rgb(255, 165, 0);
   height: 50px;

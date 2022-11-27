@@ -1,7 +1,7 @@
 import React from "react";
-import "./cssReset.css";
-import css from "./modules/AdminPage.module.css";
-import Button from "./components/button";
+import "../cssReset.css";
+import css from "../modules/AdminPage.module.css";
+import Button from "../components/button";
 function AdminPage() {
   return (
     <React.Fragment>
