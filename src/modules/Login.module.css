@@ -78,6 +78,6 @@
   color: white;
 }
 
-.Butt:active {
+.Link:active {
   background-color: rgb(214, 140, 1);
 }

@@ -6,7 +6,7 @@ import "../fonts/Exo2-Italic-VariableFont_wght.ttf";
 import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
 import "../cssReset.css";
-import css from "../modules/app.module.css";
+import css from "../modules/N29.module.css";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
