@@ -5,6 +5,7 @@ import ButtonComp from "../components/button";
 import "../fonts/Exo2-Italic-VariableFont_wght.ttf";
 import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
+import ResultJson from "../result.json";
 import "../cssReset.css";
 import css from "../modules/N29.module.css";
 
@@ -18,6 +19,8 @@ function N29Test() {
   const [goodSelection, setGoodSelection] = useState(false);
   const [badSelection, setBadSelection] = useState(false);
   const [evaluation, setEvalutation] = useState(selectionArray.selection);
+  const [result, setResult] = useState(ResultJson);
+  const [disabled, setDisabled] = useState(false);
 
   const handleCheckAuswahl = (value, Int) => {
     let newWordsArray = [...words]; //* erstellt ein neues array dass gleich ist wie die words array
@@ -60,12 +63,6 @@ function N29Test() {
 
     setChosenBadSelection(chosenBadSelections); //! Man sollte setState nie in useEffect verwenden, solange man weiss wie man eine infinite loop vermeidet.
     checkBoolean();
-    const result = {
-      name: "Hansi",
-      date: "444",
-      evaluation: evaluation,
-    };
-    console.log(result);
   });
 
   const checkBoolean = () => {
@@ -79,11 +76,17 @@ function N29Test() {
     } else {
       setBadSelection(false);
     }
+
+    if (chosenGoodSelection == 6 && chosenBadSelection == 6) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
   };
 
   const handleNextPage = () => {
     if (maxArray <= 347) {
-      if (goodSelection && badSelection) {
+      if (!disabled) {
         let newArray = maxArray + pages;
         setminArray(maxArray);
         setMaxArray(newArray);
@@ -161,6 +164,8 @@ function N29Test() {
       }
       console.log(scanner);
     }
+    setResult((result.evaluation = evaluation));
+    console.log(result);
   };
 
   return (
@@ -192,14 +197,22 @@ function N29Test() {
                 words={words} //* prop: das ganze array wird als prop weiter gegeben
                 onCheckAuswahl={handleCheckAuswahl}
                 onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
-                onHandleNextPage={handleNextPage}
               ></WordSelectionList>
             </div>
           </div>
           <div className={css.Logo}>
             <div className={css.LogoPicture}></div>
+            <div className={css.NextButton}>
+              <ButtonComp
+                style={css.button}
+                name="Weiter"
+                event={handleNextPage}
+                disabled={disabled}
+              ></ButtonComp>
+            </div>
           </div>
         </div>
+
         <ButtonComp name={"Evalutation"} event={evaluationProcess}></ButtonComp>
       </div>
     </React.Fragment>

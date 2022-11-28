@@ -48,6 +48,32 @@
   font-size: -2rem;
 }
 
+.button {
+  width: 580px;
+  height: 80px;
+  background-color: rgb(0, 155, 0);
+  transition: background-color 0.5s;
+  color: white;
+  font-size: 2rem;
+  border: solid;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 1px;
+}
+
+.button:hover {
+  background-color: rgb(5, 177, 5);
+}
+
+.button:disabled {
+  background-color: #cccccc;
+}
+
+.NextButton {
+  position: sticky;
+  top: 65vh;
+}
+
 .TestHeader {
   display: flex;
   font-size: 1.8rem;

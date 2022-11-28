@@ -1,5 +1,6 @@
 import WordSelection from "./wordSelectionCheckBox";
 import PageButton from "./button";
+import css from "../modules/WordSelectionCheckBoxList.module.css";
 
 const WordSelectionCheckBoxList = (props) => {
   const handleCheckAuswahl = (value, Int) => {
@@ -35,9 +36,7 @@ const WordSelectionCheckBoxList = (props) => {
           />
         ))}
 
-      <div>
-        <PageButton name="Next Page" event={handleNextPage} />
-      </div>
+      <div></div>
     </div>
   );
 };
