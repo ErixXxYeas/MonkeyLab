@@ -1,8 +1,4 @@
 const button = (props) => {
-  const clicked = () => {
-    console.log("hola");
-  };
-
   return (
     <div>
       <button
