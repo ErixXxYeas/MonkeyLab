@@ -1,6 +1,4 @@
 import WordSelection from "./wordSelectionCheckBox";
-import PageButton from "./button";
-import css from "../modules/WordSelectionCheckBoxList.module.css";
 
 const WordSelectionCheckBoxList = (props) => {
   const handleCheckAuswahl = (value, Int) => {
@@ -9,10 +7,6 @@ const WordSelectionCheckBoxList = (props) => {
 
   const handleCheckAuswahlNeutral = (value, Int) => {
     props.onCheckAuswahlNeutral(value, Int);
-  };
-
-  const handleNextPage = () => {
-    props.onHandleNextPage();
   };
 
   return (
