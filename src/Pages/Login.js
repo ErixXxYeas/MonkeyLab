@@ -1,14 +1,15 @@
-import Butt from "../components/button";
+import ButtonComp from "../components/button";
 import InputField from "../components/inputField";
 import "../cssReset.css";
 import css from "../modules/Login.module.css";
 import { useNavigate } from "react-router-dom";
+
 import React from "react";
+
 function Login() {
   const navigate = useNavigate();
-
-  const navigatePage = () => {
-    navigate("./AdminPage.js");
+  const directToAdmin = () => {
+    navigate("/admin");
   };
 
   return (
@@ -24,11 +25,11 @@ function Login() {
             <InputField type="password" style={css.inputField}></InputField>
             <p>Passwort</p>
           </div>
-          <Butt
+          <ButtonComp
             name={"Einloggen"}
             style={css.Butt}
-            onClick={navigatePage}
-          ></Butt>
+            event={directToAdmin}
+          ></ButtonComp>
         </div>
         {/*<div className={css.Logo}></div>*/}
       </main>

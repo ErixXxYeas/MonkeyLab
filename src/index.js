@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./Pages/App.js";
+import N29 from "./Pages/N-29_Test.js";
 import AdminPage from "./Pages/AdminPage.js";
 import Login from "./Pages/Login.js";
 import reportWebVitals from "./reportWebVitals";
+import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Login />
+    <App />
   </React.StrictMode>
 );
 

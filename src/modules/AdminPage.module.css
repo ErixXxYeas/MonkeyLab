@@ -77,21 +77,21 @@
 }
 .Firstname {
   position: relative;
-  right: 22vh;
+  right: 190px;
 }
 .Lastname {
   position: relative;
-  right: 42vh;
+  right: 360px;
 }
 
 .Evaluation {
   position: relative;
-  right: 60vh;
+  right: 500px;
 }
 
 .Selectedwords {
   position: relative;
-  right: 50vh;
+  right: 500px;
 }
 
 @media screen and (max-width: 1350px) {
