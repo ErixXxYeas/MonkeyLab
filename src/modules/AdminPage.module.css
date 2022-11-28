@@ -1,0 +1,114 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1a4978;
+}
+
+.Knöpfe {
+  display: flex;
+  justify-content: space-between;
+  width: 36vw;
+}
+.Main {
+  margin-bottom: 80px;
+}
+
+.Header {
+  display: flex;
+  width: 85vw;
+  position: relative;
+  justify-content: space-between;
+  top: 20px;
+}
+
+.List {
+  height: 77vh;
+  width: 85vw;
+}
+
+.TrueList {
+  background-color: white;
+  height: 100%;
+}
+
+.Selection {
+  position: relative;
+  top: 30px;
+  width: 300px;
+  height: 30px;
+}
+
+.Headline {
+  bottom: 15px;
+  position: relative;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.Knopf {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  background-color: #ffa500;
+  border: none;
+  width: 15vw;
+  height: 30px;
+  right: 20px;
+  top: 5px;
+}
+
+.Knopf:active {
+  background-color: #d68d04;
+}
+
+.Navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.Firstname {
+  position: relative;
+  right: 190px;
+}
+.Lastname {
+  position: relative;
+  right: 360px;
+}
+
+.Evaluation {
+  position: relative;
+  right: 500px;
+}
+
+.Selectedwords {
+  position: relative;
+  right: 500px;
+}
+
+@media screen and (max-width: 1350px) {
+  .Header {
+    display: flex;
+    width: 85vw;
+    position: relative;
+    justify-content: space-between;
+    top: 20px;
+  }
+
+  .Knöpfe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10vw;
+    position: relative;
+    bottom: 22px;
+  }
+}

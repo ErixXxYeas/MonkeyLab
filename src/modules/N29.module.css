@@ -1,0 +1,111 @@
+.Container {
+  width: 99, 9vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*background-color: pink;*/
+}
+
+.main {
+  display: flex;
+  width: 99vw;
+  height: fit-content;
+}
+
+.WordList {
+  display: flex;
+  flex-direction: column;
+  width: 49vw;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.Logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 49vw;
+  padding-right: 50px;
+}
+
+.Header {
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #086cb4;
+  color: white;
+  border-style: solid;
+  border-bottom-width: 2px;
+  border-color: black;
+}
+
+.Button {
+  font-size: -2rem;
+}
+
+.button {
+  width: 580px;
+  height: 80px;
+  background-color: rgb(0, 155, 0);
+  transition: background-color 0.5s;
+  color: white;
+  font-size: 2rem;
+  border: solid;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 1px;
+}
+
+.button:hover {
+  background-color: rgb(5, 177, 5);
+}
+
+.button:disabled {
+  background-color: #cccccc;
+}
+
+.NextButton {
+  position: sticky;
+  top: 65vh;
+}
+
+.TestHeader {
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+
+.TestHeaderWord {
+  margin-left: 80px;
+}
+
+.TestHeaderWordGroup {
+  display: flex;
+  margin-left: 100px;
+}
+
+.LogoPicture {
+  position: sticky;
+  top: 42vh;
+  width: 500px;
+  height: 197px;
+  background-image: url("../../public/bifo-logo.png");
+}
+
+.Information {
+  position: absolute;
+  right: 20px;
+}
+
+.InformationIcon {
+  color: white;
+  font-size: 3rem;
+}

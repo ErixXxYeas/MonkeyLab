@@ -1,7 +1,7 @@
 const inputField = (props) => {
   return (
     <div>
-      <input></input>
+      <input type={props.type} className={props.style}></input>
     </div>
   );
 };

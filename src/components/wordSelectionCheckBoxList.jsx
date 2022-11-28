@@ -1,5 +1,6 @@
 import WordSelection from "./wordSelectionCheckBox";
-import PageButton from "./pageButton";
+import PageButton from "./button";
+import css from "../modules/WordSelectionCheckBoxList.module.css";
 
 const WordSelectionCheckBoxList = (props) => {
   const handleCheckAuswahl = (value, Int) => {
@@ -9,9 +10,7 @@ const WordSelectionCheckBoxList = (props) => {
   const handleCheckAuswahlNeutral = (value, Int) => {
     props.onCheckAuswahlNeutral(value, Int);
   };
-  const handleLastPage = () => {
-    props.onHandleLastPage();
-  };
+
   const handleNextPage = () => {
     props.onHandleNextPage();
   };
@@ -26,20 +25,18 @@ const WordSelectionCheckBoxList = (props) => {
         .slice(props.minArray, props.maxArray)
         .map((selectionWords) => (
           <WordSelection
+            onHandleChangeNeutral={handleCheckAuswahlNeutral}
             chosenGoodSelection={props.chosenGoodSelection}
             chosenBadSelection={props.chosenBadSelection}
+            onHandleChangeSelection={handleCheckAuswahl}
             goodSelections={props.goodSelection}
             badSelections={props.badSelection}
-            key={selectionWords.id}
             selectionWord={selectionWords} //prop: selectionword beinhaltet alle eigenschaften vom prop words
-            onHandleChangeSelection={handleCheckAuswahl}
-            onHandleChangeNeutral={handleCheckAuswahlNeutral}
+            key={selectionWords.id}
           />
         ))}
 
-      <div>
-        <PageButton onLastPage={handleLastPage} onNextPage={handleNextPage} />
-      </div>
+      <div></div>
     </div>
   );
 };
