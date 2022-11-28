@@ -44,6 +44,7 @@ function N29Test() {
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     //* useEffect wird nach jedem render der seite und update der states durchgeführt, dies verwenden wir
     let chosenGoodSelections = 0; //* um die anzahl der ausgewählten guten und schlecht wörter zu im Blick zu halten
@@ -77,7 +78,7 @@ function N29Test() {
       setBadSelection(false);
     }
 
-    if (chosenGoodSelection == 6 && chosenBadSelection == 6) {
+    if (chosenGoodSelection === 6 && chosenBadSelection === 6) {
       setDisabled(false);
     } else {
       setDisabled(true);
@@ -160,6 +161,7 @@ function N29Test() {
           case 348:
             scanner[scannerUpdate] = 319;
             break;
+          default:
         }
       }
       console.log(scanner);
