@@ -101,14 +101,19 @@ function N29Test() {
   };
 
   const evaluationProcess = () => {
+    setResult(() => result);
     let scanner = [20, 50, 58, 110, 141, 166, 200, 203, 255, 261, 314, 319];
     let newEvaluation = [...evaluation];
     let goodSelections = 0;
     let badSelections = 0;
 
     for (let evaluationRow = 0; evaluationRow <= 28; evaluationRow++) {
-      for (let i = 0; i <= 11; i++) {
-        let scannerLoc = scanner[i];
+      for (
+        let evaluationColumn = 0;
+        evaluationColumn <= 11;
+        evaluationColumn++
+      ) {
+        let scannerLoc = scanner[evaluationColumn];
         if (words[scannerLoc].selection === 1) {
           goodSelections++;
         } else if (words[scannerLoc].selection === 2) {
@@ -164,7 +169,6 @@ function N29Test() {
           default:
         }
       }
-      console.log(scanner);
     }
     setResult((result.evaluation = evaluation));
     console.log(result);
