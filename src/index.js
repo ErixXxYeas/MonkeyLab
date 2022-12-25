@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import PDF from "./Pages/PDF";
+import Printer from "./components/printer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
