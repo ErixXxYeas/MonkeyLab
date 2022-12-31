@@ -9,21 +9,27 @@ import domtoimage from "dom-to-image";
 
 const PDF = () => {
   const doc = new jsPDF({ orientation: "landscape" });
+  const Fragment = renderToString(<Printer></Printer>);
+  const HTML = document.createElement("div");
 
   const test = () => {
-    var node = document.getElementById("print");
+    HTML.innerHTML = Fragment;
+    var node = HTML.firstElementChild;
     domtoimage.toPng(node).then(function (dataUrl) {
       var img = new Image();
       img.src = dataUrl;
-      doc.addImage(img, "Png", 0, 0, 0, 0);
-      doc.autoPrint(doc);
-      doc.save("ben");
+      img.onload = () => {
+        console.log("loaded");
+        doc.save("ben");
+        doc.addImage(img, "Png", 0, 0, 0, 0);
+        doc.autoPrint(doc);
+      };
     });
     console.log("tested");
   };
 
   const test2 = () => {
-    window.print;
+    window.print();
   };
 
   return (

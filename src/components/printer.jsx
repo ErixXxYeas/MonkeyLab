@@ -4,11 +4,11 @@ import css from "../modules/PDF.module.css";
 
 const printer = () => {
   return (
-    <main>
+    <React.Fragment>
       <div>
         <p className={css.h1}>Save ME</p>
       </div>
-    </main>
+    </React.Fragment>
   );
 };
 
