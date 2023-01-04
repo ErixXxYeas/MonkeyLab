@@ -6,7 +6,7 @@ const printer = () => {
   return (
     <React.Fragment>
       <div>
-        <p className={css.h1}>Save ME</p>
+        <p>Save ME</p>
       </div>
     </React.Fragment>
   );
