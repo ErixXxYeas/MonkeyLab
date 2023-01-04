@@ -11,22 +11,25 @@ import canvas from "html2canvas";
 const PDF = () => {
   const doc = new jsPDF({ orientation: "landscape" });
   const Fragment = renderToString(<Printer></Printer>);
-  const kkl = "<h1>hallo</h1>";
-  const HTML = document.createElement("object");
+  const HTML = document.createElement("div");
 
   const test = () => {
-    HTML.innerHTML = kkl.trim;
+    HTML.setAttribute("id", "Page");
+    HTML.innerHTML = Fragment;
     var node = HTML;
-    var x = document.getElementById("print");
+    document.body.appendChild(node);
     domtoimage.toPng(node).then(function (dataUrl) {
       var img = new Image();
       img.src = dataUrl;
-      img.onload = () => {
-        console.log("loaded");
-        doc.addImage(img, "Png", 0, 0, 0, 0);
-        doc.autoPrint(doc);
-        doc.save("ben");
-      };
+      console.log("loaded");
+      doc.setDocumentProperties({
+        title: "Test",
+        author: "bifo",
+        subject: "sunb",
+      });
+      doc.addImage(img, "Png", 0, 0, 0, 0);
+      doc.output("dataurlnewwindow", "Test von Ben");
+      document.body.removeChild(node);
     });
     console.log(Fragment);
   };
@@ -37,12 +40,12 @@ const PDF = () => {
 
   return (
     <React.Fragment>
-      <div id="print">
+      <div className={css.print}>
         <p className={css.h1}>Hello World</p>
-      </div>
-      <div>
-        <Butt name={"JSPDF"} event={test}></Butt>
-        <button onClick={test2}>Regular</button>
+        <div>
+          <Butt name={"JSPDF"} event={test}></Butt>
+          <button onClick={test2}>Regular</button>
+        </div>
       </div>
     </React.Fragment>
   );

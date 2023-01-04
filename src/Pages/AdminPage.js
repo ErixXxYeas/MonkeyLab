@@ -3,6 +3,7 @@ import "../cssReset.css";
 import css from "../modules/AdminPage.module.css";
 import Button from "../components/button";
 import { useNavigate } from "react-router-dom";
+import CompletedTestBar from "../components/completedTestBar";
 function AdminPage() {
   const navigate = useNavigate();
   const navigateN29 = () => {
@@ -45,8 +46,9 @@ function AdminPage() {
                 <p>Wörterauswahl</p>
               </div>
             </div>
-
-            <div className={css.TrueList}></div>
+            <div className={css.TrueList}>
+              <CompletedTestBar></CompletedTestBar>
+            </div>
           </div>
         </div>
       </div>

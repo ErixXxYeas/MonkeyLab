@@ -1,3 +1,7 @@
 .h1 {
   font-size: 30px;
 }
+
+.print {
+  position: absolute;
+}
