@@ -1,7 +1,54 @@
-.h1 {
-  font-size: 30px;
+.main {
+  background-color: transparent;
+  height: 210mm;
+  width: 297mm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.print {
+.header {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  height: 30mm;
+  width: 95%;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.tableWrapper {
+  background-color: transparent;
+  width: 95%;
+  height: 170mm;
+  font-size: 0.879rem;
+}
+.tHead {
+  background-color: transparent;
+}
+.tableContainer {
+  background-color: transparent;
+  width: 100%;
+}
+.title {
+  font-weight: bold;
   position: absolute;
+  left: 240mm;
+}
+
+.checkers {
+  border: 1px;
+  width: 6mm;
+  height: 6mm;
+  border-style: solid;
+}
+
+.row {
+  width: 10mm;
+  background-color: transparent;
+}
+
+.group {
+  border: 2px;
+  border-style: solid;
 }

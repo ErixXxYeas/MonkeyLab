@@ -3,11 +3,34 @@ import "../cssReset.css";
 import css from "../modules/AdminPage.module.css";
 import Button from "../components/button";
 import { useNavigate } from "react-router-dom";
-import CompletedTestBar from "../components/completedTestBar";
+import CompletedTestBarList from "../components/completedTestBarList";
+import Results from "../result.json";
+import domtoimage from "dom-to-image";
+import { jsPDF } from "jspdf";
+
 function AdminPage() {
   const navigate = useNavigate();
   const navigateN29 = () => {
     navigate("/N29");
+  };
+  const HTML = document.createElement("div");
+  const doc = new jsPDF({ orientation: "landscape" }, "mm", "a4", true);
+  const createPdf = (Fragment) => {
+    HTML.innerHTML = Fragment;
+    document.body.appendChild(HTML);
+    domtoimage.toPng(HTML).then(function (dataurl) {
+      var img = new Image();
+      img.src = dataurl;
+      console.log("loaded");
+      doc.setDocumentProperties({
+        title: "Test",
+        author: "bifo",
+        subject: "sunb",
+      });
+      doc.addImage(img, "Png", 0, 0, 0, 0);
+      doc.output("dataurlnewwindow", "Test von Ben");
+      document.body.removeChild(HTML);
+    });
   };
 
   return (
@@ -47,7 +70,10 @@ function AdminPage() {
               </div>
             </div>
             <div className={css.TrueList}>
-              <CompletedTestBar></CompletedTestBar>
+              <CompletedTestBarList
+                onHandlePdf={createPdf}
+                results={Results}
+              ></CompletedTestBarList>
             </div>
           </div>
         </div>

@@ -1,0 +1,149 @@
+{
+  "sentences": [
+    {
+      "id": 1,
+      "s": "sozial: für andere da sein, ihnen helfen Gutes tun",
+      "t": "Humane Bedürfnisse"
+    },
+    {
+      "id": 2,
+      "s": "kollektiv: mit anderen zusammensein, sich in einer Gruppe wohlfühlen, sich einordnen",
+      "t": ""
+    },
+    {
+      "id": 3,
+      "s": "aktiv: etwas aktiv unternehmen, sich durchsetzen, für etwas kämpfen",
+      "t": "Aktivitäts-Bedürfnisse"
+    },
+    {
+      "id": 4,
+      "s": "passiv: eher passiv bleiben, nachgeben, sich mit etwas abfinden ",
+      "t": ""
+    },
+    {
+      "id": 5,
+      "s": "kontaktsuchend: sich mit anderen unterhalten, gerne mit Menschen zusammen sein ",
+      "t": "Kontakt-Bedürfnisse"
+    },
+    {
+      "id": 6,
+      "s": "alleinarbeitend: eine Arbeit still für sich tun ",
+      "t": ""
+    },
+    {
+      "id": 7,
+      "s": "reden, essen: sich mündlich ausdrücken, mit Lebensmitteln arbeiten ",
+      "t": ""
+    },
+    {
+      "id": 8,
+      "s": "Schmutz, Unordnung: Materialgeffihl, Freude an der Arbeit, bei der es schmutzige Finger gibt Kontakt-Bedürfnisse ",
+      "t": ""
+    },
+    {
+      "id": 9,
+      "s": "lehren: anderen etwas vormachen, beibringen",
+      "t": "Ich-Bedürfnisse "
+    },
+    {
+      "id": 10,
+      "s": "(sich) zeigen: anderen etwas zeigen, sich selber zeigen, im Mittelpunkt stehen, ein Werk von sich zeigen ",
+      "t": ""
+    },
+    {
+      "id": 11,
+      "s": "dominieren: befehlen können, andere lenken und beaufsichtigen ",
+      "t": ""
+    },
+    {
+      "id": 12,
+      "s": "sichern: aufpassen, Fehler suchen, kein Risiko eingehen, Freude an genauer Arbeit ",
+      "t": ""
+    },
+    {
+      "id": 13,
+      "s": "rezeptiv: nach Anleitung vorgehen, etwas nachmachen, lernen",
+      "t": "Intellektuelle-Bedürfnisse"
+    },
+    {
+      "id": 14,
+      "s": "selbständig denken: den Lösungsweg selber suchen, etwas Neues ausstudieren",
+      "t": ""
+    },
+    {
+      "id": 15,
+      "s": "forschend: Freude am Ergründen, Erforschen und Herausfinden",
+      "t": ""
+    },
+    {
+      "id": 16,
+      "s": "ästhetisch: Gefühl für das Schöne, etwas verschönern, schmücken, verzieren",
+      "t": "Gestaltungs-Bedürfnisse"
+    },
+    {
+      "id": 17,
+      "s": "zeichnend und gestaltend: etwas Schönes herstellen",
+      "t": ""
+    },
+    {
+      "id": 18,
+      "s": "konstruierend: vorausplanen, Pläne erstellen, Entwürfe machen ",
+      "t": ""
+    },
+    {
+      "id": 19,
+      "s": "berechnend: gerne mit Zahlen zu tun haben, rechnerisch-buchhalterisch tätig sein ",
+      "t": "Fachliche-Bedürfnisse "
+    },
+    {
+      "id": 20,
+      "s": "sprachlich: schriftliche Tätigkeiten, Berichte und Briefe schreiben",
+      "t": ""
+    },
+    {
+      "id": 21,
+      "s": "organisatorisch: Anweisungen weiterleiten, Übersicht haben",
+      "t": ""
+    },
+    {
+      "id": 22,
+      "s": "administrativ: Ordnung machen, sortieren, Listen führen, Eintragungen machen ",
+      "t": ""
+    },
+    {
+      "id": 23,
+      "s": "erwerbend: mit Geld zu tun haben, Geschäfte machen, besitzen ",
+      "t": ""
+    },
+    {
+      "id": 24,
+      "s": "im Freien arbeitend: robuste, landwirtschaftliche und gärtnerische Arbeit",
+      "t": "Motorische Bedürfnisse"
+    },
+    {
+      "id": 25,
+      "s": "sich bewegend: den ganzen Körper bewegen, nicht immer am selben Ort arbeiten ",
+      "t": ""
+    },
+    {
+      "id": 26,
+      "s": "ruhig arbeitend: längere Zeit am selben Gegenstand arbeiten, Ausdauer haben ",
+      "t": ""
+    },
+    {
+      "id": 27,
+      "s": "fein-manuell: gerne feine Arbeit machen, die Genauigkeit/Handgeschick erfordern",
+      "t": ""
+    },
+    {
+      "id": 28,
+      "s": "grob-körperlich: gerne große und grobe Arbeiten machen, die Kraft verlangen",
+      "t": ""
+    },
+    {
+      "id": 29,
+      "s": "praktisch-produktiv: etwas zusammenstellen, etwas Praktisches herstellen, man sieht was man gearbeitet hat ",
+      "t": ""
+    }
+  ]
+}

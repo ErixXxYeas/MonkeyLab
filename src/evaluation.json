@@ -1,4 +1,8 @@
 {
+  "id": 1,
+  "name": "Eric",
+  "familyName": "Ye",
+  "date": "01.01.2022",
   "selection": [
     {
       "good": 0,
@@ -115,6 +119,56 @@
     {
       "good": 0,
       "bad": 0
+    }
+  ],
+  "selectedWord": [
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
     }
   ]
 }

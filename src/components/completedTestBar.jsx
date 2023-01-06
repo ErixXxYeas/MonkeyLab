@@ -1,13 +1,35 @@
 import css from "../modules/CompletedTestBar.module.css";
 
-const CompletedTestBar = () => {
+import { renderToString } from "react-dom/server";
+
+import Printer from "../components/printer";
+
+const CompletedTestBar = (props) => {
+  const evaluation = props.result.evaluation;
+
+  const Fragment = renderToString(
+    <Printer
+      evaluation={props.result.evaluation}
+      name={props.result.name}
+      age={props.result.age}
+    ></Printer>
+  );
+
+  const handlePdf = () => {
+    props.onHandlePdf(Fragment);
+    console.log("hel");
+  };
   return (
     <div>
       <div className={css.main}>
-        <div className={css.date}></div>
-        <div className={css.name}></div>
-        <div className={css.lastName}></div>
-        <div className={css.print}></div>
+        <div className={css.date}>{props.result.date}</div>
+        <div className={css.name}>{props.result.name}</div>
+        <div className={css.lastName}>{props.result.familyName}</div>
+        <div className={css.print}>
+          <a href="#" onClick={handlePdf}>
+            Click Me
+          </a>
+        </div>
       </div>
     </div>
   );
