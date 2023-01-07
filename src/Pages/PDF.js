@@ -2,7 +2,7 @@ import React from "react";
 import css from "../modules/PDF.module.css";
 import { jsPDF } from "jspdf";
 import Butt from "../components/button";
-import Printer from "../components/printer";
+import Printer from "../components/selectionEvaluation";
 import { renderToString } from "react-dom/server";
 import N29 from "./N-29_Test";
 import domtoimage from "dom-to-image";

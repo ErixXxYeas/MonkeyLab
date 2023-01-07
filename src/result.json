@@ -36,95 +36,146 @@
           "bad": 6
         },
         {
-          "good": 0,
+          "good": 3,
+          "bad": 2
+        },
+        {
+          "good": 1,
+          "bad": 6
+        },
+        {
+          "good": 2,
+          "bad": 3
+        },
+        {
+          "good": 4,
+          "bad": 1
+        },
+        {
+          "good": 5,
           "bad": 0
         },
         {
           "good": 0,
-          "bad": 0
+          "bad": 4
+        },
+        {
+          "good": 5,
+          "bad": 2
+        },
+        {
+          "good": 3,
+          "bad": 2
+        },
+        {
+          "good": 1,
+          "bad": 1
+        },
+        {
+          "good": 3,
+          "bad": 5
+        },
+        {
+          "good": 2,
+          "bad": 3
+        },
+        {
+          "good": 1,
+          "bad": 6
+        },
+        {
+          "good": 4,
+          "bad": 2
+        },
+        {
+          "good": 3,
+          "bad": 3
+        },
+        {
+          "good": 1,
+          "bad": 6
+        },
+        {
+          "good": 3,
+          "bad": 2
+        },
+        {
+          "good": 4,
+          "bad": 1
+        },
+        {
+          "good": 1,
+          "bad": 3
+        },
+        {
+          "good": 2,
+          "bad": 5
+        },
+        {
+          "good": 4,
+          "bad": 2
         },
         {
           "good": 0,
-          "bad": 0
+          "bad": 2
         },
         {
-          "good": 0,
-          "bad": 0
+          "good": 6,
+          "bad": 3
+        }
+      ],
+      "selectedWord": [
+        {
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         },
         {
-          "good": 0,
-          "bad": 0
-        },
-        {
-          "good": 0,
-          "bad": 0
-        },
-        {
-          "good": 0,
-          "bad": 0
-        },
-        {
-          "good": 0,
-          "bad": 0
-        },
-        {
-          "good": 0,
-          "bad": 0
-        },
-        {
-          "good": 0,
-          "bad": 0
-        },
-        {
-          "good": 0,
-          "bad": 0
-        },
-        {
-          "good": 0,
-          "bad": 0
+          "goodWords": [],
+          "badWords": []
         }
       ]
     },
+
     {
       "id": 2,
       "name": "Ben",
@@ -247,6 +298,56 @@
         {
           "good": 0,
           "bad": 0
+        }
+      ],
+      "selectedWord": [
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
+        },
+        {
+          "goodWords": [],
+          "badWords": []
         }
       ]
     }

@@ -4,8 +4,8 @@ import Results from "../result.json";
 const CompletedTestBarList = (props) => {
   const minId = 1;
   const maxId = 1;
-  const handlePdf = (Fragment) => {
-    props.onHandlePdf(Fragment);
+  const handlePdf = (selectionFragment, wordsFragment) => {
+    props.onHandlePdf(selectionFragment, wordsFragment);
   };
   return (
     <div>
@@ -14,6 +14,7 @@ const CompletedTestBarList = (props) => {
           onHandlePdf={handlePdf}
           result={result}
           evaluation={result.evaluation}
+          wordsEvaluation={result.selectedWord}
           key={result.id}
         ></CompletedTestBar>
       ))}

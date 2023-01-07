@@ -1,10 +1,9 @@
-import jsPDF from "jspdf";
 import React from "react";
 import css from "../modules/PDF.module.css";
 import EvaluationRow from "./evaluationRow";
 import sentences from "../sentences.json";
 
-const printer = (props) => {
+const selectionEvaluation = (props) => {
   const evaluation = props.evaluation;
 
   return (
@@ -122,4 +121,4 @@ const printer = (props) => {
   );
 };
 
-export default printer;
+export default selectionEvaluation;
