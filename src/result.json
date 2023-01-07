@@ -8,12 +8,12 @@
       "age": 19,
       "evaluation": [
         {
-          "good": 1,
-          "bad": 0
+          "good": 3,
+          "bad": 5
         },
         {
-          "good": 0,
-          "bad": 0
+          "good": 6,
+          "bad": 6
         },
         {
           "good": 2,
@@ -21,19 +21,19 @@
         },
         {
           "good": 0,
-          "bad": 0
+          "bad": 5
         },
         {
           "good": 5,
           "bad": 0
         },
         {
-          "good": 0,
-          "bad": 0
+          "good": 6,
+          "bad": 5
         },
         {
-          "good": 0,
-          "bad": 0
+          "good": 5,
+          "bad": 6
         },
         {
           "good": 0,
@@ -133,8 +133,8 @@
       "age": 19,
       "evaluation": [
         {
-          "good": 1,
-          "bad": 0
+          "good": 5,
+          "bad": 5
         },
         {
           "good": 0,

@@ -9,10 +9,11 @@ const CompletedTestBarList = (props) => {
   };
   return (
     <div>
-      {Results.tests.slice(0, 4).map((result) => (
+      {props.results.tests.slice(0, 4).map((result) => (
         <CompletedTestBar
           onHandlePdf={handlePdf}
           result={result}
+          evaluation={result.evaluation}
           key={result.id}
         ></CompletedTestBar>
       ))}

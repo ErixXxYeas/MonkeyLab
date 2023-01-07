@@ -23,6 +23,8 @@ const printer = (props) => {
               {sentences.sentences.slice(0, 2).map((sentences, index) => (
                 <EvaluationRow
                   key={index}
+                  goodWords={evaluation[sentences.id - 1].good}
+                  badWords={evaluation[sentences.id - 1].bad}
                   s={sentences.s}
                   t={sentences.t}
                   id={sentences.id}
@@ -36,6 +38,8 @@ const printer = (props) => {
                   s={sentences.s}
                   t={sentences.t}
                   id={sentences.id}
+                  goodWords={evaluation[sentences.id - 1].good}
+                  badWords={evaluation[sentences.id - 1].bad}
                 ></EvaluationRow>
               ))}
             </tbody>
@@ -46,6 +50,8 @@ const printer = (props) => {
                   s={sentences.s}
                   t={sentences.t}
                   id={sentences.id}
+                  goodWords={evaluation[sentences.id - 1].good}
+                  badWords={evaluation[sentences.id - 1].bad}
                 ></EvaluationRow>
               ))}
             </tbody>
@@ -56,6 +62,8 @@ const printer = (props) => {
                   s={sentences.s}
                   t={sentences.t}
                   id={sentences.id}
+                  goodWords={evaluation[sentences.id - 1].good}
+                  badWords={evaluation[sentences.id - 1].bad}
                 ></EvaluationRow>
               ))}
             </tbody>
@@ -66,6 +74,8 @@ const printer = (props) => {
                   s={sentences.s}
                   t={sentences.t}
                   id={sentences.id}
+                  goodWords={evaluation[sentences.id - 1].good}
+                  badWords={evaluation[sentences.id - 1].bad}
                 ></EvaluationRow>
               ))}
             </tbody>
@@ -76,6 +86,8 @@ const printer = (props) => {
                   s={sentences.s}
                   t={sentences.t}
                   id={sentences.id}
+                  goodWords={evaluation[sentences.id - 1].good}
+                  badWords={evaluation[sentences.id - 1].bad}
                 ></EvaluationRow>
               ))}
             </tbody>
@@ -86,6 +98,8 @@ const printer = (props) => {
                   s={sentences.s}
                   t={sentences.t}
                   id={sentences.id}
+                  goodWords={evaluation[sentences.id - 1].good}
+                  badWords={evaluation[sentences.id - 1].bad}
                 ></EvaluationRow>
               ))}
             </tbody>
@@ -96,6 +110,8 @@ const printer = (props) => {
                   s={sentences.s}
                   t={sentences.t}
                   id={sentences.id}
+                  goodWords={evaluation[sentences.id - 1].good}
+                  badWords={evaluation[sentences.id - 1].bad}
                 ></EvaluationRow>
               ))}
             </tbody>

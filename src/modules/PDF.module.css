@@ -1,5 +1,4 @@
 .main {
-  background-color: transparent;
   height: 210mm;
   width: 297mm;
   display: flex;
@@ -8,7 +7,6 @@
 }
 
 .header {
-  background-color: transparent;
   display: flex;
   align-items: center;
   height: 30mm;
@@ -18,21 +16,17 @@
 }
 
 .tableWrapper {
-  background-color: transparent;
   width: 95%;
   height: 170mm;
   font-size: 0.879rem;
 }
-.tHead {
-  background-color: transparent;
-}
 .tableContainer {
-  background-color: transparent;
   width: 100%;
 }
 .title {
   font-weight: bold;
-  position: absolute;
+  position: fixed;
+  z-index: -99;
   left: 240mm;
 }
 
@@ -45,10 +39,24 @@
 
 .row {
   width: 10mm;
-  background-color: transparent;
+  border-right: 1px;
+  border-style: solid;
 }
 
 .group {
   border: 2px;
+  border-style: solid;
+}
+
+.border {
+  background-color: green;
+  height: 6mm;
+  width: 6mm;
+  border-top-width: 1px;
+  z-index: -98;
+}
+
+.sentence {
+  border-left: 1px;
   border-style: solid;
 }

@@ -5,11 +5,9 @@ import { renderToString } from "react-dom/server";
 import Printer from "../components/printer";
 
 const CompletedTestBar = (props) => {
-  const evaluation = props.result.evaluation;
-
   const Fragment = renderToString(
     <Printer
-      evaluation={props.result.evaluation}
+      evaluation={props.evaluation}
       name={props.result.name}
       age={props.result.age}
     ></Printer>
@@ -17,7 +15,7 @@ const CompletedTestBar = (props) => {
 
   const handlePdf = () => {
     props.onHandlePdf(Fragment);
-    console.log("hel");
+    console.log(props.evaluation);
   };
   return (
     <div>
