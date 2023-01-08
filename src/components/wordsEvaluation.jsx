@@ -29,7 +29,7 @@ const WordsEvaluation = (props) => {
               </tr>
               {Array.from({ length: 6 }).map((_, indexY) => (
                 <React.Fragment>
-                  <tr>
+                  <tr className={css.rowBorder}>
                     {Array.from({ length: 3 }).map((_, index) => (
                       <WordsEvaluationRow
                         style={css.content}
@@ -59,7 +59,7 @@ const WordsEvaluation = (props) => {
               </tr>
               {Array.from({ length: 6 }).map((_, indexY) => (
                 <React.Fragment>
-                  <tr>
+                  <tr className={css.rowBorder}>
                     {Array.from({ length: 3 }).map((_, index) => (
                       <WordsEvaluationRow
                         style={css.content}
@@ -89,7 +89,7 @@ const WordsEvaluation = (props) => {
               </tr>
               {Array.from({ length: 6 }).map((_, indexY) => (
                 <React.Fragment>
-                  <tr>
+                  <tr className={css.rowBorder}>
                     {Array.from({ length: 3 }).map((_, index) => (
                       <WordsEvaluationRow
                         style={css.content}
@@ -111,7 +111,7 @@ const WordsEvaluation = (props) => {
                 ))}
               </tr>
             </tbody>
-            <tbody>
+            <tbody className={css.rowBorderL}>
               <tr>
                 {Array.from({ length: 3 }).map((_, index) => (
                   <TableHeaders key={index}></TableHeaders>
@@ -119,7 +119,7 @@ const WordsEvaluation = (props) => {
               </tr>
               {Array.from({ length: 6 }).map((_, indexY) => (
                 <React.Fragment>
-                  <tr>
+                  <tr className={css.rowBorder}>
                     {Array.from({ length: 3 }).map((_, index) => (
                       <WordsEvaluationRow
                         style={css.content}
