@@ -7,17 +7,22 @@ const CompletedTestBar = (props) => {
   const selectionFragment = renderToString(
     <SelectionEvaluation
       evaluation={props.evaluation}
-      wordsEvaluation={props.wordsEvaluation}
       name={props.result.name}
       age={props.result.age}
     ></SelectionEvaluation>
   );
 
-  const wordsFragment = renderToString(<WordsEvaluation></WordsEvaluation>);
+  const wordsFragment = renderToString(
+    <WordsEvaluation
+      wordsEvaluation={props.wordsEvaluation}
+      name={props.result.name}
+      age={props.result.age}
+    ></WordsEvaluation>
+  );
 
   const handlePdf = () => {
     props.onHandlePdf(selectionFragment, wordsFragment);
-    console.log(props.evaluation);
+    console.log(props.wordsEvaluation);
   };
 
   return (
