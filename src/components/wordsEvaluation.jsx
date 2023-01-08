@@ -1,7 +1,7 @@
 import css from "../modules/WordsEvaluation.module.css";
-import { Row, Col } from "react-bootstrap";
 import WordsEvaluationRow from "./wordsEvaluationRow";
 import TableHeaders from "./tableheaders";
+import React from "react";
 const WordsEvaluation = (props) => {
   const words = props.wordsEvaluation;
   return (
@@ -24,17 +24,22 @@ const WordsEvaluation = (props) => {
             <tbody>
               <tr>
                 {Array.from({ length: 3 }).map((_, index) => (
-                  <TableHeaders></TableHeaders>
+                  <TableHeaders key={index}></TableHeaders>
                 ))}
               </tr>
-              {Array.from({ length: 6 }).map((_, index) => (
-                <tr className={css.contentRow}>
-                  <WordsEvaluationRow
-                    style={css.content}
-                    key={index}
-                    words={words[0].goodWords[index]}
-                  ></WordsEvaluationRow>
-                </tr>
+              {Array.from({ length: 6 }).map((_, indexY) => (
+                <React.Fragment>
+                  <tr>
+                    {Array.from({ length: 3 }).map((_, index) => (
+                      <WordsEvaluationRow
+                        style={css.content}
+                        key={index}
+                        goodWords={words[index].goodWords[indexY]}
+                        badWords={words[index].badWords[indexY]}
+                      ></WordsEvaluationRow>
+                    ))}
+                  </tr>
+                </React.Fragment>
               ))}
             </tbody>
             <tbody>
@@ -47,19 +52,24 @@ const WordsEvaluation = (props) => {
               </tr>
             </tbody>
             <tbody>
-              {" "}
               <tr>
                 {Array.from({ length: 3 }).map((_, index) => (
-                  <TableHeaders></TableHeaders>
+                  <TableHeaders key={index}></TableHeaders>
                 ))}
               </tr>
-              {Array.from({ length: 6 }).map((_, index) => (
-                <tr className={css.contentRow}>
-                  <WordsEvaluationRow
-                    style={css.content}
-                    key={index}
-                  ></WordsEvaluationRow>
-                </tr>
+              {Array.from({ length: 6 }).map((_, indexY) => (
+                <React.Fragment>
+                  <tr>
+                    {Array.from({ length: 3 }).map((_, index) => (
+                      <WordsEvaluationRow
+                        style={css.content}
+                        key={index}
+                        goodWords={words[index + 3].goodWords[indexY]}
+                        badWords={words[index + 3].badWords[indexY]}
+                      ></WordsEvaluationRow>
+                    ))}
+                  </tr>
+                </React.Fragment>
               ))}
             </tbody>
             <tbody>
@@ -72,19 +82,24 @@ const WordsEvaluation = (props) => {
               </tr>
             </tbody>
             <tbody>
-              {" "}
               <tr>
                 {Array.from({ length: 3 }).map((_, index) => (
-                  <TableHeaders></TableHeaders>
+                  <TableHeaders key={index}></TableHeaders>
                 ))}
               </tr>
-              {Array.from({ length: 6 }).map((_, index) => (
-                <tr className={css.contentRow}>
-                  <WordsEvaluationRow
-                    style={css.content}
-                    key={index}
-                  ></WordsEvaluationRow>
-                </tr>
+              {Array.from({ length: 6 }).map((_, indexY) => (
+                <React.Fragment>
+                  <tr>
+                    {Array.from({ length: 3 }).map((_, index) => (
+                      <WordsEvaluationRow
+                        style={css.content}
+                        key={index}
+                        goodWords={words[index + 6].goodWords[indexY]}
+                        badWords={words[index + 6].badWords[indexY]}
+                      ></WordsEvaluationRow>
+                    ))}
+                  </tr>
+                </React.Fragment>
               ))}
             </tbody>
             <tbody>
@@ -97,19 +112,24 @@ const WordsEvaluation = (props) => {
               </tr>
             </tbody>
             <tbody>
-              {" "}
               <tr>
                 {Array.from({ length: 3 }).map((_, index) => (
-                  <TableHeaders></TableHeaders>
+                  <TableHeaders key={index}></TableHeaders>
                 ))}
               </tr>
-              {Array.from({ length: 6 }).map((_, index) => (
-                <tr className={css.contentRow}>
-                  <WordsEvaluationRow
-                    style={css.content}
-                    key={index}
-                  ></WordsEvaluationRow>
-                </tr>
+              {Array.from({ length: 6 }).map((_, indexY) => (
+                <React.Fragment>
+                  <tr>
+                    {Array.from({ length: 3 }).map((_, index) => (
+                      <WordsEvaluationRow
+                        style={css.content}
+                        key={index}
+                        goodWords={words[index + 9].goodWords[indexY]}
+                        badWords={words[index + 9].badWords[indexY]}
+                      ></WordsEvaluationRow>
+                    ))}
+                  </tr>
+                </React.Fragment>
               ))}
             </tbody>
           </table>

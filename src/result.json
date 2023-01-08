@@ -126,28 +126,63 @@
       ],
       "selectedWord": [
         {
-          "goodWords": ["habllo", "Hund", "kohle"],
-          "badWords": ["habllo", "Hund", "kohle"]
+          "goodWords": [
+            "Schauspielern",
+            "leiten",
+            "kontrollieren",
+            "lernen",
+            "überlegen",
+            "experimentieren"
+          ],
+          "badWords": [
+            "schönschreiben",
+            "zeichnen",
+            "konstruieren",
+            "rechnen",
+            "schreiben",
+            "organisieren"
+          ]
         },
         {
-          "goodWords": [],
-          "badWords": []
+          "goodWords": ["kekl", "rok", "lkfj", "habllo", "Hund", "kohle"],
+          "badWords": [
+            "fds",
+            "rddd",
+            "dlksafj",
+            "hfdsa",
+            "Hunasadfd",
+            "kofsadfhle"
+          ]
         },
         {
-          "goodWords": [],
-          "badWords": []
+          "goodWords": [
+            "habllo",
+            "Hund",
+            "kohle",
+            "hfdsa",
+            "Hunasadfd",
+            "kofsadfhle"
+          ],
+          "badWords": [
+            "hfdsa",
+            "Hunasadfd",
+            "kofsadfhle",
+            "habllo",
+            "Hund",
+            "kohle"
+          ]
         },
         {
-          "goodWords": [],
-          "badWords": []
+          "goodWords": ["es"],
+          "badWords": ["funktionert"]
         },
         {
-          "goodWords": [],
-          "badWords": []
+          "goodWords": ["richtig"],
+          "badWords": ["ohne"]
         },
         {
-          "goodWords": [],
-          "badWords": []
+          "goodWords": ["probleme"],
+          "badWords": ["Ja"]
         },
         {
           "goodWords": [],

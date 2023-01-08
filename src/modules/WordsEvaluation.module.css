@@ -40,7 +40,7 @@
 .heaven {
   display: flex;
   align-items: center;
-  height: 15mm;
+  height: 20mm;
   width: 95%;
   font-weight: bold;
   font-size: 2rem;
@@ -50,10 +50,13 @@
   background-color: pink;
   border-style: solid;
   border-width: 1px;
+  height: 5mm;
+  font-size: 0.839rem;
+  text-align: center;
 }
 
 .contentRow {
   background-color: green;
-  text-align: center;
+
   width: 100mm;
 }
