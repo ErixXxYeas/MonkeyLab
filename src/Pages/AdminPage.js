@@ -15,12 +15,12 @@ function AdminPage() {
   };
   const HTMLselectionEvaluation = document.createElement("div");
   const HTMLwordsEvaluation = document.createElement("div");
-  const doc = new jsPDF({ orientation: "landscape" }, "mm", "a4", true);
   const createPdf = (selectionFragment, wordsFragment) => {
+    let doc = new jsPDF({ orientation: "landscape" }, "mm", "a4", true);
     HTMLselectionEvaluation.innerHTML = selectionFragment;
     document.body.appendChild(HTMLselectionEvaluation);
     domtoimage.toPng(HTMLselectionEvaluation).then(function (dataurl) {
-      var selectionImg = new Image();
+      let selectionImg = new Image();
       selectionImg.src = dataurl;
       selectionImg.onload = () => {
         console.log("loaded");
@@ -33,13 +33,13 @@ function AdminPage() {
         HTMLwordsEvaluation.innerHTML = wordsFragment;
         document.body.appendChild(HTMLwordsEvaluation);
         domtoimage.toPng(HTMLwordsEvaluation).then(function (dataUrl) {
-          var wordImg = new Image();
+          let wordImg = new Image();
           wordImg.src = dataUrl;
           doc.addPage();
           doc.addImage(wordImg, "Png", 0, 0, 0, 0);
+          doc.output("dataurlnewwindow", "Test von Ben");
           document.body.removeChild(HTMLwordsEvaluation);
           document.body.removeChild(HTMLselectionEvaluation);
-          doc.output("dataurlnewwindow", "Test von Ben");
         });
       };
     });
