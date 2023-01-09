@@ -8,3 +8,14 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.Button {
+  background: none;
+  border: none;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.Button:hover {
+  color: rgb(14, 138, 201);
+}
