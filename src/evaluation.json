@@ -1,8 +1,9 @@
 {
-  "id": 1,
-  "name": "Eric",
-  "familyName": "Ye",
+  "id": 0,
+  "name": "",
+  "familyName": "",
   "date": "01.01.2022",
+  "age": "",
   "selection": [
     {
       "good": 0,
