@@ -4,11 +4,11 @@ import TableHeaders from "./tableheaders";
 import React from "react";
 const WordsEvaluation = (props) => {
   const words = props.wordsEvaluation;
+  const pageTitle = // eslint-disable-next-line
+    "Neigungstest N-29 " + "Name: " + props.name + " Alter: " + props.age;
   return (
     <div className={css.main}>
-      <div className={css.heaven}>
-        {"Neigungstest N-29 " + "Name: " + props.name + " Alter: " + props.age}
-      </div>
+      <div className={css.heaven}>{pageTitle}</div>
       <div className={css.hell}>
         <div className={css.tableWrapper}>
           <table>
@@ -28,8 +28,8 @@ const WordsEvaluation = (props) => {
                 ))}
               </tr>
               {Array.from({ length: 6 }).map((_, indexY) => (
-                <React.Fragment>
-                  <tr className={css.rowBorder}>
+                <React.Fragment key={indexY}>
+                  <tr key={indexY} className={css.rowBorder}>
                     {Array.from({ length: 3 }).map((_, index) => (
                       <WordsEvaluationRow
                         style={css.content}
@@ -58,8 +58,8 @@ const WordsEvaluation = (props) => {
                 ))}
               </tr>
               {Array.from({ length: 6 }).map((_, indexY) => (
-                <React.Fragment>
-                  <tr className={css.rowBorder}>
+                <React.Fragment key={indexY}>
+                  <tr key={indexY} className={css.rowBorder}>
                     {Array.from({ length: 3 }).map((_, index) => (
                       <WordsEvaluationRow
                         style={css.content}
@@ -88,8 +88,8 @@ const WordsEvaluation = (props) => {
                 ))}
               </tr>
               {Array.from({ length: 6 }).map((_, indexY) => (
-                <React.Fragment>
-                  <tr className={css.rowBorder}>
+                <React.Fragment key={indexY}>
+                  <tr key={indexY} className={css.rowBorder}>
                     {Array.from({ length: 3 }).map((_, index) => (
                       <WordsEvaluationRow
                         style={css.content}
@@ -118,8 +118,8 @@ const WordsEvaluation = (props) => {
                 ))}
               </tr>
               {Array.from({ length: 6 }).map((_, indexY) => (
-                <React.Fragment>
-                  <tr className={css.rowBorder}>
+                <React.Fragment key={indexY}>
+                  <tr key={indexY} className={css.rowBorder}>
                     {Array.from({ length: 3 }).map((_, index) => (
                       <WordsEvaluationRow
                         style={css.content}
