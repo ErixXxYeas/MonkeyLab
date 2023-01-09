@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import wordsJson from "../n29_words.json";
-import selectionArray from "../selection.json";
+import selectionArray from "../evaluation.json";
 import ButtonComp from "../components/button";
 import "../fonts/Exo2-Italic-VariableFont_wght.ttf";
 import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
-import ResultJson from "../result.json";
 import "../cssReset.css";
 import css from "../modules/N29.module.css";
 
@@ -19,7 +18,9 @@ function N29Test() {
   const [goodSelection, setGoodSelection] = useState(false);
   const [badSelection, setBadSelection] = useState(false);
   const [evaluation, setEvalutation] = useState(selectionArray.selection);
-  const [result, setResult] = useState(ResultJson);
+  const [evaluationWords, setEvalutationWords] = useState(
+    selectionArray.selectedWord
+  );
   const [disabled, setDisabled] = useState(false);
 
   const handleCheckAuswahl = (value, Int) => {
@@ -101,14 +102,24 @@ function N29Test() {
   };
 
   const evaluationProcess = () => {
+    //Auswahl Evaluierung
     let scanner = [20, 50, 58, 110, 141, 166, 200, 203, 255, 261, 314, 319];
     let newEvaluation = [...evaluation];
     let goodSelections = 0;
     let badSelections = 0;
+    let newWordEvaluation = [...evaluationWords];
+    let newGoodWords = [];
+    let newBadWords = [];
+    let minRow = 0;
+    let maxRow = 28;
 
     for (let evaluationRow = 0; evaluationRow <= 28; evaluationRow++) {
-      for (let i = 0; i <= 11; i++) {
-        let scannerLoc = scanner[i];
+      for (
+        let evaluationColumn = 0;
+        evaluationColumn <= 11;
+        evaluationColumn++
+      ) {
+        let scannerLoc = scanner[evaluationColumn];
         if (words[scannerLoc].selection === 1) {
           goodSelections++;
         } else if (words[scannerLoc].selection === 2) {
@@ -164,10 +175,28 @@ function N29Test() {
           default:
         }
       }
-      console.log(scanner);
     }
-    setResult((result.evaluation = evaluation));
-    console.log(result);
+
+    //Wörter Evaluierung
+
+    for (let column = 0; column <= 11; column++) {
+      for (minRow; minRow <= maxRow; minRow++) {
+        if (words[minRow].selection === 1) {
+          newGoodWords.push(words[minRow].word);
+        }
+        if (words[minRow].selection === 2) {
+          newBadWords.push(words[minRow].word);
+        }
+      }
+      newWordEvaluation[column].goodWords = newGoodWords;
+      newWordEvaluation[column].badWords = newBadWords;
+      setEvalutationWords(() => newWordEvaluation);
+      newGoodWords = [];
+      newBadWords = [];
+      console.log(minRow, maxRow);
+      maxRow += 29;
+    }
+    console.log(selectionArray);
   };
 
   return (
