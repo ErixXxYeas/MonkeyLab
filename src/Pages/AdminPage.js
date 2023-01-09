@@ -3,10 +3,46 @@ import "../cssReset.css";
 import css from "../modules/AdminPage.module.css";
 import Button from "../components/button";
 import { useNavigate } from "react-router-dom";
+import CompletedTestBarList from "../components/completedTestBarList";
+import Results from "../result.json";
+import domtoimage from "dom-to-image";
+import { jsPDF } from "jspdf";
+
 function AdminPage() {
   const navigate = useNavigate();
   const navigateN29 = () => {
     navigate("/N29");
+  };
+  const HTMLselectionEvaluation = document.createElement("div");
+  const HTMLwordsEvaluation = document.createElement("div");
+  const doc = new jsPDF({ orientation: "landscape" }, "mm", "a4", true);
+  const createPdf = (selectionFragment, wordsFragment) => {
+    HTMLselectionEvaluation.innerHTML = selectionFragment;
+    document.body.appendChild(HTMLselectionEvaluation);
+    domtoimage.toPng(HTMLselectionEvaluation).then(function (dataurl) {
+      var selectionImg = new Image();
+      selectionImg.src = dataurl;
+      selectionImg.onload = () => {
+        console.log("loaded");
+        doc.setDocumentProperties({
+          title: "Test",
+          author: "bifo",
+          subject: "sunb",
+        });
+        doc.addImage(selectionImg, "Png", 0, 0, 0, 0);
+        HTMLwordsEvaluation.innerHTML = wordsFragment;
+        document.body.appendChild(HTMLwordsEvaluation);
+        domtoimage.toPng(HTMLwordsEvaluation).then(function (dataUrl) {
+          var wordImg = new Image();
+          wordImg.src = dataUrl;
+          doc.addPage();
+          doc.addImage(wordImg, "Png", 0, 0, 0, 0);
+          document.body.removeChild(HTMLwordsEvaluation);
+          document.body.removeChild(HTMLselectionEvaluation);
+          doc.output("dataurlnewwindow", "Test von Ben");
+        });
+      };
+    });
   };
 
   return (
@@ -45,8 +81,12 @@ function AdminPage() {
                 <p>Wörterauswahl</p>
               </div>
             </div>
-
-            <div className={css.TrueList}></div>
+            <div className={css.TrueList}>
+              <CompletedTestBarList
+                onHandlePdf={createPdf}
+                results={Results}
+              ></CompletedTestBarList>
+            </div>
           </div>
         </div>
       </div>

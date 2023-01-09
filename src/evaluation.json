@@ -1,4 +1,9 @@
 {
+  "id": 0,
+  "name": "",
+  "familyName": "",
+  "date": "01.01.2022",
+  "age": "",
   "selection": [
     {
       "good": 0,
@@ -115,6 +120,56 @@
     {
       "good": 0,
       "bad": 0
+    }
+  ],
+  "selectedWord": [
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
+    },
+    {
+      "goodWords": [],
+      "badWords": []
     }
   ]
 }
