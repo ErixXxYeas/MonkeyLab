@@ -2,6 +2,7 @@ import css from "../modules/CompletedTestBar.module.css";
 import { renderToString } from "react-dom/server";
 import SelectionEvaluation from "./selectionEvaluation";
 import WordsEvaluation from "./wordsEvaluation";
+import ButtonComp from "../components/button";
 
 const CompletedTestBar = (props) => {
   const selectionFragment = renderToString(
@@ -32,9 +33,9 @@ const CompletedTestBar = (props) => {
         <div className={css.name}>{props.result.name}</div>
         <div className={css.lastName}>{props.result.familyName}</div>
         <div className={css.print}>
-          <a href="#" onClick={handlePdf}>
-            Test von {props.result.name} herunterladen
-          </a>
+          <button onClick={handlePdf} className={css.button}>
+            {"Test von " + props.result.name + " herunterladen"}
+          </button>
         </div>
       </div>
     </div>
