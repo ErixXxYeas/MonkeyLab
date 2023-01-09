@@ -2,7 +2,6 @@ import css from "../modules/CompletedTestBar.module.css";
 import { renderToString } from "react-dom/server";
 import SelectionEvaluation from "./selectionEvaluation";
 import WordsEvaluation from "./wordsEvaluation";
-import ButtonComp from "../components/button";
 
 const CompletedTestBar = (props) => {
   const selectionFragment = renderToString(
