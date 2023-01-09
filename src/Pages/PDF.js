@@ -4,9 +4,7 @@ import { jsPDF } from "jspdf";
 import Butt from "../components/button";
 import Printer from "../components/selectionEvaluation";
 import { renderToString } from "react-dom/server";
-import N29 from "./N-29_Test";
 import domtoimage from "dom-to-image";
-import canvas from "html2canvas";
 
 const PDF = () => {
   const doc = new jsPDF({ orientation: "landscape" });

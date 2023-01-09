@@ -1,9 +1,6 @@
 import CompletedTestBar from "./completedTestBar";
-import Results from "../result.json";
 
 const CompletedTestBarList = (props) => {
-  const minId = 1;
-  const maxId = 1;
   const handlePdf = (selectionFragment, wordsFragment) => {
     props.onHandlePdf(selectionFragment, wordsFragment);
   };

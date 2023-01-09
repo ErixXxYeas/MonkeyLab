@@ -1,8 +1,6 @@
 import css from "../modules/PDF.module.css";
 import React from "react";
-import Eval from "../result.json";
 const EvaluationRow = (props) => {
-  const evalTest = Eval.tests[0].evaluation;
   const goodLength = props.goodWords;
   const badLength = props.badWords;
   const regLength = 12 - goodLength - badLength;

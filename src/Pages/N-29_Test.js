@@ -5,7 +5,6 @@ import ButtonComp from "../components/button";
 import "../fonts/Exo2-Italic-VariableFont_wght.ttf";
 import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
-import ResultJson from "../result.json";
 import "../cssReset.css";
 import css from "../modules/N29.module.css";
 
@@ -22,7 +21,6 @@ function N29Test() {
   const [evaluationWords, setEvalutationWords] = useState(
     selectionArray.selectedWord
   );
-  const [result, setResult] = useState(ResultJson);
   const [disabled, setDisabled] = useState(false);
 
   const handleCheckAuswahl = (value, Int) => {
