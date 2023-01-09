@@ -32,7 +32,7 @@ const CompletedTestBar = (props) => {
         <div className={css.name}>{props.result.name}</div>
         <div className={css.lastName}>{props.result.familyName}</div>
         <div className={css.print}>
-          <a href="/#" onClick={handlePdf}>
+          <a href="#" onClick={handlePdf}>
             Test von {props.result.name} herunterladen
           </a>
         </div>
