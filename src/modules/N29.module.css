@@ -109,6 +109,16 @@
   font-size: 3rem;
 }
 
+.modal {
+  width: 100px;
+  height: 80vh;
+}
+.modalWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 1300px) {
   .Logo {
     padding-left: 100px;

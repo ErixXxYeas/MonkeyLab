@@ -7,6 +7,7 @@ import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
 import "../cssReset.css";
 import css from "../modules/N29.module.css";
+import { Modal } from "react-bootstrap";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -22,6 +23,11 @@ function N29Test() {
     selectionArray.selectedWord
   );
   const [disabled, setDisabled] = useState(false);
+  const [modalState, setModalState] = useState(true);
+
+  const handleModalState = () => {
+    setModalState(() => false);
+  };
 
   const handleCheckAuswahl = (value, Int) => {
     let newWordsArray = [...words]; //* erstellt ein neues array dass gleich ist wie die words array
@@ -202,6 +208,22 @@ function N29Test() {
   return (
     <React.Fragment>
       <div className={css.Container}>
+        <div className={css.modalWrapper}>
+          <Modal show={modalState} onHide={handleModalState}>
+            <Modal.Header closeButton>
+              <Modal.Title>Modal title</Modal.Title>
+            </Modal.Header>
+
+            <Modal.Body>
+              <p>Modal body text goes here.</p>
+            </Modal.Body>
+
+            <Modal.Footer>
+              <button variant="secondary">Close</button>
+              <button variant="primary">Save changes</button>
+            </Modal.Footer>
+          </Modal>
+        </div>
         <div className={css.Header}>
           <p>BIFO | N-29 Neigungstest</p>
           <div className={css.Information}>
