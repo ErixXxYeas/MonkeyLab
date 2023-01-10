@@ -7,7 +7,7 @@ import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
 import "../cssReset.css";
 import css from "../modules/N29.module.css";
-import { Modal } from "react-bootstrap";
+import { Modal, Row, Col, Button } from "react-bootstrap";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -22,11 +22,57 @@ function N29Test() {
   const [evaluationWords, setEvalutationWords] = useState(
     selectionArray.selectedWord
   );
+  const [baseInformation, setBaseInformation] = useState(selectionArray);
   const [disabled, setDisabled] = useState(false);
   const [modalState, setModalState] = useState(true);
+  const [infoModalState, setInfoModalState] = useState(false);
+  const [name, setName] = useState("");
+  const [familyName, setFamilyName] = useState("");
+  const [age, setAge] = useState(0);
+  const [error, setError] = useState(true);
 
   const handleModalState = () => {
     setModalState(() => false);
+  };
+
+  const handleInfoModalState = () => {
+    if (infoModalState === false) {
+      setInfoModalState(true);
+    } else {
+      setInfoModalState(() => false);
+    }
+  };
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleFamilyNameChange = (event) => {
+    setFamilyName(event.target.value);
+  };
+
+  const handleAgeChange = (event) => {
+    setAge(event.target.value);
+  };
+
+  const handleNextModal = () => {
+    if (name === "" || familyName === "" || (age === 0 && age <= 100)) {
+      setError(false);
+    } else if (
+      !name.replace(/\s/g, "").length ||
+      !familyName.replace(/\s/g, "").length
+    ) {
+      setError(false);
+    } else if (/\d/.test(name) || /\d/.test(familyName)) {
+      setError(false);
+    } else {
+      setBaseInformation((baseInformation.name = name));
+      setBaseInformation((baseInformation.familyName = familyName));
+      setBaseInformation((baseInformation.age = age));
+      handleModalState();
+      setInfoModalState(true);
+      console.log(baseInformation);
+    }
   };
 
   const handleCheckAuswahl = (value, Int) => {
@@ -208,26 +254,83 @@ function N29Test() {
   return (
     <React.Fragment>
       <div className={css.Container}>
-        <div className={css.modalWrapper}>
-          <Modal show={modalState} onHide={handleModalState}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal title</Modal.Title>
+        <div>
+          <Modal
+            show={modalState}
+            onHide={handleModalState}
+            centered={true}
+            dialogClassName={css.modal}
+            backdrop="static"
+          >
+            <Modal.Header>
+              <Modal.Title>Willkommen zum N29-Neigungstest</Modal.Title>
             </Modal.Header>
-
             <Modal.Body>
-              <p>Modal body text goes here.</p>
+              <p>{"Bitte geben sie folgende Informationen an."}</p>
+              <div>
+                <Row>
+                  <Col>
+                    <input
+                      type={"text"}
+                      name={"name"}
+                      onChange={handleNameChange}
+                      placeholder="Max"
+                    ></input>
+                    <p>{" Vorname "}</p>
+                  </Col>
+                  <Col>
+                    <input
+                      type={"text"}
+                      name={"familyName"}
+                      onChange={handleFamilyNameChange}
+                      placeholder="Mussterman"
+                    ></input>
+                    <p>{" Nachname "}</p>
+                  </Col>
+                  <Col>
+                    <input
+                      type={"number"}
+                      min={1}
+                      max={99}
+                      onChange={handleAgeChange}
+                      placeholder="24"
+                    ></input>
+                    <p>{" Alter "}</p>
+                  </Col>
+                </Row>
+              </div>
             </Modal.Body>
 
             <Modal.Footer>
-              <button variant="secondary">Close</button>
-              <button variant="primary">Save changes</button>
+              <div className={css.modalFooter}>
+                <div className={css.error}>
+                  <p hidden={error}>*Bitte richtige Werte eingeben*</p>
+                </div>
+
+                <Button onClick={handleNextModal} variant="primary">
+                  Weiter
+                </Button>
+              </div>
+            </Modal.Footer>
+          </Modal>
+          <Modal onHide={handleInfoModalState} show={infoModalState}>
+            {" "}
+            <Modal.Header closeButton>
+              <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              Woohoo, you're reading this text in a modal!
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary">Close</Button>
+              <Button variant="primary">Save Changes</Button>
             </Modal.Footer>
           </Modal>
         </div>
         <div className={css.Header}>
           <p>BIFO | N-29 Neigungstest</p>
           <div className={css.Information}>
-            <InformationIcon />
+            <InformationIcon event={handleInfoModalState} />
           </div>
         </div>
         <div className={css.main}>

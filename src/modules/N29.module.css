@@ -109,14 +109,15 @@
   font-size: 3rem;
 }
 
-.modal {
-  width: 100px;
-  height: 80vh;
+.error {
+  width: 300px;
+  color: red;
 }
-.modalWrapper {
+
+.modalFooter {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 @media (max-width: 1300px) {
