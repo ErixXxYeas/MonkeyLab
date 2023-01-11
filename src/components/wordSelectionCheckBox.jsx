@@ -20,7 +20,7 @@ const WordSelectionCheckBox = (props) => {
 
   let handleChangeGood = () => {
     if (props.chosenGoodSelection === 6) {
-      console.log("Bitte eines ausschalten");
+      props.tooManyWords();
     } else {
       props.onHandleChangeSelection(props.selectionWord, 1); //schickt
     }
@@ -28,7 +28,7 @@ const WordSelectionCheckBox = (props) => {
 
   let handleChangeBad = () => {
     if (props.chosenBadSelection === 6) {
-      console.log("Bitte eines ausschalten");
+      props.tooManyWords();
     } else {
       props.onHandleChangeSelection(props.selectionWord, 2);
     }

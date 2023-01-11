@@ -9,6 +9,10 @@ const WordSelectionCheckBoxList = (props) => {
     props.onCheckAuswahlNeutral(value, Int);
   };
 
+  const handleTooManyWords = () => {
+    props.onhandleTooManyWords();
+  };
+
   return (
     <div
       style={{
@@ -19,6 +23,7 @@ const WordSelectionCheckBoxList = (props) => {
         .slice(props.minArray, props.maxArray)
         .map((selectionWords) => (
           <WordSelection
+            tooManyWords={handleTooManyWords}
             onHandleChangeNeutral={handleCheckAuswahlNeutral}
             chosenGoodSelection={props.chosenGoodSelection}
             chosenBadSelection={props.chosenBadSelection}

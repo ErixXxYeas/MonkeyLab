@@ -7,7 +7,11 @@ import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
 import "../cssReset.css";
 import css from "../modules/N29.module.css";
-import { Modal, Row, Col, Button } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
+
+import IntroModal from "../components/introModal";
+import InfoModal from "../components/infoModal";
+import WarningModal from "../components/warningModal";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -30,6 +34,10 @@ function N29Test() {
   const [familyName, setFamilyName] = useState("");
   const [age, setAge] = useState(0);
   const [error, setError] = useState(true);
+  const [buttonStyle, setButtonStyle] = useState("outline-primary");
+  const [alertState, setAlertState] = useState(false);
+  const [modalNextPage, setModalNextPageState] = useState(false);
+  const [finishButton, setFinishButton] = useState("Weiter");
   const handleModalState = () => {
     setModalState(() => false);
   };
@@ -42,28 +50,61 @@ function N29Test() {
     }
   };
 
+  const handleModalNextPageState = () => {
+    if (maxArray <= 347) {
+      if (modalNextPage === false) {
+        setModalNextPageState(true);
+      } else {
+        setModalNextPageState(() => false);
+      }
+    } else {
+      handleNextPage();
+    }
+  };
+
+  const alertFalse = () => {
+    setAlertState(false);
+  };
+  const handleTooManyWords = () => {
+    console.log("hi");
+    setAlertState(true);
+  };
+
+  const changedInput = () => {
+    setError(true);
+    setButtonStyle("outline-primary");
+  };
+
+  const falseInput = () => {
+    setError(false);
+    setButtonStyle("outline-danger");
+  };
+
   const handleNameChange = (event) => {
     setName(event.target.value);
+    changedInput();
   };
 
   const handleFamilyNameChange = (event) => {
     setFamilyName(event.target.value);
+    changedInput();
   };
 
   const handleAgeChange = (event) => {
     setAge(event.target.value);
+    changedInput();
   };
 
   const handleNextModal = () => {
-    if (name === "" || familyName === "" || (age === 0 && age <= 100)) {
-      setError(false);
+    if (name === "" || familyName === "" || age === 0 || age >= 100) {
+      falseInput();
     } else if (
       !name.replace(/\s/g, "").length ||
       !familyName.replace(/\s/g, "").length
     ) {
-      setError(false);
+      falseInput();
     } else if (/\d/.test(name) || /\d/.test(familyName)) {
-      setError(false);
+      falseInput();
     } else {
       setBaseInformation((baseInformation.name = name));
       setBaseInformation((baseInformation.familyName = familyName));
@@ -139,13 +180,13 @@ function N29Test() {
 
   const handleNextPage = () => {
     if (maxArray <= 347) {
-      if (!disabled) {
-        let newArray = maxArray + pages;
-        setminArray(maxArray);
-        setMaxArray(newArray);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        console.log("wählen sie 6 gute & schlechte Wörter aus");
+      setModalNextPageState(false);
+      let newArray = maxArray + pages;
+      setminArray(maxArray);
+      setMaxArray(newArray);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (maxArray <= 347) {
+        setFinishButton("Abgeben");
       }
     } else {
       console.log("letzte seite");
@@ -254,89 +295,30 @@ function N29Test() {
     <React.Fragment>
       <div className={css.Container}>
         <div>
-          <Modal
-            show={modalState}
-            onHide={handleModalState}
-            centered={true}
-            dialogClassName={css.modal}
-            size={"lg"}
-            backdrop="static"
-          >
-            <Modal.Header>
-              <Modal.Title>Willkommen zum N29-Neigungstest</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <p>
-                {
-                  "Bei diesem Test werden auf den folgenden Seiten Ihre Interessen und Neigungenerfasst. "
-                }
-              </p>
-              <p>{"Bitte geben sie folgende Informationen an."}</p>
-              <div>
-                <Row>
-                  <Col>
-                    <input
-                      type={"text"}
-                      name={"name"}
-                      onChange={handleNameChange}
-                      placeholder="Max"
-                    ></input>
-                    <p>{" Vorname "}</p>
-                  </Col>
-                  <Col>
-                    <input
-                      type={"text"}
-                      name={"familyName"}
-                      onChange={handleFamilyNameChange}
-                      placeholder="Mussterman"
-                    ></input>
-                    <p>{" Nachname "}</p>
-                  </Col>
-                  <Col>
-                    <input
-                      type={"number"}
-                      min={1}
-                      max={99}
-                      onChange={handleAgeChange}
-                      placeholder="24"
-                    ></input>
-                    <p>{" Alter "}</p>
-                  </Col>
-                </Row>
-              </div>
-            </Modal.Body>
-
-            <Modal.Footer>
-              <div className={css.modalFooter}>
-                <div className={css.error}>
-                  <p hidden={error}>*Bitte richtige Werte eingeben*</p>
-                </div>
-
-                <Button onClick={handleNextModal} variant="primary">
-                  Weiter
-                </Button>
-              </div>
-            </Modal.Footer>
-          </Modal>
-          <Modal
-            onHide={handleInfoModalState}
-            show={infoModalState}
-            size={"xl"}
-          >
-            <Modal.Header closeButton>
-              <Modal.Title>{"Information "}</Modal.Title>
-            </Modal.Header>
-
-            <Modal.Body>
-              Sie werden verschiedenen Tätigkeitsbegriffe sehen und ihre Aufgabe
-              sieht folgendermaßen aus: Bitte wählen Sie pro Seite 6 Begriffe,
-              die Sie interessieren diese erscheinen grün
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary">Close</Button>
-              <Button variant="primary">Save Changes</Button>
-            </Modal.Footer>
-          </Modal>
+          <IntroModal
+            error={error}
+            modalState={modalState}
+            buttonStyle={buttonStyle}
+            onHandleModalState={handleModalState}
+            onHandleNameChange={handleNameChange}
+            onHandleAgeChange={handleAgeChange}
+            onHandleNextModal={handleNextModal}
+            onHandleFamilyNameChange={handleFamilyNameChange}
+          ></IntroModal>
+          <InfoModal
+            infoModalState={infoModalState}
+            onHandleInfoModalState={handleInfoModalState}
+          ></InfoModal>
+          <WarningModal
+            modalNextPage={modalNextPage}
+            onHandleNextPage={handleNextPage}
+            onHandleModalNextPageState={handleModalNextPageState}
+          ></WarningModal>
+          <div className={css.AlertPosition}>
+            <Alert variant="warning" dismissible={true}>
+              Bruh Bruh Bruh
+            </Alert>
+          </div>
         </div>
         <div className={css.Header}>
           <p>BIFO | N-29 Neigungstest</p>
@@ -355,14 +337,15 @@ function N29Test() {
             </div>
             <div className={css.WordSelectionList}>
               <WordSelectionList
-                chosenGoodSelection={chosenGoodSelection}
-                chosenBadSelection={chosenBadSelection}
-                goodSelection={goodSelection}
-                badSelection={badSelection}
+                words={words} //* prop: das ganze array wird als prop weiter gegeben
                 maxArray={maxArray}
                 minArray={minArray}
-                words={words} //* prop: das ganze array wird als prop weiter gegeben
+                badSelection={badSelection}
+                goodSelection={goodSelection}
+                chosenBadSelection={chosenBadSelection}
+                chosenGoodSelection={chosenGoodSelection}
                 onCheckAuswahl={handleCheckAuswahl}
+                onhandleTooManyWords={handleTooManyWords}
                 onCheckAuswahlNeutral={handleCheckAuswahlNeutral}
               ></WordSelectionList>
             </div>
@@ -372,9 +355,9 @@ function N29Test() {
             <div className={css.NextButton}>
               <ButtonComp
                 style={css.button}
-                name="Weiter"
-                event={handleNextPage}
+                name={finishButton}
                 disabled={disabled}
+                event={handleModalNextPageState}
               ></ButtonComp>
             </div>
             <div className={css.wordsSelection}>

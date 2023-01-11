@@ -1,0 +1,39 @@
+.modalFooter {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.buttonWidth {
+  min-width: 100%;
+  width: 100%;
+  font-weight: bold;
+}
+
+.buttonWidth2 {
+  min-width: 220px;
+  width: 220px;
+  font-weight: bold;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.borderRadius {
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.error {
+  width: 300px;
+  color: red;
+}
+
+.underline {
+  margin-top: 10px;
+  text-decoration-line: underline;
+}
