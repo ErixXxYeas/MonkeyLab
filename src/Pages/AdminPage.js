@@ -13,6 +13,9 @@ function AdminPage() {
   const navigateN29 = () => {
     navigate("/N29");
   };
+
+  //Kai sagt PDF in pfad Speichern damit leute darauf zugreifen können
+
   const HTMLselectionEvaluation = document.createElement("div");
   const HTMLwordsEvaluation = document.createElement("div");
   const createPdf = (selectionFragment, wordsFragment) => {

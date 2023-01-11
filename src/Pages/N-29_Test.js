@@ -30,7 +30,6 @@ function N29Test() {
   const [familyName, setFamilyName] = useState("");
   const [age, setAge] = useState(0);
   const [error, setError] = useState(true);
-
   const handleModalState = () => {
     setModalState(() => false);
   };
@@ -260,12 +259,18 @@ function N29Test() {
             onHide={handleModalState}
             centered={true}
             dialogClassName={css.modal}
+            size={"lg"}
             backdrop="static"
           >
             <Modal.Header>
               <Modal.Title>Willkommen zum N29-Neigungstest</Modal.Title>
             </Modal.Header>
             <Modal.Body>
+              <p>
+                {
+                  "Bei diesem Test werden auf den folgenden Seiten Ihre Interessen und Neigungenerfasst. "
+                }
+              </p>
               <p>{"Bitte geben sie folgende Informationen an."}</p>
               <div>
                 <Row>
@@ -313,13 +318,19 @@ function N29Test() {
               </div>
             </Modal.Footer>
           </Modal>
-          <Modal onHide={handleInfoModalState} show={infoModalState}>
-            {" "}
+          <Modal
+            onHide={handleInfoModalState}
+            show={infoModalState}
+            size={"xl"}
+          >
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              <Modal.Title>{"Information "}</Modal.Title>
             </Modal.Header>
+
             <Modal.Body>
-              Woohoo, you're reading this text in a modal!
+              Sie werden verschiedenen Tätigkeitsbegriffe sehen und ihre Aufgabe
+              sieht folgendermaßen aus: Bitte wählen Sie pro Seite 6 Begriffe,
+              die Sie interessieren diese erscheinen grün
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary">Close</Button>
@@ -365,6 +376,14 @@ function N29Test() {
                 event={handleNextPage}
                 disabled={disabled}
               ></ButtonComp>
+            </div>
+            <div className={css.wordsSelection}>
+              <div className={css.goodWords}>
+                <p>{"'gute' Wörter: " + chosenGoodSelection}</p>
+              </div>
+              <div className={css.badWords}>
+                <p>{"'schlechte' Wörter: " + chosenBadSelection}</p>
+              </div>
             </div>
           </div>
         </div>
