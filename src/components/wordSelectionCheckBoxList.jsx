@@ -9,8 +9,8 @@ const WordSelectionCheckBoxList = (props) => {
     props.onCheckAuswahlNeutral(value, Int);
   };
 
-  const handleTooManyWords = () => {
-    props.onhandleTooManyWords();
+  const handleTooManyWords = (word) => {
+    props.onhandleTooManyWords(word);
   };
 
   return (

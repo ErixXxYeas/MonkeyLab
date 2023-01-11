@@ -20,7 +20,11 @@ const WordSelectionCheckBox = (props) => {
 
   let handleChangeGood = () => {
     if (props.chosenGoodSelection === 6) {
-      props.tooManyWords();
+      if (props.chosenBadSelection === 6) {
+        props.tooManyWords("e Anzahl an Wörter erreicht");
+      } else {
+        props.tooManyWords(" nur 6 gute Begriffe");
+      }
     } else {
       props.onHandleChangeSelection(props.selectionWord, 1); //schickt
     }
@@ -28,7 +32,11 @@ const WordSelectionCheckBox = (props) => {
 
   let handleChangeBad = () => {
     if (props.chosenBadSelection === 6) {
-      props.tooManyWords();
+      if (props.chosenGoodSelection === 6) {
+        props.tooManyWords("e Anzahl an Wörter erreicht");
+      } else {
+        props.tooManyWords(" nur 6 schlechte Begriffe");
+      }
     } else {
       props.onHandleChangeSelection(props.selectionWord, 2);
     }

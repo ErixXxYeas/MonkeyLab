@@ -7,8 +7,8 @@ import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
 import "../cssReset.css";
 import css from "../modules/N29.module.css";
-import { Alert } from "react-bootstrap";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import IntroModal from "../components/introModal";
 import InfoModal from "../components/infoModal";
 import WarningModal from "../components/warningModal";
@@ -62,12 +62,16 @@ function N29Test() {
     }
   };
 
-  const alertFalse = () => {
-    setAlertState(false);
-  };
-  const handleTooManyWords = () => {
-    console.log("hi");
-    setAlertState(true);
+  const handleTooManyWords = (word) => {
+    toast.warn("Maximal" + word, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      theme: "colored",
+    });
   };
 
   const changedInput = () => {
@@ -185,7 +189,7 @@ function N29Test() {
       setminArray(maxArray);
       setMaxArray(newArray);
       window.scrollTo({ top: 0, behavior: "smooth" });
-      if (maxArray <= 347) {
+      if (newArray >= 347) {
         setFinishButton("Abgeben");
       }
     } else {
@@ -314,17 +318,16 @@ function N29Test() {
             onHandleNextPage={handleNextPage}
             onHandleModalNextPageState={handleModalNextPageState}
           ></WarningModal>
-          <div className={css.AlertPosition}>
-            <Alert variant="warning" dismissible={true}>
-              Bruh Bruh Bruh
-            </Alert>
-          </div>
         </div>
+
         <div className={css.Header}>
           <p>BIFO | N-29 Neigungstest</p>
           <div className={css.Information}>
             <InformationIcon event={handleInfoModalState} />
           </div>
+        </div>
+        <div>
+          <ToastContainer limit={3} className={css.toast}></ToastContainer>
         </div>
         <div className={css.main}>
           <div className={css.WordList}>
