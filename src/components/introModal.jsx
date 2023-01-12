@@ -38,7 +38,7 @@ const IntroModal = (props) => {
                 type={"text"}
                 name={"familyName"}
                 onChange={props.onHandleFamilyNameChange}
-                placeholder="Mussterman"
+                placeholder="Mustermann"
                 className={css.borderRadius}
               ></input>
               <p>{" Nachname "}</p>

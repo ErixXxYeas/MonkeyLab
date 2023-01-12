@@ -7,11 +7,12 @@ import InformationIcon from "../components/informationIcon";
 import WordSelectionList from "../components/wordSelectionCheckBoxList";
 import "../cssReset.css";
 import css from "../modules/N29.module.css";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import IntroModal from "../components/introModal";
 import InfoModal from "../components/infoModal";
 import WarningModal from "../components/warningModal";
+import FarewellModal from "../components/farewellModal";
 
 function N29Test() {
   const pages = 29; //* pages gibt die Anzahl an die man im Array überspringt
@@ -35,9 +36,10 @@ function N29Test() {
   const [age, setAge] = useState(0);
   const [error, setError] = useState(true);
   const [buttonStyle, setButtonStyle] = useState("outline-primary");
-  const [alertState, setAlertState] = useState(false);
   const [modalNextPage, setModalNextPageState] = useState(false);
+  const [modalFarewell, setModalFarewell] = useState(false);
   const [finishButton, setFinishButton] = useState("Weiter");
+
   const handleModalState = () => {
     setModalState(() => false);
   };
@@ -63,7 +65,7 @@ function N29Test() {
   };
 
   const handleTooManyWords = (word) => {
-    toast.warn("Maximal" + word, {
+    toast.error("Maximal" + word, {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: true,
@@ -71,6 +73,8 @@ function N29Test() {
       pauseOnHover: false,
       draggable: true,
       theme: "colored",
+      limit: 3,
+      transition: Flip,
     });
   };
 
@@ -193,7 +197,8 @@ function N29Test() {
         setFinishButton("Abgeben");
       }
     } else {
-      console.log("letzte seite");
+      setModalFarewell(true);
+      evaluationProcess();
     }
   };
 
@@ -318,8 +323,8 @@ function N29Test() {
             onHandleNextPage={handleNextPage}
             onHandleModalNextPageState={handleModalNextPageState}
           ></WarningModal>
+          <FarewellModal modalFarewell={modalFarewell}></FarewellModal>
         </div>
-
         <div className={css.Header}>
           <p>BIFO | N-29 Neigungstest</p>
           <div className={css.Information}>
@@ -327,7 +332,11 @@ function N29Test() {
           </div>
         </div>
         <div>
-          <ToastContainer limit={3} className={css.toast}></ToastContainer>
+          <ToastContainer
+            limit={3}
+            className={css.toast}
+            closeOnClick={true}
+          ></ToastContainer>
         </div>
         <div className={css.main}>
           <div className={css.WordList}>

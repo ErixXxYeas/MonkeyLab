@@ -1,5 +1,5 @@
 import WordSelection from "./wordSelectionCheckBox";
-
+import css from "../modules/WordSelectionCheckBoxList.module.css";
 const WordSelectionCheckBoxList = (props) => {
   const handleCheckAuswahl = (value, Int) => {
     props.onCheckAuswahl(value, Int);
@@ -14,11 +14,7 @@ const WordSelectionCheckBoxList = (props) => {
   };
 
   return (
-    <div
-      style={{
-        columns: 1,
-      }}
-    >
+    <div className={css.contentList}>
       {props.words
         .slice(props.minArray, props.maxArray)
         .map((selectionWords) => (

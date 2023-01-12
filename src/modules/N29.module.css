@@ -34,6 +34,7 @@
 }
 
 .Header {
+  z-index: 2;
   position: sticky;
   width: 100%;
   top: 0px;
@@ -75,12 +76,20 @@
 }
 
 .TestHeader {
+  position: sticky;
+  background-color: white;
+  width: 620px;
+  height: 70px;
+  top: 80px;
+  padding-top: 20px;
   display: flex;
   font-size: 1.8rem;
   font-weight: bold;
   padding-left: 10px;
   margin-bottom: 5px;
+  padding-left: 40px;
   margin-top: 25px;
+  z-index: 1;
 }
 
 .TestHeaderWord {
@@ -89,7 +98,7 @@
 
 .TestHeaderWordGroup {
   display: flex;
-  margin-left: 100px;
+  margin-left: 80px;
 }
 
 .LogoPicture {

@@ -11,7 +11,7 @@ const InfoModal = (props) => {
       centered
     >
       <Modal.Header closeButton>
-        <div className={css.modalHeader}>{"Information "}</div>
+        <div className={css.modalHeader}>{"Information"}</div>
       </Modal.Header>
 
       <Modal.Body>
